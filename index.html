@@ -260,7 +260,8 @@
     .nav-img{width:42px;height:42px;border-radius:4px;overflow:hidden;background:#fff;flex-shrink:0}
     .nav-img img{width:100%;height:100%;object-fit:cover}
     .nav-wm{display:flex;flex-direction:column;gap:2px}
-    .nav-name{font-family:'Bodoni Moda',serif;font-size:1.05rem;font-weight:600;color:var(--tx);line-height:1}
+    @font-face{font-family:'AlfaownerScript';src:url('./alfa-romeo-font/alfaowner-script.ttf') format('truetype');font-weight:normal;font-style:normal;font-display:swap}
+    .nav-name{font-family:'AlfaownerScript','Bodoni Moda',serif;font-size:1.05rem;font-weight:600;color:var(--tx);line-height:1}
     .nav-sub{font-size:.57rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
     .nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none}
     .nav-a{font-size:.71rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;
@@ -791,6 +792,7 @@
     /* Line 1 — Autotech: dominant brand headline */
     .hero-l1{
       display:block;
+      font-family:'AlfaownerScript','Bodoni Moda',serif;
       font-size:clamp(3.2rem,6.5vw,6.8rem);
       font-weight:600;
       letter-spacing:-.04em;
@@ -999,7 +1001,7 @@
   <div style="padding:0 5vw">
     <div class="ws-strip" data-rev="scale">
       <div class="wsp">
-        <img src="./garage photo 5.jpg" alt="Classic Alfa Romeo on lift with heritage badge wall" loading="lazy">
+        <img src="./garage-photo-5.jpg" alt="Classic Alfa Romeo on lift with heritage badge wall" loading="lazy">
         <div class="wsp-cap"><span class="lbl-m">Heritage &nbsp;·&nbsp; Classic Models</span></div>
       </div>
       <div class="wsp">
@@ -1126,20 +1128,20 @@
       <!-- 2.0 Petrol -->
       <div id="panel-petrol" class="pr-panel active pr-list" role="tabpanel" aria-labelledby="tab-petrol">
         <div class="pr-row">
-          <div><div class="pr-mi">9,000 miles</div></div>
+          <div><div class="pr-mi">10,000 KM</div></div>
           <div class="pr-price">AED 1,100</div>
         </div>
         <div class="pr-row">
-          <div><div class="pr-mi">18,000 miles</div></div>
+          <div><div class="pr-mi">20,000 KM</div></div>
           <div class="pr-price">AED 1,650</div>
         </div>
         <div class="pr-row">
-          <div><div class="pr-mi">27,000 miles</div></div>
+          <div><div class="pr-mi">30,000 KM</div></div>
           <div class="pr-price">AED 1,100</div>
         </div>
         <div class="pr-row highlight">
           <div>
-            <div class="pr-mi">36,000 miles</div>
+            <div class="pr-mi">40,000 KM</div>
             <div class="pr-note">Includes spark plugs</div>
           </div>
           <div>
@@ -1148,16 +1150,16 @@
           </div>
         </div>
         <div class="pr-row">
-          <div><div class="pr-mi">45,000 miles</div></div>
+          <div><div class="pr-mi">50,000 KM</div></div>
           <div class="pr-price">AED 1,100</div>
         </div>
         <div class="pr-row">
-          <div><div class="pr-mi">54,000 miles</div></div>
+          <div><div class="pr-mi">60,000 KM</div></div>
           <div class="pr-price">AED 1,650</div>
         </div>
         <div class="pr-row highlight">
           <div>
-            <div class="pr-mi">72,000 miles</div>
+            <div class="pr-mi">80,000 KM</div>
             <div class="pr-note">Includes spark plugs + brake fluid</div>
           </div>
           <div>
@@ -1165,26 +1167,26 @@
             <span class="pr-label">Major Service</span>
           </div>
         </div>
-        <p class="pr-footnote">All prices include OEM-grade parts and fluids. Contact us to confirm pricing for your specific mileage and model year.</p>
+        <p class="pr-footnote">All prices include OEM-grade parts and fluids. Contact us to confirm pricing for your specific KM and model year.</p>
       </div>
 
       <!-- 2.9 V6 Quadrifoglio -->
       <div id="panel-v6" class="pr-panel pr-list" role="tabpanel" aria-labelledby="tab-v6">
         <div class="pr-row">
-          <div><div class="pr-mi">9,000 miles</div></div>
+          <div><div class="pr-mi">10,000 KM</div></div>
           <div class="pr-price">AED 1,350</div>
         </div>
         <div class="pr-row">
-          <div><div class="pr-mi">18,000 miles</div></div>
+          <div><div class="pr-mi">20,000 KM</div></div>
           <div class="pr-price">AED 2,200</div>
         </div>
         <div class="pr-row">
-          <div><div class="pr-mi">27,000 miles</div></div>
+          <div><div class="pr-mi">30,000 KM</div></div>
           <div class="pr-price">AED 1,350</div>
         </div>
         <div class="pr-row highlight">
           <div>
-            <div class="pr-mi">36,000 miles</div>
+            <div class="pr-mi">40,000 KM</div>
             <div class="pr-note">Includes spark plugs (×12)</div>
           </div>
           <div>
@@ -1193,16 +1195,16 @@
           </div>
         </div>
         <div class="pr-row">
-          <div><div class="pr-mi">45,000 miles</div></div>
+          <div><div class="pr-mi">50,000 KM</div></div>
           <div class="pr-price">AED 1,350</div>
         </div>
         <div class="pr-row">
-          <div><div class="pr-mi">54,000 miles</div></div>
+          <div><div class="pr-mi">60,000 KM</div></div>
           <div class="pr-price">AED 2,200</div>
         </div>
         <div class="pr-row highlight">
           <div>
-            <div class="pr-mi">72,000 miles</div>
+            <div class="pr-mi">80,000 KM</div>
             <div class="pr-note">Includes spark plugs, brake fluid + carbon clean</div>
           </div>
           <div>
@@ -1287,7 +1289,7 @@
           </div>
         </div>
         <div class="about-pf">
-          <img src="./garage photo 5.jpg" alt="Alfa Romeo badge wall and classic vehicle on lift" loading="lazy">
+          <img src="./garage-photo-5.jpg" alt="Alfa Romeo badge wall and classic vehicle on lift" loading="lazy">
         </div>
         <div class="about-corner" aria-hidden="true"></div>
       </div>
