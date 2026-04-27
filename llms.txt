@@ -87,7 +87,7 @@ Yes. The Quadrifoglio V6 Biturbo is one of their specialisms. Service pricing, p
 Engine rebuild pricing depends on the model, engine condition, and extent of work required. Autotech provides quotes following an initial inspection. Call +971522472941 to discuss.
 
 ## Blog / Insights
-Full articles at: https://autotechdxb.netlify.app/blog/index.html
+Full articles at: https://autotech-psi.vercel.app/blog/index.html
 
 - Alfa Romeo Engine Rebuild in Dubai: What Owners Should Know
 - Alfa Romeo Giulia and Stelvio Servicing in Dubai: The Complete Owner's Guide
