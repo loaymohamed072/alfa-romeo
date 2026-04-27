@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Autotech — Dubai's premier Alfa Romeo specialist garage. Appointed tuner for Squadra Tuning BV.">
-  <title>Autotech — Alfa Romeo Specialists, Dubai</title>
+  <meta name="description" content="Autotech DXB is a Dubai-based Alfa Romeo specialist workshop for Giulia, Stelvio, Quadrifoglio servicing, diagnostics, tuning, inspections, and engine rebuilds.">
+  <title>Autotech DXB | Alfa Romeo Specialist in Dubai</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500&family=Jost:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,10 +15,11 @@
   <link rel="canonical" href="https://autotechdxb.netlify.app/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Autotech — Alfa Romeo Specialists, Dubai">
-  <meta property="og:description" content="Dubai's leading Alfa Romeo specialist garage. The only appointed Squadra Tuning BV partner in the Middle East. Diagnostics, repair, tuning, and pre-purchase inspections.">
+  <meta property="og:title" content="Autotech DXB | Alfa Romeo Specialist in Dubai">
+  <meta property="og:description" content="Autotech DXB is Dubai's specialist Alfa Romeo workshop. Giulia, Stelvio, Quadrifoglio servicing, diagnostics, tuning, inspections, and engine rebuilds.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://autotechdxb.netlify.app/">
+  <meta property="og:image" content="https://autotechdxb.netlify.app/Alfaromeo2015.webp">
   <meta property="og:locale" content="en_AE">
 
   <!-- LocalBusiness structured data -->
@@ -29,7 +30,7 @@
     "name": "Autotech",
     "description": "Dubai's premier Alfa Romeo specialist garage. The only appointed Squadra Tuning BV partner in the Middle East.",
     "url": "https://autotechdxb.netlify.app/",
-    "telephone": "+97154441177",
+    "telephone": "+971522472941",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Dubai",
@@ -424,6 +425,25 @@
     @media(max-width:900px){.og-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:480px){.og-grid{grid-template-columns:1fr 1fr}}
 
+    .og-card.og-featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
+    .og-feat-imgs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bd)}
+    .og-feat-imgs img{width:100%;height:270px;object-fit:cover;display:block;transition:transform .9s var(--ease)}
+    .og-card.og-featured:hover .og-feat-imgs img{transform:scale(1.04)}
+    .og-feat-body{padding:2.5rem 2rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--bd)}
+    .og-feat-sub{font-size:.8rem;font-weight:300;color:rgba(232,228,221,.55);margin-bottom:1.1rem;line-height:1.55}
+    .og-feat-text{font-size:.78rem;font-weight:300;color:var(--tx-m);line-height:1.75;margin-bottom:1.4rem}
+    .og-feat-trust{font-size:.61rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;
+                   color:rgba(232,228,221,.38);border-left:2px solid var(--red);padding-left:.65rem;margin-bottom:1.4rem}
+    @media(max-width:900px){
+      .og-card.og-featured{grid-template-columns:1fr}
+      .og-feat-imgs img{height:220px}
+      .og-feat-body{border-left:none;border-top:1px solid var(--bd)}
+    }
+    @media(max-width:480px){
+      .og-feat-imgs{grid-template-columns:1fr}
+      .og-feat-imgs img{height:195px}
+    }
+
     /* ──────────────────────────────────────────────────
        ABOUT
     ────────────────────────────────────────────────── */
@@ -620,6 +640,17 @@
     @media(max-width:600px){
       .pr-tab{padding:.65rem 1.25rem;font-size:.62rem}
       .pr-row.highlight{margin:0 -.75rem;padding:1.2rem .75rem}
+    }
+
+    @media(min-width:768px){
+      .pr-panel.active{display:grid;grid-template-columns:1fr 1fr;max-width:860px}
+      .pr-panel.active .pr-row{padding-left:.85rem;padding-right:.85rem}
+      .pr-panel.active .pr-row:nth-child(2){border-top:1px solid var(--bd-soft)}
+      .pr-panel.active .pr-row:nth-child(odd){border-right:1px solid var(--bd)}
+      .pr-panel.active .pr-row:nth-child(even){padding-left:1.25rem}
+      .pr-panel.active .pr-row.highlight{margin:0;padding:1.35rem .85rem}
+      .pr-panel.active .pr-row.highlight:nth-child(even){padding-left:1.25rem}
+      .pr-panel.active .pr-footnote{grid-column:1/-1;padding:.5rem .85rem 0}
     }
 
     /* ──────────────────────────────────────────────────
@@ -850,6 +881,7 @@
     <li><a href="#about"    class="nav-a">About</a></li>
     <li><a href="#pricing"  class="nav-a">Pricing</a></li>
     <li><a href="#squadra"  class="nav-a">Squadra</a></li>
+    <li><a href="./blog/index.html"   class="nav-a">Insights</a></li>
     <li><a href="#contact"  class="nav-a">Contact</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:1rem">
@@ -866,6 +898,7 @@
   <a href="#about"    class="mob-a" onclick="closeNav()">About</a>
   <a href="#pricing"  class="mob-a" onclick="closeNav()">Pricing</a>
   <a href="#squadra"  class="mob-a" onclick="closeNav()">Squadra</a>
+  <a href="./blog/index.html"   class="mob-a" onclick="closeNav()">Insights</a>
   <a href="#contact"  class="mob-a" onclick="closeNav()">Contact</a>
   <a href="#contact"  class="btn btn-r" onclick="closeNav()" style="margin-top:2.5rem;width:fit-content"><span>Book Inspection</span></a>
 </div>
@@ -1129,90 +1162,166 @@
       <div id="panel-petrol" class="pr-panel active pr-list" role="tabpanel" aria-labelledby="tab-petrol">
         <div class="pr-row">
           <div><div class="pr-mi">10,000 KM</div></div>
-          <div class="pr-price">AED 1,100</div>
+          <div class="pr-price">AED 1,350</div>
         </div>
         <div class="pr-row">
-          <div><div class="pr-mi">20,000 KM</div></div>
-          <div class="pr-price">AED 1,650</div>
+          <div>
+            <div class="pr-mi">20,000 KM</div>
+            <div class="pr-note">+ Brake fluid</div>
+          </div>
+          <div class="pr-price">AED 1,800</div>
         </div>
         <div class="pr-row">
           <div><div class="pr-mi">30,000 KM</div></div>
-          <div class="pr-price">AED 1,100</div>
+          <div class="pr-price">AED 1,350</div>
         </div>
         <div class="pr-row highlight">
           <div>
             <div class="pr-mi">40,000 KM</div>
-            <div class="pr-note">Includes spark plugs</div>
+            <div class="pr-note">+ Drive belt</div>
           </div>
           <div>
-            <div class="pr-price">AED 2,300</div>
+            <div class="pr-price">AED 2,260</div>
             <span class="pr-label">Major Service</span>
           </div>
         </div>
         <div class="pr-row">
           <div><div class="pr-mi">50,000 KM</div></div>
-          <div class="pr-price">AED 1,100</div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">60,000 KM</div></div>
-          <div class="pr-price">AED 1,650</div>
+          <div class="pr-price">AED 1,350</div>
         </div>
         <div class="pr-row highlight">
           <div>
-            <div class="pr-mi">80,000 KM</div>
-            <div class="pr-note">Includes spark plugs + brake fluid</div>
+            <div class="pr-mi">60,000 KM</div>
+            <div class="pr-note">+ Spark plugs</div>
           </div>
           <div>
-            <div class="pr-price">AED 2,450</div>
+            <div class="pr-price">AED 2,640</div>
             <span class="pr-label">Major Service</span>
           </div>
         </div>
-        <p class="pr-footnote">All prices include OEM-grade parts and fluids. Contact us to confirm pricing for your specific KM and model year.</p>
+        <div class="pr-row">
+          <div><div class="pr-mi">70,000 KM</div></div>
+          <div class="pr-price">AED 1,350</div>
+        </div>
+        <div class="pr-row">
+          <div>
+            <div class="pr-mi">80,000 KM</div>
+            <div class="pr-note">+ Brake fluid</div>
+          </div>
+          <div class="pr-price">AED 1,800</div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">90,000 KM</div></div>
+          <div class="pr-price">AED 1,350</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">100,000 KM</div>
+            <div class="pr-note">+ Coolant · transmission · transfer case · differential oils</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 5,380</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">110,000 KM</div></div>
+          <div class="pr-price">AED 1,350</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">120,000 KM</div>
+            <div class="pr-note">+ Spark plugs</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 2,640</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter.<br>Prices exclude VAT. Final quote may vary after inspection depending on vehicle condition and required parts.</p>
       </div>
 
       <!-- 2.9 V6 Quadrifoglio -->
       <div id="panel-v6" class="pr-panel pr-list" role="tabpanel" aria-labelledby="tab-v6">
         <div class="pr-row">
           <div><div class="pr-mi">10,000 KM</div></div>
-          <div class="pr-price">AED 1,350</div>
+          <div class="pr-price">AED 1,950</div>
         </div>
         <div class="pr-row">
-          <div><div class="pr-mi">20,000 KM</div></div>
-          <div class="pr-price">AED 2,200</div>
+          <div>
+            <div class="pr-mi">20,000 KM</div>
+            <div class="pr-note">+ Brake fluid</div>
+          </div>
+          <div class="pr-price">AED 2,400</div>
         </div>
         <div class="pr-row">
           <div><div class="pr-mi">30,000 KM</div></div>
-          <div class="pr-price">AED 1,350</div>
+          <div class="pr-price">AED 1,950</div>
         </div>
         <div class="pr-row highlight">
           <div>
             <div class="pr-mi">40,000 KM</div>
-            <div class="pr-note">Includes spark plugs (×12)</div>
+            <div class="pr-note">+ Drive belt</div>
           </div>
           <div>
-            <div class="pr-price">AED 3,200</div>
+            <div class="pr-price">AED 5,350</div>
             <span class="pr-label">Major Service</span>
           </div>
         </div>
         <div class="pr-row">
           <div><div class="pr-mi">50,000 KM</div></div>
-          <div class="pr-price">AED 1,350</div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">60,000 KM</div></div>
-          <div class="pr-price">AED 2,200</div>
+          <div class="pr-price">AED 1,950</div>
         </div>
         <div class="pr-row highlight">
           <div>
-            <div class="pr-mi">80,000 KM</div>
-            <div class="pr-note">Includes spark plugs, brake fluid + carbon clean</div>
+            <div class="pr-mi">60,000 KM</div>
+            <div class="pr-note">+ Spark plugs</div>
           </div>
           <div>
-            <div class="pr-price">AED 4,100</div>
+            <div class="pr-price">AED 3,600</div>
             <span class="pr-label">Major Service</span>
           </div>
         </div>
-        <p class="pr-footnote">V6 Biturbo services use Quadrifoglio-specification parts. Contact us for a full quote on your specific build and service history.</p>
+        <div class="pr-row">
+          <div><div class="pr-mi">70,000 KM</div></div>
+          <div class="pr-price">AED 1,950</div>
+        </div>
+        <div class="pr-row">
+          <div>
+            <div class="pr-mi">80,000 KM</div>
+            <div class="pr-note">+ Brake fluid</div>
+          </div>
+          <div class="pr-price">AED 2,400</div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">90,000 KM</div></div>
+          <div class="pr-price">AED 1,950</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">100,000 KM</div>
+            <div class="pr-note">+ Coolant · transmission · transfer case · differential oils</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 5,890</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">110,000 KM</div></div>
+          <div class="pr-price">AED 1,950</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">120,000 KM</div>
+            <div class="pr-note">+ Spark plugs</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 3,600</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter.<br>Prices exclude VAT. Final quote may vary after inspection depending on vehicle condition and required parts.</p>
       </div>
     </div>
 
@@ -1233,41 +1342,21 @@
 
     <div class="og-grid" data-rev="up" data-d="2">
 
-      <div class="og-card">
-        <div class="og-car">Giulia Quadrifoglio</div>
-        <div class="og-desc">Stage 2 ECU build — full Squadra specification</div>
-        <span class="og-tag">Stage 2 Build</span>
+      <!-- Featured: Berlina Engine Rebuild -->
+      <div class="og-card og-featured">
+        <div class="og-feat-imgs">
+          <img src="./IMG_4272.jpg" alt="Alfa Romeo Berlina engine stripped and laid out for full rebuild" loading="lazy">
+          <img src="./IMG_4273.jpg" alt="Alfa Romeo Berlina engine components during specialist rebuild at Autotech Dubai" loading="lazy">
+        </div>
+        <div class="og-feat-body">
+          <div class="og-car">Alfa Romeo Berlina Engine Rebuild</div>
+          <div class="og-feat-sub">A classic Alfa brought from Kuwait for specialist engine work.</div>
+          <div class="og-feat-text">This Berlina came to Autotech from Kuwait for a full engine rebuild, trusted to a workshop that understands Alfa Romeo engineering beyond routine servicing. The project is currently underway, with the engine being stripped, inspected, and rebuilt with the care these cars deserve.</div>
+          <div class="og-feat-trust">Client travelled from Kuwait for specialist Alfa Romeo work</div>
+          <span class="og-tag">Engine Rebuild &nbsp;·&nbsp; In Progress</span>
+        </div>
       </div>
 
-      <div class="og-card">
-        <div class="og-car">Stelvio Quadrifoglio</div>
-        <div class="og-desc">Major service, brake overhaul &amp; geometry reset</div>
-        <span class="og-tag">Service Package</span>
-      </div>
-
-      <div class="og-card">
-        <div class="og-car">Giulia 2.0 Veloce</div>
-        <div class="og-desc">Custom exhaust fabrication, cat-back system</div>
-        <span class="og-tag">Custom Exhaust</span>
-      </div>
-
-      <div class="og-card">
-        <div class="og-car">147 GTA</div>
-        <div class="og-desc">Full mechanical restoration — heritage project</div>
-        <span class="og-tag">Heritage Restore</span>
-      </div>
-
-      <div class="og-card">
-        <div class="og-car">Giulietta QV</div>
-        <div class="og-desc">Electrical fault trace &amp; diagnostic report</div>
-        <span class="og-tag">ECU Diagnostics</span>
-      </div>
-
-      <div class="og-card">
-        <div class="og-car">Spider S</div>
-        <div class="og-desc">Pre-purchase inspection, full mechanical check</div>
-        <span class="og-tag">PPI Complete</span>
-      </div>
 
     </div>
   </div>
@@ -1592,14 +1681,14 @@
             <svg class="loc-row-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z"/></svg>
             <div>
               <div class="loc-row-lbl">Phone</div>
-              <div class="loc-row-val"><a href="tel:+97154441177" style="color:inherit;text-decoration:none">+971 54 441 1773</a></div>
+              <div class="loc-row-val"><a href="tel:+971522472941" style="color:inherit;text-decoration:none">+971 52 247 2941</a></div>
             </div>
           </div>
           <div class="loc-row">
             <svg class="loc-row-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             <div>
               <div class="loc-row-lbl">WhatsApp</div>
-              <div class="loc-row-val"><a href="https://wa.me/97154441177" style="color:inherit;text-decoration:none">+971 54 441 1773</a></div>
+              <div class="loc-row-val"><a href="https://wa.me/971522472941" style="color:inherit;text-decoration:none">+971 52 247 2941</a></div>
             </div>
           </div>
         </div>
@@ -1768,7 +1857,7 @@
           Whether it's a routine service or a full Squadra performance build, reach out and we'll discuss exactly what your car needs.
         </p>
 
-        <a href="https://wa.me/97154441177" class="cch" aria-label="Contact via WhatsApp">
+        <a href="https://wa.me/971522472941" class="cch" aria-label="Contact via WhatsApp">
           <div class="cch-ic">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -1778,13 +1867,13 @@
           <svg class="cch-arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
 
-        <a href="tel:+97154441177" class="cch" aria-label="Call Autotech">
+        <a href="tel:+971522472941" class="cch" aria-label="Call Autotech">
           <div class="cch-ic">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--tx-m)" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.85 19.79 19.79 0 01.07 1.22 2 2 0 012.07.04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
             </svg>
           </div>
-          <div><div class="cch-lbl" style="color:var(--tx-m)">Call Us</div><div class="cch-val">+971 54 441 1773</div></div>
+          <div><div class="cch-lbl" style="color:var(--tx-m)">Call Us</div><div class="cch-val">+971 52 247 2941</div></div>
           <svg class="cch-arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
 
@@ -1873,8 +1962,8 @@
       <div>
         <div class="ft-ct">Contact</div>
         <div style="display:flex;flex-direction:column;gap:.85rem">
-          <a href="https://wa.me/97154441177" class="ft-a">WhatsApp</a>
-          <a href="tel:+97154441177"           class="ft-a">+971 54 441 1773</a>
+          <a href="https://wa.me/971522472941" class="ft-a">WhatsApp</a>
+          <a href="tel:+971522472941"           class="ft-a">+971 52 247 2941</a>
           <span class="ft-a" style="cursor:default">Dubai, United Arab Emirates</span>
           <span class="ft-a" style="cursor:default;margin-top:.25rem">Mon–Sat &nbsp;08:00–18:00</span>
         </div>
