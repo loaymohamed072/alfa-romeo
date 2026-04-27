@@ -694,32 +694,25 @@
     #contact{background:var(--s1);padding:5.5rem 0;border-top:1px solid var(--bd)}
     .ct-h{font-family:'Bodoni Moda',serif;font-size:clamp(2.3rem,5.5vw,5.5rem);
           font-weight:500;line-height:1.04;letter-spacing:-.028em;color:var(--tx);
-          margin-top:1.25rem;max-width:15ch}
+          margin-top:1.25rem}
     .ct-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.45)}
-    .ct-g{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;margin-top:4rem}
-    .cch{display:flex;align-items:center;gap:1rem;padding:1.2rem 1.4rem;border:1px solid var(--bd);
-         margin-bottom:.9rem;transition:border-color .25s,background .25s;cursor:pointer}
-    .cch:hover{border-color:rgba(232,228,221,.18);background:rgba(255,255,255,.02)}
-    .cch-ic{width:2.3rem;height:2.3rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-    .cch-lbl{font-size:.61rem;font-weight:600;letter-spacing:.19em;text-transform:uppercase;margin-bottom:3px}
-    .cch-val{font-size:.9rem;font-weight:400;color:var(--tx)}
-    .cch-arr{margin-left:auto;opacity:.28;flex-shrink:0;transition:opacity .2s,transform .2s}
-    .cch:hover .cch-arr{opacity:.65;transform:translateX(3px)}
+    .ct-inner{text-align:center;max-width:580px;margin:0 auto}
+    .ct-ctas{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bd);margin:3.5rem 0 0}
+    .ct-card{background:var(--bg);display:flex;align-items:center;gap:1.5rem;padding:2.5rem 2.25rem;transition:background .25s var(--ease);position:relative;text-decoration:none}
+    .ct-card:hover{background:rgba(13,13,13,.9)}
+    .ct-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+    .ct-card-wa::before{background:#25D366}
+    .ct-card-ph::before{background:var(--red)}
+    .ct-ic{width:52px;height:52px;display:flex;align-items:center;justify-content:center;border:1px solid var(--bd);flex-shrink:0}
+    .ct-bd{flex:1}
+    .ct-lbl{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.45rem}
+    .ct-val{font-family:'Bodoni Moda',serif;font-size:1.35rem;font-weight:500;color:var(--tx)}
+    .ct-arr{margin-left:auto;opacity:.3;flex-shrink:0;transition:opacity .2s,transform .2s}
+    .ct-card:hover .ct-arr{opacity:.7;transform:translateX(3px)}
     .ct-meta{display:grid;grid-template-columns:1fr 1fr;gap:2rem;
-             margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--bd-soft)}
+             max-width:580px;margin:2.5rem auto 0;padding-top:2rem;border-top:1px solid var(--bd-soft);text-align:center}
     .cml{font-size:.61rem;font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:var(--red);margin-bottom:.7rem}
     .cmv{font-size:.875rem;font-weight:300;line-height:1.75;color:var(--tx-m)}
-    .fr{display:grid;grid-template-columns:1fr 1fr;gap:0 1.75rem}
-    .ff{margin-bottom:1.6rem}
-    .ff input,.ff textarea,.ff select{width:100%;background:transparent;border:none;
-      border-bottom:1px solid var(--bd);color:var(--tx);font-size:.9rem;font-weight:300;
-      padding:.85rem 0;outline:none;transition:border-color .25s;-webkit-appearance:none;appearance:none}
-    .ff input:focus,.ff textarea:focus,.ff select:focus{border-bottom-color:var(--red)}
-    .ff input::placeholder,.ff textarea::placeholder{color:var(--tx-d);font-weight:300}
-    .ff select{color:var(--tx-d);cursor:pointer}
-    .ff select option{background:#111;color:var(--tx)}
-    .ff textarea{resize:none;min-height:88px}
-    .f-note{font-size:.74rem;font-weight:300;color:var(--tx-d);line-height:1.65;margin-top:1rem}
 
     /* ──────────────────────────────────────────────────
        FOOTER
@@ -775,7 +768,6 @@
       .ft-g{grid-template-columns:1fr 1fr;gap:2.5rem}
     }
     @media(max-width:900px){
-      .ct-g{grid-template-columns:1fr;gap:4rem}
       .ws-strip{grid-template-columns:1fr;gap:4px}
       .wsp:nth-child(1),.wsp:nth-child(2),.wsp:nth-child(3){height:280px}
       .gl-r1{grid-template-columns:1fr}
@@ -793,7 +785,7 @@
       .sq-dyno{flex-wrap:wrap}
       .dyn-s{min-width:120px}
       .ct-meta{grid-template-columns:1fr;gap:1.5rem}
-      .fr{grid-template-columns:1fr;gap:0}
+      .ct-ctas{grid-template-columns:1fr}
       .svc-tag{display:none}
       .svc-row{gap:1.25rem;padding:1.6rem 0}
       .svc-n{font-size:1.6rem;width:2.25rem}
@@ -1847,75 +1839,52 @@
 <section id="contact" aria-labelledby="contact-h">
   <div class="amb" style="width:600px;height:600px;bottom:10%;right:-10%" aria-hidden="true"></div>
   <div class="w">
-    <div data-rev="up"><span class="lbl">Get in Touch</span></div>
-    <h2 id="contact-h" class="ct-h" data-rev="up" data-d="1">
-      Ready when<br><em>you are</em>
-    </h2>
 
-    <div class="ct-g">
+    <div class="ct-inner">
+      <div data-rev="up"><span class="lbl">Get in Touch</span></div>
+      <h2 id="contact-h" class="ct-h" data-rev="up" data-d="1">
+        Ready when<br><em>you are</em>
+      </h2>
+      <p class="body-t" style="font-size:1rem;margin-top:1.5rem;color:rgba(232,228,221,.5);line-height:1.75" data-rev="up" data-d="2">
+        Whether it's a routine service or a full Squadra performance build,<br>reach out and we'll discuss exactly what your car needs.
+      </p>
+    </div>
 
-      <!-- channels -->
-      <div data-rev="up">
-        <p class="body-t" style="font-size:1rem;margin-bottom:2.75rem;max-width:44ch">
-          Whether it's a routine service or a full Squadra performance build, reach out and we'll discuss exactly what your car needs.
-        </p>
+    <div class="ct-ctas" data-rev="up" data-d="3">
 
-        <a href="https://wa.me/971522472941" class="cch" aria-label="Contact via WhatsApp">
-          <div class="cch-ic">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-          </div>
-          <div><div class="cch-lbl" style="color:#25D366">WhatsApp</div><div class="cch-val">Message us directly</div></div>
-          <svg class="cch-arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-
-        <a href="tel:+971522472941" class="cch" aria-label="Call Autotech">
-          <div class="cch-ic">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--tx-m)" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.85 19.79 19.79 0 01.07 1.22 2 2 0 012.07.04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
-            </svg>
-          </div>
-          <div><div class="cch-lbl" style="color:var(--tx-m)">Call Us</div><div class="cch-val">+971 52 247 2941</div></div>
-          <svg class="cch-arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-
-        <div class="ct-meta">
-          <div><div class="cml">Location</div><p class="cmv">Dubai,<br>United Arab Emirates</p></div>
-          <div><div class="cml">Hours</div><p class="cmv">Mon – Sat<br>08:00 – 18:00</p></div>
+      <a href="https://wa.me/971522472941" class="ct-card ct-card-wa" aria-label="Contact via WhatsApp">
+        <div class="ct-ic">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
         </div>
-      </div>
+        <div class="ct-bd">
+          <div class="ct-lbl" style="color:#25D366">WhatsApp</div>
+          <div class="ct-val">Message us directly</div>
+        </div>
+        <svg class="ct-arr" width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
 
-      <!-- form -->
-      <div data-rev="up" data-d="2">
-        <form onsubmit="handleForm(event)" novalidate>
-          <div class="fr">
-            <div class="ff"><input type="text" name="name" placeholder="Name" required autocomplete="name" aria-label="Your name"></div>
-            <div class="ff"><input type="email" name="email" placeholder="Email" required autocomplete="email" aria-label="Your email"></div>
-          </div>
-          <div class="ff"><input type="text" name="vehicle" placeholder="Vehicle (e.g. Giulia Quadrifoglio 2019)" aria-label="Your vehicle"></div>
-          <div class="ff">
-            <select name="service" required aria-label="Service required">
-              <option value="" disabled selected>Service Required</option>
-              <option>Diagnostics</option>
-              <option>Maintenance &amp; Repair</option>
-              <option>Squadra Performance Tuning</option>
-              <option>Electrical Systems</option>
-              <option>Pre-Purchase Inspection</option>
-              <option>Performance Parts</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="ff"><textarea name="message" placeholder="Tell us about your car or request…" rows="4" aria-label="Your message"></textarea></div>
-          <button type="submit" class="btn btn-r" id="sub-btn" style="width:100%;justify-content:center">
-            <span id="sub-txt">Send Enquiry</span>
-            <svg id="sub-arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </form>
-        <p class="f-note">We typically respond within a few hours. For urgent matters, use WhatsApp.</p>
-      </div>
+      <a href="tel:+971522472941" class="ct-card ct-card-ph" aria-label="Call Autotech">
+        <div class="ct-ic">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--tx-m)" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.85 19.79 19.79 0 01.07 1.22 2 2 0 012.07.04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+        </div>
+        <div class="ct-bd">
+          <div class="ct-lbl" style="color:var(--tx-m)">Call Us</div>
+          <div class="ct-val">+971 52 247 2941</div>
+        </div>
+        <svg class="ct-arr" width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
 
     </div>
+
+    <div class="ct-meta" data-rev="up" data-d="4">
+      <div><div class="cml">Location</div><p class="cmv">Dubai,<br>United Arab Emirates</p></div>
+      <div><div class="cml">Hours</div><p class="cmv">Mon – Sat<br>08:00 – 18:00</p></div>
+    </div>
+
   </div>
 </section>
 
@@ -2074,27 +2043,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* ── FORM ──────────────────────────────────────────── */
-function handleForm(e) {
-  e.preventDefault();
-  const btn = document.getElementById('sub-btn');
-  const txt = document.getElementById('sub-txt');
-  const arr = document.getElementById('sub-arr');
-  if (btn.disabled) return;
-  btn.disabled = true;
-  arr.style.display = 'none';
-  txt.textContent = "Sent — We'll be in touch";
-  btn.style.cssText += ';background:#166534;border-color:#166534';
-  setTimeout(() => {
-    txt.textContent = 'Send Enquiry';
-    arr.style.display = '';
-    btn.style.background = '';
-    btn.style.borderColor = '';
-    btn.disabled = false;
-    e.target.reset();
-  }, 5000);
-}
-
 /* ── FAQ ACCORDION ─────────────────────────────────── */
 function toggleFaq(btn) {
   const answer  = btn.nextElementSibling;
@@ -2122,10 +2070,7 @@ function switchTab(id) {
   document.getElementById('panel-' + id).classList.add('active');
 }
 
-/* select color reset */
-document.querySelectorAll('.ff select').forEach(s =>
-  s.addEventListener('change', () => { s.style.color = s.value ? 'var(--tx)' : 'var(--tx-d)'; })
-);
+
 </script>
 </body>
 </html>
