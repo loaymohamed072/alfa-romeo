@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://autotechdxb.netlify.app/sitemap.xml
+Sitemap: https://autotech-psi.vercel.app/sitemap.xml
