@@ -36,10 +36,11 @@
     "telephone": "+971522472941",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Unit 7, Street 28B, Al Quoz Industrial Area 3",
       "addressLocality": "Dubai",
       "addressCountry": "AE"
     },
-    "openingHours": "Mo-Sa 08:00-18:00",
+    "openingHours": ["Mo-Fr 08:00-17:00", "Sa 09:00-14:00"],
     "priceRange": "$$",
     "areaServed": ["Dubai", "UAE", "Middle East"],
     "knowsAbout": ["Alfa Romeo", "Squadra Tuning", "Quadrifoglio", "Alfa Romeo diagnostics", "performance tuning"]
@@ -637,8 +638,9 @@
     .pr-label{font-size:.58rem;font-weight:600;letter-spacing:.14em;
               text-transform:uppercase;color:var(--red);display:block;margin-top:.25rem;text-align:right}
     .pr-list{max-width:640px}
-    .pr-footnote{margin-top:2rem;font-size:.75rem;font-weight:300;
-                 color:var(--tx-d);line-height:1.7;max-width:52ch}
+    .pr-footnote{margin-top:2rem;font-size:.8rem;font-weight:300;
+                 color:var(--tx-m);line-height:1.7;max-width:52ch;
+                 padding-top:1.25rem;border-top:1px solid var(--bd-soft)}
 
     @media(max-width:600px){
       .pr-tab{padding:.65rem 1.25rem;font-size:.62rem}
@@ -731,7 +733,6 @@
       .ws-card{padding:2.25rem 0}
     }
     @media(max-width:600px){
-      #why-specialist .w>div:last-child{grid-template-columns:1fr!important}
       .ws-card{border-left:none!important}
     }
     @media(max-width:900px){
@@ -820,6 +821,35 @@
       .hero-l2{font-size:clamp(.9rem,3.8vw,1.25rem)}
     }
 
+    /* ── MODEL KNOWLEDGE ACCORDION ──────────────────── */
+    #model-knowledge{background:var(--s1);padding:5.5rem 0;border-top:1px solid var(--bd)}
+    .mk-intro{font-size:.97rem;font-weight:300;line-height:1.82;color:rgba(232,228,221,.58);max-width:52ch;margin-top:1.5rem}
+    .mk-accordion{margin-top:3rem;border-top:1px solid var(--bd)}
+    .mk-item{border-bottom:1px solid var(--bd)}
+    .mk-trigger{width:100%;background:none;border:none;cursor:pointer;padding:1.5rem 0;
+                display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+                text-align:left;color:var(--tx);transition:color .2s}
+    .mk-trigger:hover{color:#fff}
+    .mk-trigger-inner{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+    .mk-group-num{font-family:'Bodoni Moda',serif;font-size:1.4rem;font-weight:400;
+                  color:var(--tx-d);line-height:1;transition:color .3s;flex-shrink:0;width:2rem}
+    .mk-trigger:hover .mk-group-num{color:rgba(185,28,28,.4)}
+    .mk-group-title{font-size:1rem;font-weight:500;letter-spacing:.02em;color:var(--tx)}
+    .mk-group-count{font-size:.62rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+                    color:var(--red);padding:.22rem .65rem;border:1px solid rgba(185,28,28,.25)}
+    .mk-ic{flex-shrink:0;color:var(--red);transition:transform .35s var(--ease)}
+    .mk-trigger[aria-expanded="true"] .mk-ic{transform:rotate(180deg)}
+    .mk-body{overflow:hidden;max-height:0;transition:max-height .5s var(--ease),opacity .4s ease;opacity:0}
+    .mk-body.mk-open{opacity:1}
+    .mk-list{display:grid;grid-template-columns:1fr 1fr;gap:0 3rem;padding:1rem 0 2rem}
+    .mk-model{font-size:.86rem;font-weight:300;color:rgba(232,228,221,.68);
+              padding:.52rem 0;border-bottom:1px solid var(--bd-soft);line-height:1.3}
+    @media(max-width:600px){
+      .mk-list{grid-template-columns:1fr}
+      .mk-trigger{padding:1.25rem 0}
+      .mk-group-count{display:none}
+    }
+
     /* ── REDUCED MOTION ─────────────────────────────── */
     @media(prefers-reduced-motion:reduce){
       [data-rev],.wr,.wr>span{opacity:1!important;transform:none!important;transition:none!important}
@@ -895,7 +925,7 @@
           <span class="hero-l2"><span class="wr" data-d="2"><span>Precision for Alfa Romeos</span></span></span>
         </h1>
         <p class="hero-sub" data-rev="fade" data-d="3">
-          Dubai's leading Alfa Romeo specialist. Genuine diagnostic expertise, precision maintenance, and the region's only appointed Squadra Tuning performance work.
+          Dubai's leading Alfa Romeo Specialist. Genuine diagnostic expertise, precision maintenance, genuine Alfa Romeo parts, and the region's exclusively appointed Squadra Tuning BV performance-trained tuners.
         </p>
         <div class="hero-ctas" data-rev="fade" data-d="4">
           <a href="#location" class="btn btn-r"><span>Book Inspection</span></a>
@@ -922,7 +952,7 @@
         </h2>
       </div>
       <p class="body-t" data-rev="up" data-d="2" style="text-align:right;max-width:38ch;align-self:flex-end">
-        Every service uses Alfa Romeo-specific tooling, diagnostics, and knowledge. Nothing generic.
+        Every service utilises Alfa Romeo-specific tooling, diagnostics, and knowledge.
       </p>
     </div>
 
@@ -1126,10 +1156,10 @@
       <div class="pr-tabs" role="tablist" aria-label="Engine variant">
         <button class="pr-tab active" role="tab" aria-selected="true"
                 aria-controls="panel-petrol" id="tab-petrol"
-                onclick="switchTab('petrol')">2.0 Petrol</button>
+                onclick="switchTab('petrol')">Giulia &amp; Stelvio 2.0</button>
         <button class="pr-tab" role="tab" aria-selected="false"
                 aria-controls="panel-v6" id="tab-v6"
-                onclick="switchTab('v6')">2.9 V6 Quadrifoglio</button>
+                onclick="switchTab('v6')">Giulia &amp; Stelvio 2.9 Quadrifoglio</button>
       </div>
 
       <!-- 2.0 Petrol -->
@@ -1212,7 +1242,7 @@
             <span class="pr-label">Major Service</span>
           </div>
         </div>
-        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter.<br>Prices exclude VAT. Final quote may vary after inspection depending on vehicle condition and required parts.</p>
+        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
       </div>
 
       <!-- 2.9 V6 Quadrifoglio -->
@@ -1295,7 +1325,7 @@
             <span class="pr-label">Major Service</span>
           </div>
         </div>
-        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter.<br>Prices exclude VAT. Final quote may vary after inspection depending on vehicle condition and required parts.</p>
+        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
       </div>
     </div>
 
@@ -1316,16 +1346,16 @@
 
     <div class="og-grid" data-rev="up" data-d="2">
 
-      <!-- Featured: Berlina Engine Rebuild -->
+      <!-- Featured: 1750 GTV Engine Rebuild -->
       <div class="og-card og-featured">
         <div class="og-feat-imgs">
-          <img src="./IMG_4272.jpg" alt="Alfa Romeo Berlina engine stripped and laid out for full rebuild" loading="lazy">
-          <img src="./IMG_4273.jpg" alt="Alfa Romeo Berlina engine components during specialist rebuild at Autotech Dubai" loading="lazy">
+          <img src="./IMG_4272.jpg" alt="Alfa Romeo 1750 GTV engine stripped and laid out for full rebuild" loading="lazy">
+          <img src="./IMG_4273.jpg" alt="Alfa Romeo 1750 GTV engine components during specialist rebuild at Autotech Dubai" loading="lazy">
         </div>
         <div class="og-feat-body">
-          <div class="og-car">Alfa Romeo Berlina Engine Rebuild</div>
+          <div class="og-car">Alfa Romeo 1750 GTV Engine Rebuild</div>
           <div class="og-feat-sub">A classic Alfa brought from Kuwait for specialist engine work.</div>
-          <div class="og-feat-text">This Berlina came to Autotech from Kuwait for a full engine rebuild, trusted to a workshop that understands Alfa Romeo engineering beyond routine servicing. The project is currently underway, with the engine being stripped, inspected, and rebuilt with the care these cars deserve.</div>
+          <div class="og-feat-text">This 1750 GTV came to Autotech from Kuwait for a full engine rebuild, trusted to a workshop that understands Alfa Romeo engineering beyond routine servicing. The project is currently underway, with the engine being stripped, inspected, and rebuilt with the care these cars deserve.</div>
           <div class="og-feat-trust">Client travelled from Kuwait for specialist Alfa Romeo work</div>
           <span class="og-tag">Engine Rebuild &nbsp;·&nbsp; In Progress</span>
         </div>
@@ -1359,7 +1389,10 @@
 
       <!-- text -->
       <div style="padding-top:2rem">
-        <div data-rev="up"><span class="lbl">The Garage</span></div>
+        <div data-rev="up">
+          <span class="lbl">The Garage</span>
+          <p style="font-size:.78rem;font-weight:300;letter-spacing:.04em;color:rgba(232,228,221,.42);margin-top:.7rem;font-style:italic">Autotech Alfa Romeo. Established 2021 by Alfa Romeo enthusiasts, for Alfa Romeo enthusiasts.</p>
+        </div>
 
         <h2 id="about-h" class="about-h" data-rev="up" data-d="1">
           Not a generalist.<br>
@@ -1438,42 +1471,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════ WHY SPECIALIST ════════════════════════ -->
-<section id="why-specialist" aria-labelledby="ws-h" style="background:var(--bg);padding:5.5rem 0;border-top:1px solid var(--bd)">
-  <div class="w">
-
-    <div style="max-width:38ch;margin-bottom:4rem">
-      <div data-rev="up"><span class="lbl">The Difference</span></div>
-      <h2 id="ws-h" style="font-family:'Bodoni Moda',serif;font-size:clamp(2rem,4vw,4rem);font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin:1.25rem 0 1rem" data-rev="up" data-d="1">
-        Why owners choose<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.45)">a specialist.</em>
-      </h2>
-      <p style="font-size:.95rem;font-weight:300;color:rgba(232,228,221,.55);line-height:1.75" data-rev="up" data-d="2">Not every workshop should touch an Alfa Romeo.</p>
-    </div>
-
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--bd)" data-rev="up" data-d="3">
-
-      <div class="ws-card">
-        <div class="ws-num">01</div>
-        <h3 class="ws-title">Brand-specific diagnostics</h3>
-        <p class="ws-body">General garages read codes. Specialists understand platform behaviour, recurring fault patterns, and what those readings actually mean for the car in front of them.</p>
-      </div>
-
-      <div class="ws-card" style="border-left:1px solid var(--bd)">
-        <div class="ws-num">02</div>
-        <h3 class="ws-title">Real performance knowledge</h3>
-        <p class="ws-body">From Squadra tuning to supporting hardware and drivability, performance work needs precision, not guesswork. The wrong calibration costs more than it saves.</p>
-      </div>
-
-      <div class="ws-card" style="border-left:1px solid var(--bd)">
-        <div class="ws-num">03</div>
-        <h3 class="ws-title">Better long-term outcomes</h3>
-        <p class="ws-body">Correct diagnosis and brand-specific repair paths reduce wasted time, unnecessary parts replacement, and repeat problems. Done right, once.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ════════════════════════ COMMUNITY ════════════════════════ -->
 <section id="community" aria-labelledby="comm-h">
   <img class="cm-img" src="./alfa romeo cars.jpg"
@@ -1503,10 +1500,10 @@
       <div>
         <div data-rev="up"><span class="lbl">Scope of Work</span></div>
         <h2 id="cov-h" style="font-family:'Bodoni Moda',serif;font-size:clamp(2rem,3.8vw,3.8rem);font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin:1.25rem 0 2rem" data-rev="up" data-d="1">
-          Built for Alfa Romeo.<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.45)">Trusted for the uncommon.</em>
+          Established for Alfa Romeo.<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.45)">Trusted by Alfisti.</em>
         </h2>
         <p style="font-size:.97rem;font-weight:300;line-height:1.82;color:rgba(232,228,221,.58);max-width:44ch" data-rev="up" data-d="2">
-          From daily-driven Giulias to Quadrifoglio builds, classic Alfa Romeo models, and rare performance-focused cars. Autotech handles specialist diagnostics, repair, tuning, inspections, and upgrades from a workshop built around technical depth, not general volume.
+          From daily-driven Giulias to 600+BHP Quadrifoglio builds, classic Alfa Romeo models, and rare performance-focused track cars. Autotech handles specialist diagnostics, repair, tuning, inspections, and upgrades from a workshop built around technical knowledge, not mass appeal.
         </p>
       </div>
 
@@ -1529,6 +1526,94 @@
             <span class="cov-tag">Electrical Faults</span>
             <span class="cov-tag">Pre-Purchase Inspection</span>
             <span class="cov-tag">Specialist Repair</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ MODEL KNOWLEDGE ════════════════════════ -->
+<section id="model-knowledge" aria-labelledby="mk-h">
+  <div class="w">
+    <div data-rev="up"><span class="lbl">Specialist Knowledge</span></div>
+    <h2 id="mk-h" style="font-family:'Bodoni Moda',serif;font-size:clamp(2rem,4vw,4rem);font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin-top:1.25rem" data-rev="up" data-d="1">
+      Specialist Alfa Romeo<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.45)">Model Knowledge</em>
+    </h2>
+    <p class="mk-intro" data-rev="up" data-d="2">
+      The team has extensive experience across classic Alfa Romeo models, modern performance cars, and rare enthusiast builds.
+    </p>
+
+    <div class="mk-accordion" data-rev="up" data-d="3">
+
+      <!-- Group 1: Classic (open by default) -->
+      <div class="mk-item">
+        <button class="mk-trigger" aria-expanded="true" onclick="toggleMk(this)">
+          <div class="mk-trigger-inner">
+            <span class="mk-group-num">01</span>
+            <span class="mk-group-title">Classic Alfa Romeo</span>
+            <span class="mk-group-count">10 Models</span>
+          </div>
+          <svg class="mk-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="mk-body mk-open" style="max-height:600px">
+          <div class="mk-list">
+            <div class="mk-model">TZ</div>
+            <div class="mk-model">Montreal</div>
+            <div class="mk-model">Giulietta Sprint</div>
+            <div class="mk-model">1750 / 2000 GTV</div>
+            <div class="mk-model">Spider S1, S2, S3 &amp; S4</div>
+            <div class="mk-model">Alfasud 1.5ti</div>
+            <div class="mk-model">33</div>
+            <div class="mk-model">75 2.0 Twinspark 8v</div>
+            <div class="mk-model">GTV6 2.5 12v</div>
+            <div class="mk-model">Alfetta 2000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 2: Modern -->
+      <div class="mk-item">
+        <button class="mk-trigger" aria-expanded="false" onclick="toggleMk(this)">
+          <div class="mk-trigger-inner">
+            <span class="mk-group-num">02</span>
+            <span class="mk-group-title">Modern Alfa Romeo</span>
+            <span class="mk-group-count">9 Models</span>
+          </div>
+          <svg class="mk-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="mk-body" style="max-height:0">
+          <div class="mk-list">
+            <div class="mk-model">147 2.0 / 3.2v6 GTA</div>
+            <div class="mk-model">156 2.0 / 2.5v6 24v / 3.2v6 24v</div>
+            <div class="mk-model">164 3.0v6 12v</div>
+            <div class="mk-model">166 3.0v6 24v</div>
+            <div class="mk-model">916 GTV &amp; Spider 2.0 / 3.0v6 24v</div>
+            <div class="mk-model">Brera 2.2 / 3.2</div>
+            <div class="mk-model">Spider 2.2 / 3.2</div>
+            <div class="mk-model">159 2.2 / 3.2</div>
+            <div class="mk-model">Giulietta 1.4 / 1.75TBI</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 3: Performance & Rare -->
+      <div class="mk-item">
+        <button class="mk-trigger" aria-expanded="false" onclick="toggleMk(this)">
+          <div class="mk-trigger-inner">
+            <span class="mk-group-num">03</span>
+            <span class="mk-group-title">Performance &amp; Rare Models</span>
+            <span class="mk-group-count">4 Models</span>
+          </div>
+          <svg class="mk-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="mk-body" style="max-height:0">
+          <div class="mk-list">
+            <div class="mk-model">4C</div>
+            <div class="mk-model">8C Competizione &amp; Spider</div>
+            <div class="mk-model">Giulia 2.0 &amp; 2.9 Quadrifoglio</div>
+            <div class="mk-model">Stelvio 2.0 &amp; 2.9 Quadrifoglio</div>
           </div>
         </div>
       </div>
@@ -1597,7 +1682,7 @@
       Squadra Tuning BV is one of Europe's most respected Alfa Romeo performance specialists. Their work is track-proven, technically exacting, and distributed through a tightly controlled network. Autotech holds the only appointment in the entire Middle East.
     </p>
     <p class="body-t" data-rev="up" data-d="3" style="max-width:55ch;font-size:1rem">
-      Every Squadra tune performed here adheres to their exact specification: original software, genuine hardware, and the quality standard their name demands. No substitutions. No shortcuts.
+      Every Squadra tune performed adheres to Squadra's exact specifications. Quality standards follow Squadra's requirements and are bespoke to the mileage and modifications of each car. Each tune receives specialist input from Stephan of Squadra, world-renowned for his attention to detail, years of research, and dedication to Alfa Romeo within safe tuning parameters. No shortcuts.
     </p>
 
     <div class="sq-dyno" data-rev="up" data-d="4">
@@ -1641,14 +1726,14 @@
             <svg class="loc-row-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
             <div>
               <div class="loc-row-lbl">Address</div>
-              <div class="loc-row-val">Al Quoz Industrial Area 4<br>Dubai, United Arab Emirates</div>
+              <div class="loc-row-val">Autotech, Unit 7, Street 28B<br>Al Quoz Industrial Area 3<br>Dubai, United Arab Emirates</div>
             </div>
           </div>
           <div class="loc-row">
             <svg class="loc-row-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <div>
               <div class="loc-row-lbl">Hours</div>
-              <div class="loc-row-val">Mon – Sat: 8:00 am – 6:00 pm<br>Sunday: Closed</div>
+              <div class="loc-row-val">Mon – Fri: 8:00 am – 5:00 pm<br>Saturday: 9:00 am – 2:00 pm<br>Out of hours: By appointment only</div>
             </div>
           </div>
           <div class="loc-row">
@@ -1771,11 +1856,11 @@
 
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
-            <span>Do you only work on Alfa Romeo cars?</span>
+            <span>Do you work on other Italian marques?</span>
             <svg class="faq-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="faq-a" hidden>
-            <p>Alfa Romeo is our core specialization. We also understand the expectations of owners with rare, enthusiast, and performance-focused vehicles.</p>
+            <p>Alfa Romeo is our primary specialism. We also accept work on classic Ferrari, Lamborghini, Lancia, Fiat, and Abarth by marque appointment consultation. Please contact us directly to discuss your vehicle and requirements.</p>
           </div>
         </div>
 
@@ -1864,7 +1949,7 @@
           <a href="https://wa.me/971522472941" class="ft-a">WhatsApp</a>
           <a href="tel:+971522472941"           class="ft-a">+971 52 247 2941</a>
           <span class="ft-a" style="cursor:default">Dubai, United Arab Emirates</span>
-          <span class="ft-a" style="cursor:default;margin-top:.25rem">Mon–Sat &nbsp;08:00–18:00</span>
+          <span class="ft-a" style="cursor:default;margin-top:.25rem">Mon–Fri 08:00–17:00 &nbsp;·&nbsp; Sat 09:00–14:00</span>
         </div>
       </div>
 
@@ -1983,6 +2068,28 @@ function toggleFaq(btn) {
   btn.setAttribute('aria-expanded', !isOpen);
   if (isOpen) { answer.setAttribute('hidden', ''); }
   else         { answer.removeAttribute('hidden'); }
+}
+
+/* ── MODEL KNOWLEDGE ACCORDION ────────────────────── */
+function toggleMk(btn) {
+  const body   = btn.nextElementSibling;
+  const isOpen = btn.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll('.mk-trigger[aria-expanded="true"]').forEach(b => {
+    if (b !== btn) {
+      b.setAttribute('aria-expanded', 'false');
+      const bd = b.nextElementSibling;
+      bd.classList.remove('mk-open');
+      bd.style.maxHeight = '0';
+    }
+  });
+  btn.setAttribute('aria-expanded', !isOpen);
+  if (isOpen) {
+    body.classList.remove('mk-open');
+    body.style.maxHeight = '0';
+  } else {
+    body.classList.add('mk-open');
+    body.style.maxHeight = body.scrollHeight + 'px';
+  }
 }
 
 /* ── PRICING TABS ──────────────────────────────────── */
