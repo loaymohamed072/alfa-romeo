@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Full Alfa Romeo service pricing and inspection points for Giulia, Stelvio, Giulietta 1.4L, 1.8L, 2.0L and 2.9L Quadrifoglio. Transparent AED pricing for every interval from 10,000 to 120,000 KM at Autotech DXB.">
+  <title>Service Pricing &amp; Inspection | Autotech DXB</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500&family=Jost:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://autotech-psi.vercel.app/pricing.html">
+
+  <meta property="og:title" content="Service Pricing & Inspection | Autotech DXB">
+  <meta property="og:description" content="Full Alfa Romeo service pricing and inspection points. Giulia, Stelvio, Giulietta. Transparent AED pricing, no surprises.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://autotech-psi.vercel.app/pricing.html">
+  <meta property="og:image" content="https://autotech-psi.vercel.app/290675929_356463063270709_6629835773073910471_n.jpg">
+  <meta property="og:locale" content="en_AE">
+
+  <style>
+    :root {
+      --bg:#080808;--s1:#0d0d0d;--s2:#131313;--bd:#222222;--bd-soft:#181818;
+      --tx:#e8e4dd;--tx-m:#706c68;--tx-d:#38352f;
+      --red:#b91c1c;--red-dim:rgba(185,28,28,0.09);
+      --ease:cubic-bezier(0.16,1,0.3,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;overflow-x:clip;background:#080808}
+    body{background:#080808;color:var(--tx);font-family:'Jost',system-ui,sans-serif;
+         font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img,video{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font-family:inherit;font-size:inherit}
+    ::selection{background:var(--red);color:#fff}
+    ::-webkit-scrollbar{width:3px}
+    ::-webkit-scrollbar-track{background:var(--bg)}
+    ::-webkit-scrollbar-thumb{background:var(--bd)}
+
+    body::after{
+      content:'';position:fixed;inset:0;z-index:8000;pointer-events:none;opacity:.028;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size:256px}
+
+    .w{max-width:1340px;margin:0 auto;padding:0 5vw}
+    .lbl{font-family:'Jost',sans-serif;font-size:.67rem;font-weight:600;
+         letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+    .lbl-m{font-family:'Jost',sans-serif;font-size:.67rem;font-weight:500;
+           letter-spacing:.18em;text-transform:uppercase;color:var(--tx-m)}
+    .body-t{font-size:.97rem;font-weight:300;line-height:1.82;color:rgba(232,228,221,.62)}
+    .it{display:flex;height:2px;width:3.5rem;gap:1.5px}
+    .it i{flex:1;display:block}
+
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2rem;
+         font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;
+         letter-spacing:.16em;text-transform:uppercase;cursor:pointer;
+         transition:all .3s var(--ease);border:none;position:relative;overflow:hidden}
+    .btn>span,.btn>svg{position:relative;z-index:1}
+    .btn-r{background:var(--red);color:#fff;border:1px solid var(--red)}
+    .btn-r::before{content:'';position:absolute;inset:0;background:#fff;
+                   transform:translateX(-102%);transition:transform .38s var(--ease)}
+    .btn-r:hover::before{transform:translateX(0)}
+    .btn-r:hover{color:var(--red)}
+    .btn-o{background:transparent;color:var(--tx);border:1px solid rgba(232,228,221,.25)}
+    .btn-o:hover{border-color:rgba(232,228,221,.6);color:#fff}
+
+    /* ── NAV ──────────────────────────────── */
+    #nav{position:fixed;top:3px;left:0;right:0;z-index:500;
+         padding:1.25rem 5vw;
+         display:flex;align-items:center;justify-content:space-between;
+         transition:padding .4s var(--ease),background .4s,border-color .4s,backdrop-filter .4s;
+         border-bottom:1px solid transparent;
+         background:rgba(8,8,8,.94);
+         backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+         border-bottom-color:var(--bd-soft)}
+    #top-seal{display:none}
+    @media(max-width:768px){
+      :root{--mobile-top-fill:max(env(safe-area-inset-top,0px),44px)}
+      #top-seal{display:block;position:fixed;top:3px;left:0;right:0;
+        height:var(--mobile-top-fill);background:#080808;z-index:10000;pointer-events:none}
+      #nav{position:fixed;top:3px;left:0;right:0;z-index:10001;background:#080808;
+        padding-top:calc(var(--mobile-top-fill) + 0.75rem);padding-bottom:1rem;
+        backdrop-filter:none;-webkit-backdrop-filter:none}
+    }
+    .nav-brand{display:flex;align-items:center;gap:.85rem}
+    .nav-img{width:42px;height:42px;border-radius:4px;overflow:hidden;background:#fff;flex-shrink:0}
+    .nav-img img{width:100%;height:100%;object-fit:cover}
+    .nav-wm{display:flex;flex-direction:column;gap:2px}
+    @font-face{font-family:'AlfaownerScript';src:url('./alfa-romeo-font/alfaowner-script.ttf') format('truetype');font-weight:normal;font-style:normal;font-display:swap}
+    .nav-name{font-family:'AlfaownerScript','Bodoni Moda',serif;font-size:1.05rem;font-weight:600;color:var(--tx);line-height:1}
+    .nav-sub{font-size:.57rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+    .nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none}
+    .nav-a{font-size:.71rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;
+           color:rgba(232,228,221,.58);position:relative;transition:color .2s}
+    .nav-a.current{color:var(--tx)}
+    .nav-a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;
+                  background:var(--red);transition:width .3s var(--ease)}
+    .nav-a:hover{color:var(--tx)}.nav-a:hover::after{width:100%}
+    .nav-a.current::after{width:100%}
+    #hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+    #hbg span{display:block;width:22px;height:1.5px;background:var(--tx);transition:all .3s;transform-origin:center}
+    #hbg.open span:nth-child(1){transform:rotate(45deg) translate(4.7px,4.7px)}
+    #hbg.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+    #hbg.open span:nth-child(3){transform:rotate(-45deg) translate(4.7px,-4.7px)}
+    #mob{display:none;position:fixed;inset:0;background:var(--bg);z-index:499;
+         padding:6rem 5vw 4rem;flex-direction:column;overflow-y:auto}
+    #mob.open{display:flex}
+    .mob-a{font-family:'Bodoni Moda',serif;font-size:clamp(2rem,7vw,3rem);font-weight:400;
+           color:var(--tx);padding:.7rem 0;border-bottom:1px solid var(--bd-soft);
+           transition:color .2s,padding-left .25s}
+    .mob-a:hover{color:var(--red);padding-left:.5rem}
+    @media(max-width:980px){
+      .nav-links{display:none}
+      .nav-cta-d{display:none !important}
+      #hbg{display:flex}
+    }
+
+    /* ── HERO HEADER ──────────────────────── */
+    #pg-hero{position:relative;padding:11rem 0 4.5rem;border-bottom:1px solid var(--bd);overflow:hidden}
+    #pg-hero::before{content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse at 18% 30%,rgba(185,28,28,.07),transparent 55%);
+      pointer-events:none}
+    .pg-h{font-family:'Bodoni Moda',serif;font-size:clamp(2.2rem,5vw,4.6rem);font-weight:500;
+          line-height:1.04;letter-spacing:-.024em;color:var(--tx);max-width:18ch;
+          margin:1.25rem 0 1.5rem;position:relative}
+    .pg-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.45)}
+    .pg-sub{font-size:1rem;font-weight:300;line-height:1.7;color:rgba(232,228,221,.62);
+            max-width:62ch;position:relative}
+
+    /* — Anchor chips — */
+    .pg-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;position:relative}
+    .pg-chip{display:inline-flex;align-items:center;gap:.5rem;
+             padding:.6rem 1.05rem;border:1px solid var(--bd);
+             font-size:.65rem;font-weight:600;letter-spacing:.13em;
+             text-transform:uppercase;color:var(--tx-m);
+             transition:border-color .25s,color .25s,background .25s}
+    .pg-chip:hover{border-color:var(--red);color:var(--tx);background:rgba(185,28,28,.06)}
+    .pg-chip-dot{width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0}
+
+    /* ── PRICING TABLES ──────────────────── */
+    .pt-section{padding:5rem 0;border-top:1px solid var(--bd)}
+    .pt-section:first-of-type{border-top:none}
+    .pt-section.alt{background:var(--s1)}
+    .pt-header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+               gap:1rem 2rem;margin-bottom:2.5rem;padding-bottom:1.5rem;
+               border-bottom:1px solid var(--bd-soft)}
+    .pt-h{font-family:'Bodoni Moda',serif;font-size:clamp(1.6rem,3.2vw,2.6rem);
+          font-weight:500;line-height:1.1;letter-spacing:-.018em;color:var(--tx)}
+    .pt-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.5)}
+    .pt-tag{display:inline-flex;align-items:center;gap:.55rem;
+            padding:.45rem 1rem;border:1px solid rgba(185,28,28,.4);
+            font-size:.6rem;font-weight:600;letter-spacing:.17em;
+            text-transform:uppercase;color:var(--red);background:rgba(185,28,28,.05)}
+
+    .pt-tbl-wrap{overflow-x:auto;border:1px solid var(--bd);background:var(--bg)}
+    .pt-tbl{width:100%;border-collapse:collapse;min-width:580px}
+    .pt-tbl thead{background:rgba(255,255,255,.02);border-bottom:1px solid var(--bd)}
+    .pt-tbl th{padding:1.15rem 1.5rem;text-align:left;font-size:.6rem;font-weight:600;
+               letter-spacing:.17em;text-transform:uppercase;color:var(--tx-m);
+               border-bottom:1px solid var(--bd)}
+    .pt-tbl th:last-child{text-align:right}
+    .pt-tbl td{padding:1.2rem 1.5rem;border-bottom:1px solid var(--bd-soft);
+               font-size:.92rem;font-weight:300;color:var(--tx);vertical-align:top}
+    .pt-tbl tr:last-child td{border-bottom:none}
+    .pt-tbl td.pt-km{font-weight:400;white-space:nowrap;width:18%}
+    .pt-tbl td.pt-items{color:rgba(232,228,221,.72);line-height:1.6;font-size:.86rem}
+    .pt-tbl td.pt-items .pt-base{color:var(--tx-m);font-size:.78rem;display:block;margin-top:.3rem}
+    .pt-tbl td.pt-items .pt-extra{color:var(--tx);font-weight:400}
+    .pt-tbl td.pt-price{font-family:'Bodoni Moda',serif;font-size:1.18rem;font-weight:400;
+                        color:var(--tx);text-align:right;white-space:nowrap;width:22%}
+    .pt-tbl tr.major{background:rgba(185,28,28,.045)}
+    .pt-tbl tr.major td.pt-price{color:var(--red)}
+    .pt-tbl tr.major td.pt-km::after{content:'Major';display:inline-block;margin-left:.6rem;
+      font-family:'Jost',sans-serif;font-size:.55rem;font-weight:600;letter-spacing:.14em;
+      text-transform:uppercase;color:var(--red);
+      border:1px solid rgba(185,28,28,.4);padding:.18rem .5rem;vertical-align:middle}
+    .pt-foot{margin-top:1.5rem;font-size:.78rem;font-weight:300;
+             color:var(--tx-m);line-height:1.7;max-width:64ch}
+    .pt-foot strong{color:var(--tx);font-weight:400}
+
+    /* — Side-by-side wrap for Giulietta two columns — */
+    .pt-couple{display:grid;grid-template-columns:1fr;gap:2.5rem}
+    @media(min-width:1100px){
+      .pt-couple{grid-template-columns:1fr 1fr;gap:2rem}
+    }
+
+    /* ── INSPECTION SECTION ──────────────── */
+    #inspection{padding:5.5rem 0;background:var(--s1);border-top:1px solid var(--bd);position:relative;overflow:hidden}
+    #inspection::before{content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse at 82% 20%,rgba(185,28,28,.06),transparent 55%);
+      pointer-events:none}
+    .ins-head{display:grid;grid-template-columns:1fr;gap:3rem;align-items:end;
+              margin-bottom:3.5rem;position:relative}
+    @media(min-width:900px){
+      .ins-head{grid-template-columns:1.4fr 1fr}
+    }
+    .ins-h{font-family:'Bodoni Moda',serif;font-size:clamp(2rem,4vw,3.6rem);font-weight:500;
+           line-height:1.06;letter-spacing:-.022em;color:var(--tx);margin:1.25rem 0 1.25rem;
+           max-width:18ch}
+    .ins-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.45)}
+    .ins-sub{font-size:.95rem;font-weight:300;line-height:1.75;color:rgba(232,228,221,.62);
+             max-width:48ch}
+    .ins-price-card{border:1px solid var(--bd);padding:2rem 2rem;
+                    background:linear-gradient(135deg,rgba(185,28,28,.08) 0%,transparent 60%);
+                    display:flex;flex-direction:column;gap:.6rem}
+    .ins-price-lbl{font-size:.62rem;font-weight:600;letter-spacing:.18em;
+                   text-transform:uppercase;color:var(--tx-m)}
+    .ins-price-val{font-family:'Bodoni Moda',serif;font-size:clamp(2.4rem,4vw,3.4rem);
+                   font-weight:500;color:var(--tx);line-height:1}
+    .ins-price-val em{font-style:italic;font-weight:400;color:rgba(232,228,221,.4);font-size:.55em;
+                      margin-left:.4rem;letter-spacing:.02em}
+    .ins-price-note{font-size:.72rem;font-weight:400;color:var(--tx-m);margin-top:.4rem}
+
+    .ins-grid{display:grid;grid-template-columns:1fr;gap:0;
+              border:1px solid var(--bd);background:var(--bg);position:relative}
+    @media(min-width:720px){.ins-grid{grid-template-columns:1fr 1fr}}
+    @media(min-width:1100px){.ins-grid{grid-template-columns:1fr 1fr 1fr}}
+    .ins-cat{padding:1.75rem 1.75rem;border-right:1px solid var(--bd-soft);
+             border-bottom:1px solid var(--bd-soft)}
+    @media(min-width:1100px){
+      .ins-cat:nth-child(3n){border-right:none}
+    }
+    @media(min-width:720px) and (max-width:1099px){
+      .ins-cat:nth-child(2n){border-right:none}
+    }
+    @media(max-width:719px){
+      .ins-cat{border-right:none}
+    }
+    .ins-cat-h{font-size:.66rem;font-weight:600;letter-spacing:.17em;
+               text-transform:uppercase;color:var(--red);margin-bottom:1.1rem;
+               display:flex;align-items:center;gap:.65rem}
+    .ins-cat-h::before{content:'';width:18px;height:1px;background:var(--red)}
+    .ins-list{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+    .ins-list li{font-size:.84rem;font-weight:300;color:rgba(232,228,221,.72);
+                 line-height:1.5;padding-left:1.2rem;position:relative}
+    .ins-list li::before{content:'';position:absolute;left:0;top:.55rem;
+                         width:5px;height:5px;border:1px solid var(--tx-m);
+                         transform:rotate(45deg)}
+    .ins-foot{margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--bd-soft);
+              font-size:.82rem;font-weight:300;color:var(--tx-m);line-height:1.7;
+              max-width:66ch;position:relative}
+
+    /* ── CLOSE CTA ────────────────────────── */
+    #close-cta{padding:5rem 0;border-top:1px solid var(--bd);text-align:center}
+    .cta-h{font-family:'Bodoni Moda',serif;font-size:clamp(1.8rem,3.6vw,3rem);font-weight:500;
+           line-height:1.1;letter-spacing:-.02em;color:var(--tx);margin:1.25rem auto 1.5rem;
+           max-width:22ch}
+    .cta-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.45)}
+    .cta-row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2.5rem}
+
+    /* ── FOOTER ───────────────────────────── */
+    .call-float{position:fixed;right:0;bottom:2rem;z-index:8500;display:flex;flex-direction:column;align-items:center;gap:.42rem;padding:.85rem .64rem;background:var(--red);color:#fff;font-family:'Jost',sans-serif;font-size:.47rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:4px 0 0 4px;box-shadow:-4px 0 20px rgba(0,0,0,.45);transition:background .2s,box-shadow .2s,transform .2s}
+    .call-float:hover{background:#991b1b;box-shadow:-4px 0 28px rgba(185,28,28,.3);transform:translateX(-2px)}
+    .call-float span{line-height:1.3;text-align:center}
+    @media(max-width:560px){.call-float{padding:.7rem .55rem;gap:.35rem;font-size:.43rem}}
+
+    footer{background:var(--s1);border-top:1px solid var(--bd);padding:3.5rem 0 0}
+    .ft-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--bd-soft)}
+    .ft-ct{font-size:.61rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--tx);margin-bottom:1.5rem}
+    .ft-ls{list-style:none;display:flex;flex-direction:column;gap:.8rem}
+    .ft-a{font-size:.82rem;font-weight:300;color:var(--tx-m);transition:color .2s}
+    .ft-a:hover{color:var(--tx)}
+    .ft-bot{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+    .ft-copy{font-size:.72rem;font-weight:300;color:var(--tx-d)}
+    .ft-auth{font-size:.67rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--tx-d);opacity:.55}
+    @media(max-width:900px){
+      .ft-g{grid-template-columns:1fr 1fr;gap:2.5rem}
+    }
+    @media(max-width:600px){
+      .ft-g{grid-template-columns:1fr}
+      .ft-bot{flex-direction:column;align-items:flex-start;gap:.75rem}
+      .pt-tbl th,.pt-tbl td{padding:.95rem 1rem}
+      .pt-tbl td.pt-price{font-size:1.02rem}
+    }
+  </style>
+
+  <!-- Service-page structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Alfa Romeo Servicing & Inspection",
+    "provider":{
+      "@type":"AutoRepair",
+      "name":"Autotech",
+      "telephone":"+971522472941",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Unit 7, Street 28B, Al Quoz Industrial Area 3",
+        "addressLocality":"Dubai",
+        "addressCountry":"AE"
+      }
+    },
+    "areaServed":["Dubai","UAE"],
+    "offers":{
+      "@type":"AggregateOffer",
+      "priceCurrency":"AED",
+      "lowPrice":"350",
+      "highPrice":"6290",
+      "offerCount":"50"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<div id="top-seal" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Main navigation">
+  <a href="./" class="nav-brand" aria-label="Autotech home">
+    <div class="nav-img"><img src="./290675929_356463063270709_6629835773073910471_n.jpg" alt="Autotech"></div>
+    <div class="nav-wm">
+      <span class="nav-name">Autotech</span>
+      <span class="nav-sub">Dubai's Alfa Romeo Specialists</span>
+    </div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="./#services" class="nav-a">Services</a></li>
+    <li><a href="./#about"    class="nav-a">About</a></li>
+    <li><a href="./pricing.html" class="nav-a current">Pricing</a></li>
+    <li><a href="./#squadra"  class="nav-a">Squadra</a></li>
+    <li><a href="./blog/index.html" class="nav-a">Insights</a></li>
+    <li><a href="./#location" class="nav-a">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <a href="./#location" class="btn btn-r nav-cta-d" style="padding:.65rem 1.5rem;font-size:.68rem"><span>Book Inspection</span></a>
+    <button id="hbg" aria-label="Open menu" aria-expanded="false" onclick="openNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mob" role="dialog" aria-label="Navigation">
+  <a href="./#services" class="mob-a" onclick="closeNav()">Services</a>
+  <a href="./#about"    class="mob-a" onclick="closeNav()">About</a>
+  <a href="./pricing.html" class="mob-a" onclick="closeNav()">Pricing</a>
+  <a href="./#squadra"  class="mob-a" onclick="closeNav()">Squadra</a>
+  <a href="./blog/index.html" class="mob-a" onclick="closeNav()">Insights</a>
+  <a href="./#location" class="mob-a" onclick="closeNav()">Contact</a>
+  <a href="./#location" class="btn btn-r" onclick="closeNav()" style="margin-top:2.5rem;width:fit-content"><span>Book Inspection</span></a>
+</div>
+
+<!-- HERO -->
+<section id="pg-hero">
+  <div class="w">
+    <div class="it" aria-hidden="true">
+      <i style="background:#009246"></i><i style="background:#fff"></i><i style="background:#CE2B37"></i>
+    </div>
+    <div style="margin-top:1.25rem"><span class="lbl">Service &amp; Inspection</span></div>
+    <h1 class="pg-h">Complete pricing &amp; <em>inspection schedule.</em></h1>
+    <p class="pg-sub">
+      Every Alfa Romeo we service follows a manufacturer-grade schedule. Below is the full breakdown for Giulia, Stelvio and Giulietta &mdash; every interval from 10,000 to 120,000 KM, every item replaced, every price. Plus our comprehensive 50-point inspection.
+    </p>
+    <div class="pg-chips">
+      <a href="#var-giulia20" class="pg-chip"><span class="pg-chip-dot"></span>Giulia &amp; Stelvio 2.0</a>
+      <a href="#var-giulia29" class="pg-chip"><span class="pg-chip-dot"></span>Giulia &amp; Stelvio 2.9 QV</a>
+      <a href="#var-giulietta14" class="pg-chip"><span class="pg-chip-dot"></span>Giulietta 1.4</a>
+      <a href="#var-giulietta18" class="pg-chip"><span class="pg-chip-dot"></span>Giulietta 1.8</a>
+      <a href="#inspection" class="pg-chip"><span class="pg-chip-dot"></span>Inspection points</a>
+    </div>
+  </div>
+</section>
+
+<!-- GIULIA & STELVIO 2.0L -->
+<section id="var-giulia20" class="pt-section">
+  <div class="w">
+    <div class="pt-header">
+      <div>
+        <span class="lbl-m">2.0L Petrol</span>
+        <h2 class="pt-h" style="margin-top:.6rem">Giulia &amp; Stelvio <em>2.0L.</em></h2>
+      </div>
+      <span class="pt-tag">AED 1,350 &nbsp;&ndash;&nbsp; AED 5,380</span>
+    </div>
+
+    <div class="pt-tbl-wrap">
+      <table class="pt-tbl">
+        <thead>
+          <tr>
+            <th>Interval</th>
+            <th>Items replaced</th>
+            <th>Price (excl. VAT)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="pt-km">10,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,350</td></tr>
+          <tr><td class="pt-km">20,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,800</td></tr>
+          <tr><td class="pt-km">30,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,350</td></tr>
+          <tr class="major"><td class="pt-km">40,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 2,260</td></tr>
+          <tr><td class="pt-km">50,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,350</td></tr>
+          <tr class="major"><td class="pt-km">60,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 2,640</td></tr>
+          <tr><td class="pt-km">70,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,350</td></tr>
+          <tr><td class="pt-km">80,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,800</td></tr>
+          <tr><td class="pt-km">90,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,350</td></tr>
+          <tr class="major"><td class="pt-km">100,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Coolant &middot; transmission oil &middot; transfer-case oil &middot; differential oil &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 5,380</td></tr>
+          <tr><td class="pt-km">110,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,350</td></tr>
+          <tr class="major"><td class="pt-km">120,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 2,640</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pt-foot"><strong>Always included:</strong> engine oil &amp; filter, cabin filter, air filter. Items marked with <strong>+</strong> are additional replacements for that interval. Final quote may vary after inspection depending on vehicle condition and required parts. All prices exclude VAT.</p>
+  </div>
+</section>
+
+<!-- GIULIA & STELVIO 2.9L -->
+<section id="var-giulia29" class="pt-section alt">
+  <div class="w">
+    <div class="pt-header">
+      <div>
+        <span class="lbl-m">2.9L V6 Biturbo &middot; Quadrifoglio</span>
+        <h2 class="pt-h" style="margin-top:.6rem">Giulia &amp; Stelvio <em>2.9L Quadrifoglio.</em></h2>
+      </div>
+      <span class="pt-tag">AED 1,950 &nbsp;&ndash;&nbsp; AED 5,890</span>
+    </div>
+
+    <div class="pt-tbl-wrap">
+      <table class="pt-tbl">
+        <thead>
+          <tr>
+            <th>Interval</th>
+            <th>Items replaced</th>
+            <th>Price (excl. VAT)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="pt-km">10,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,950</td></tr>
+          <tr><td class="pt-km">20,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 2,400</td></tr>
+          <tr><td class="pt-km">30,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,950</td></tr>
+          <tr class="major"><td class="pt-km">40,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 5,350</td></tr>
+          <tr><td class="pt-km">50,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,950</td></tr>
+          <tr class="major"><td class="pt-km">60,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 3,600</td></tr>
+          <tr><td class="pt-km">70,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,950</td></tr>
+          <tr><td class="pt-km">80,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 2,400</td></tr>
+          <tr><td class="pt-km">90,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,950</td></tr>
+          <tr class="major"><td class="pt-km">100,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Coolant &middot; transmission oil &middot; transfer-case oil &middot; differential oil &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 5,890</td></tr>
+          <tr><td class="pt-km">110,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,950</td></tr>
+          <tr class="major"><td class="pt-km">120,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 3,600</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pt-foot"><strong>Always included:</strong> engine oil &amp; filter, cabin filter, air filter. Items marked with <strong>+</strong> are additional replacements for that interval. Final quote may vary after inspection depending on vehicle condition and required parts. All prices exclude VAT.</p>
+  </div>
+</section>
+
+<!-- GIULIETTA 1.4 -->
+<section id="var-giulietta14" class="pt-section">
+  <div class="w">
+    <div class="pt-header">
+      <div>
+        <span class="lbl-m">1.4L Turbo</span>
+        <h2 class="pt-h" style="margin-top:.6rem">Giulietta <em>1.4L.</em></h2>
+      </div>
+      <span class="pt-tag">AED 950 &nbsp;&ndash;&nbsp; AED 5,730</span>
+    </div>
+
+    <div class="pt-tbl-wrap">
+      <table class="pt-tbl">
+        <thead>
+          <tr>
+            <th>Interval</th>
+            <th>Items replaced</th>
+            <th>Price (excl. VAT)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="pt-km">10,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 950</td></tr>
+          <tr><td class="pt-km">20,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,300</td></tr>
+          <tr><td class="pt-km">30,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 950</td></tr>
+          <tr class="major"><td class="pt-km">40,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 5,240</td></tr>
+          <tr><td class="pt-km">50,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 950</td></tr>
+          <tr class="major"><td class="pt-km">60,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,790</td></tr>
+          <tr><td class="pt-km">70,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 950</td></tr>
+          <tr class="major"><td class="pt-km">80,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 5,240</td></tr>
+          <tr><td class="pt-km">90,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 950</td></tr>
+          <tr class="major"><td class="pt-km">100,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Coolant &middot; transmission oil &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,640</td></tr>
+          <tr><td class="pt-km">110,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 950</td></tr>
+          <tr class="major"><td class="pt-km">120,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 5,730</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pt-foot"><strong>Always included:</strong> engine oil &amp; filter, cabin filter, air filter. Items marked with <strong>+</strong> are additional replacements for that interval. Timing-belt intervals (40K, 80K, 120K) are major services. Final quote may vary after inspection. All prices exclude VAT.</p>
+  </div>
+</section>
+
+<!-- GIULIETTA 1.8 -->
+<section id="var-giulietta18" class="pt-section alt">
+  <div class="w">
+    <div class="pt-header">
+      <div>
+        <span class="lbl-m">1.8L Turbo &middot; QV</span>
+        <h2 class="pt-h" style="margin-top:.6rem">Giulietta <em>1.8L.</em></h2>
+      </div>
+      <span class="pt-tag">AED 1,050 &nbsp;&ndash;&nbsp; AED 6,290</span>
+    </div>
+
+    <div class="pt-tbl-wrap">
+      <table class="pt-tbl">
+        <thead>
+          <tr>
+            <th>Interval</th>
+            <th>Items replaced</th>
+            <th>Price (excl. VAT)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="pt-km">10,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,050</td></tr>
+          <tr><td class="pt-km">20,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,400</td></tr>
+          <tr><td class="pt-km">30,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,050</td></tr>
+          <tr class="major"><td class="pt-km">40,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 5,540</td></tr>
+          <tr><td class="pt-km">50,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,050</td></tr>
+          <tr class="major"><td class="pt-km">60,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 2,150</td></tr>
+          <tr><td class="pt-km">70,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,050</td></tr>
+          <tr class="major"><td class="pt-km">80,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 5,540</td></tr>
+          <tr><td class="pt-km">90,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,050</td></tr>
+          <tr class="major"><td class="pt-km">100,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Coolant &middot; transmission oil &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,740</td></tr>
+          <tr><td class="pt-km">110,000 KM</td>
+              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 1,050</td></tr>
+          <tr class="major"><td class="pt-km">120,000 KM</td>
+              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
+              <td class="pt-price">AED 6,290</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pt-foot"><strong>Always included:</strong> engine oil &amp; filter, cabin filter, air filter. Items marked with <strong>+</strong> are additional replacements for that interval. Timing-belt intervals (40K, 80K, 120K) are major services. Final quote may vary after inspection. All prices exclude VAT.</p>
+  </div>
+</section>
+
+<!-- INSPECTION SECTION -->
+<section id="inspection">
+  <div class="w">
+
+    <div class="ins-head">
+      <div>
+        <span class="lbl">Comprehensive Inspection</span>
+        <h2 class="ins-h">50 checkpoints. <em>One flat price.</em></h2>
+        <p class="ins-sub">
+          Every Autotech inspection follows the same depth of process whether the car is a daily Giulietta or a Quadrifoglio. We look at drivetrain, electrics, brakes, suspension, safety systems and the undercarriage &mdash; every check below is performed and documented before the report leaves the workshop.
+        </p>
+      </div>
+      <div class="ins-price-card">
+        <span class="ins-price-lbl">Inspection &middot; all models</span>
+        <div class="ins-price-val">AED 350<em>+ VAT</em></div>
+        <div class="ins-price-note">Flat fee. Same price across the full Alfa Romeo range &mdash; classics included.</div>
+      </div>
+    </div>
+
+    <div class="ins-grid">
+
+      <div class="ins-cat">
+        <div class="ins-cat-h">Drivetrain &amp; Fluids</div>
+        <ul class="ins-list">
+          <li>Engine oil level &amp; condition</li>
+          <li>Oil leaks around engine and sump</li>
+          <li>Coolant level &amp; condition</li>
+          <li>Brake fluid level &amp; contamination check</li>
+          <li>Power steering fluid level check</li>
+          <li>Windshield washer fluid check</li>
+          <li>Fuel leaks</li>
+          <li>Belt inspection</li>
+          <li>Engine hoses &amp; pipes inspection</li>
+          <li>Engine mount inspection</li>
+          <li>CV boot inspection</li>
+          <li>Transmission leak check</li>
+        </ul>
+      </div>
+
+      <div class="ins-cat">
+        <div class="ins-cat-h">Battery &amp; Electrical</div>
+        <ul class="ins-list">
+          <li>Battery voltage &amp; health test</li>
+          <li>Battery corrosion check</li>
+          <li>Starter motor operation check</li>
+          <li>Exterior light function test</li>
+          <li>Interior light function test</li>
+          <li>Wiper &amp; washer operation</li>
+          <li>OBD scan</li>
+        </ul>
+      </div>
+
+      <div class="ins-cat">
+        <div class="ins-cat-h">Tires &amp; Wheels</div>
+        <ul class="ins-list">
+          <li>Tire inspection &mdash; tread depth, age, cracks, wear, pressure</li>
+          <li>Spare tire condition &amp; pressure check</li>
+          <li>Wheel nut / bolt torque check</li>
+          <li>Wheel &amp; rim damage inspection</li>
+        </ul>
+      </div>
+
+      <div class="ins-cat">
+        <div class="ins-cat-h">Brakes</div>
+        <ul class="ins-list">
+          <li>Brake pad thickness</li>
+          <li>Brake disc wear</li>
+          <li>Brake line condition</li>
+          <li>Brake fluid leak check</li>
+          <li>Parking brake operation</li>
+        </ul>
+      </div>
+
+      <div class="ins-cat">
+        <div class="ins-cat-h">Suspension &amp; Steering</div>
+        <ul class="ins-list">
+          <li>Suspension bush inspection</li>
+          <li>Wheel bearing noise / play check</li>
+          <li>Ball joint play check</li>
+          <li>Steering rack leaks / play</li>
+          <li>Visual alignment check</li>
+          <li>Tie rod end inspection</li>
+          <li>Shock absorber leaks / wear</li>
+        </ul>
+      </div>
+
+      <div class="ins-cat">
+        <div class="ins-cat-h">Safety &amp; Undercarriage</div>
+        <ul class="ins-list">
+          <li>Seat belt condition &amp; locking</li>
+          <li>Door lock operation</li>
+          <li>Parking sensor functionality</li>
+          <li>Child lock functionality</li>
+          <li>Underbody damage / corrosion</li>
+          <li>Exhaust system leaks / rust check</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="ins-foot">
+      Inspections are ideal before purchase, before a long trip, or when something feels off and you want a specialist&rsquo;s eyes on it. You receive a written report on every checkpoint, with photos of anything that needs attention and a clear recommendation. Inspection price is flat across the full Alfa Romeo range &mdash; modern and classic.
+    </p>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="close-cta">
+  <div class="w">
+    <span class="lbl">Book now</span>
+    <h2 class="cta-h">Ready when you are &mdash; <em>parts on the shelf, eyes on the car.</em></h2>
+    <p class="body-t" style="max-width:54ch;margin:0 auto">
+      Send your model, year and KM and we&rsquo;ll confirm the exact service due, parts being replaced, and a slot in the workshop.
+    </p>
+    <div class="cta-row">
+      <a href="https://wa.me/971522472941" class="btn btn-r"><span>WhatsApp the workshop</span></a>
+      <a href="./#location" class="btn btn-o"><span>View location &amp; hours</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="w">
+    <div class="ft-g">
+
+      <div>
+        <a href="./" style="display:inline-flex;align-items:center;gap:.75rem;margin-bottom:1.5rem" aria-label="Autotech home">
+          <div class="nav-img" style="width:36px;height:36px"><img src="./290675929_356463063270709_6629835773073910471_n.jpg" alt="Autotech"></div>
+          <div class="nav-wm">
+            <span class="nav-name" style="font-size:.95rem">Autotech</span>
+            <span class="nav-sub">Dubai's Alfa Romeo Specialists</span>
+          </div>
+        </a>
+        <p class="body-t" style="font-size:.82rem;max-width:28ch;margin-top:1rem">
+          Dubai's premier Alfa Romeo specialist. Appointed tuner for Squadra Tuning BV.
+        </p>
+        <div class="it" style="margin-top:1.5rem" aria-hidden="true">
+          <i style="background:#009246"></i><i style="background:#fff"></i><i style="background:#CE2B37"></i>
+        </div>
+      </div>
+
+      <div>
+        <div class="ft-ct">Services</div>
+        <ul class="ft-ls" role="list">
+          <li><a href="./#services" class="ft-a">Diagnostics</a></li>
+          <li><a href="./#services" class="ft-a">Maintenance</a></li>
+          <li><a href="./#squadra"  class="ft-a">Squadra Tuning</a></li>
+          <li><a href="./#services" class="ft-a">Electrical</a></li>
+          <li><a href="./#services" class="ft-a">Inspections</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="ft-ct">Company</div>
+        <ul class="ft-ls" role="list">
+          <li><a href="./#about"    class="ft-a">About</a></li>
+          <li><a href="./#ongoing"  class="ft-a">Projects</a></li>
+          <li><a href="./pricing.html" class="ft-a">Pricing</a></li>
+          <li><a href="./#gallery"  class="ft-a">Gallery</a></li>
+          <li><a href="./#location" class="ft-a">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="ft-ct">Contact</div>
+        <div style="display:flex;flex-direction:column;gap:.85rem">
+          <a href="https://wa.me/971522472941" class="ft-a">WhatsApp</a>
+          <a href="tel:+971522472941"           class="ft-a">+971 52 247 2941</a>
+          <span class="ft-a" style="cursor:default">Dubai, United Arab Emirates</span>
+          <span class="ft-a" style="cursor:default;margin-top:.25rem">Mon&ndash;Fri 08:00&ndash;17:00 &nbsp;&middot;&nbsp; Sat 09:00&ndash;14:00</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="ft-bot">
+      <span class="ft-copy">&copy; 2024 Autotech. All rights reserved.</span>
+      <span class="ft-auth">Official Appointed Tuner &nbsp;&middot;&nbsp; Squadra Tuning BV</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+971522472941" class="call-float" aria-label="Call Autotech DXB">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.85 19.79 19.79 0 01.07 1.22 2 2 0 012.07.04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+  <span>Call<br>Now</span>
+</a>
+
+<script>
+'use strict';
+function openNav(){
+  const hbg=document.getElementById('hbg'),mob=document.getElementById('mob');
+  const open=mob.classList.toggle('open');
+  hbg.classList.toggle('open',open);
+  hbg.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+function closeNav(){
+  document.getElementById('hbg').classList.remove('open');
+  document.getElementById('mob').classList.remove('open');
+  document.getElementById('hbg').setAttribute('aria-expanded',false);
+  document.body.style.overflow='';
+}
+
+/* smooth-scroll only for in-page #anchors (skip ./# cross-page links) */
+const nav=document.getElementById('nav');
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href');
+    if(id==='#')return;
+    const t=document.querySelector(id);
+    if(!t)return;
+    e.preventDefault();
+    window.scrollTo({top:t.getBoundingClientRect().top+scrollY-nav.offsetHeight-8,behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>

@@ -4,7 +4,13 @@
     <loc>https://autotech-psi.vercel.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://autotech-psi.vercel.app/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <lastmod>2026-05-15</lastmod>
   </url>
   <url>
     <loc>https://autotech-psi.vercel.app/blog/index.html</loc>

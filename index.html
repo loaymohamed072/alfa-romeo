@@ -614,14 +614,25 @@
        PRICING
     ────────────────────────────────────────────────── */
     #pricing{background:var(--bg);padding:5.5rem 0;border-top:1px solid var(--bd)}
-    .pr-tabs{display:flex;width:fit-content;border:1px solid var(--bd);margin-bottom:3.5rem}
-    .pr-tab{padding:.7rem 2rem;font-size:.68rem;font-weight:600;
-            letter-spacing:.14em;text-transform:uppercase;
+    .pr-tabs{display:inline-flex;flex-wrap:wrap;border:1px solid var(--bd);margin-bottom:3.5rem;max-width:100%}
+    .pr-tab{padding:.7rem 1.5rem;font-size:.66rem;font-weight:600;
+            letter-spacing:.13em;text-transform:uppercase;
             background:none;border:none;color:var(--tx-m);
-            cursor:pointer;transition:background .2s,color .2s}
-    .pr-tab:not(:last-child){border-right:1px solid var(--bd)}
-    .pr-tab.active{background:var(--red);color:#fff}
+            cursor:pointer;transition:background .2s,color .2s;
+            white-space:nowrap;flex:0 0 auto;
+            border-right:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+    .pr-tab:last-child{border-right:none}
+    .pr-tab.active{background:var(--red);color:#fff;border-bottom-color:var(--red)}
     .pr-tab:not(.active):hover{color:var(--tx);background:rgba(255,255,255,.03)}
+    .pr-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 2rem;margin-top:3rem}
+    .pr-detail-link{display:inline-flex;align-items:center;gap:.55rem;
+                    font-size:.7rem;font-weight:600;letter-spacing:.14em;
+                    text-transform:uppercase;color:var(--tx-m);
+                    border-bottom:1px solid var(--bd);padding:.65rem 0;
+                    transition:color .25s,border-color .25s,gap .25s}
+    .pr-detail-link:hover{color:var(--tx);border-bottom-color:var(--red);gap:.85rem}
+    .pr-detail-link svg{transition:transform .3s var(--ease)}
+    .pr-detail-link:hover svg{transform:translateX(3px)}
     .pr-panel{display:none}
     .pr-panel.active{display:block}
     .pr-row{display:flex;align-items:flex-start;justify-content:space-between;
@@ -643,7 +654,7 @@
                  padding-top:1.25rem;border-top:1px solid var(--bd-soft)}
 
     @media(max-width:600px){
-      .pr-tab{padding:.65rem 1.25rem;font-size:.62rem}
+      .pr-tab{padding:.6rem 1rem;font-size:.6rem;letter-spacing:.11em}
       .pr-row.highlight{margin:0 -.75rem;padding:1.2rem .75rem}
     }
 
@@ -1167,7 +1178,13 @@
                 onclick="switchTab('petrol')">Giulia &amp; Stelvio 2.0</button>
         <button class="pr-tab" role="tab" aria-selected="false"
                 aria-controls="panel-v6" id="tab-v6"
-                onclick="switchTab('v6')">Giulia &amp; Stelvio 2.9 Quadrifoglio</button>
+                onclick="switchTab('v6')">Giulia &amp; Stelvio 2.9 QV</button>
+        <button class="pr-tab" role="tab" aria-selected="false"
+                aria-controls="panel-g14" id="tab-g14"
+                onclick="switchTab('g14')">Giulietta 1.4</button>
+        <button class="pr-tab" role="tab" aria-selected="false"
+                aria-controls="panel-g18" id="tab-g18"
+                onclick="switchTab('g18')">Giulietta 1.8</button>
       </div>
 
       <!-- 2.0 Petrol -->
@@ -1335,10 +1352,186 @@
         </div>
         <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
       </div>
+
+      <!-- Giulietta 1.4 -->
+      <div id="panel-g14" class="pr-panel pr-list" role="tabpanel" aria-labelledby="tab-g14">
+        <div class="pr-row">
+          <div><div class="pr-mi">10,000 KM</div></div>
+          <div class="pr-price">AED 950</div>
+        </div>
+        <div class="pr-row">
+          <div>
+            <div class="pr-mi">20,000 KM</div>
+            <div class="pr-note">+ Brake fluid</div>
+          </div>
+          <div class="pr-price">AED 1,300</div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">30,000 KM</div></div>
+          <div class="pr-price">AED 950</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">40,000 KM</div>
+            <div class="pr-note">+ Drive belt · timing belt</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 5,240</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">50,000 KM</div></div>
+          <div class="pr-price">AED 950</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">60,000 KM</div>
+            <div class="pr-note">+ Spark plugs</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 1,790</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">70,000 KM</div></div>
+          <div class="pr-price">AED 950</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">80,000 KM</div>
+            <div class="pr-note">+ Drive belt · timing belt</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 5,240</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">90,000 KM</div></div>
+          <div class="pr-price">AED 950</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">100,000 KM</div>
+            <div class="pr-note">+ Coolant · transmission oil</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 1,640</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">110,000 KM</div></div>
+          <div class="pr-price">AED 950</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">120,000 KM</div>
+            <div class="pr-note">+ Spark plugs · drive belt · timing belt</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 5,730</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
+      </div>
+
+      <!-- Giulietta 1.8 -->
+      <div id="panel-g18" class="pr-panel pr-list" role="tabpanel" aria-labelledby="tab-g18">
+        <div class="pr-row">
+          <div><div class="pr-mi">10,000 KM</div></div>
+          <div class="pr-price">AED 1,050</div>
+        </div>
+        <div class="pr-row">
+          <div>
+            <div class="pr-mi">20,000 KM</div>
+            <div class="pr-note">+ Brake fluid</div>
+          </div>
+          <div class="pr-price">AED 1,400</div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">30,000 KM</div></div>
+          <div class="pr-price">AED 1,050</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">40,000 KM</div>
+            <div class="pr-note">+ Drive belt · timing belt</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 5,540</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">50,000 KM</div></div>
+          <div class="pr-price">AED 1,050</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">60,000 KM</div>
+            <div class="pr-note">+ Spark plugs</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 2,150</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">70,000 KM</div></div>
+          <div class="pr-price">AED 1,050</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">80,000 KM</div>
+            <div class="pr-note">+ Drive belt · timing belt</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 5,540</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">90,000 KM</div></div>
+          <div class="pr-price">AED 1,050</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">100,000 KM</div>
+            <div class="pr-note">+ Coolant · transmission oil</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 1,740</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <div class="pr-row">
+          <div><div class="pr-mi">110,000 KM</div></div>
+          <div class="pr-price">AED 1,050</div>
+        </div>
+        <div class="pr-row highlight">
+          <div>
+            <div class="pr-mi">120,000 KM</div>
+            <div class="pr-note">+ Spark plugs · drive belt · timing belt</div>
+          </div>
+          <div>
+            <div class="pr-price">AED 6,290</div>
+            <span class="pr-label">Major Service</span>
+          </div>
+        </div>
+        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
+      </div>
     </div>
 
-    <div style="margin-top:3rem" data-rev="up" data-d="3">
+    <div class="pr-cta-row" data-rev="up" data-d="3">
       <a href="#location" class="btn btn-r"><span>Book a Service</span></a>
+      <a href="./pricing.html" class="pr-detail-link">
+        <span>View full pricing &amp; inspection details</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
 
   </div>
@@ -1948,6 +2141,7 @@
           <li><a href="#about"    class="ft-a">About</a></li>
           <li><a href="#ongoing"  class="ft-a">Projects</a></li>
           <li><a href="#pricing"  class="ft-a">Pricing</a></li>
+          <li><a href="./pricing.html" class="ft-a">Full Pricing &amp; Inspection</a></li>
           <li><a href="#gallery"  class="ft-a">Gallery</a></li>
           <li><a href="#location"  class="ft-a">Contact</a></li>
         </ul>
