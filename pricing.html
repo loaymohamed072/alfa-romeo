@@ -236,12 +236,51 @@
              color:var(--tx-m);line-height:1.65;max-width:78ch}
     .pt-foot strong{color:var(--tx);font-weight:400}
 
-    @media(max-width:600px){
-      .pt-tbl th,.pt-tbl td{padding:.6rem .7rem}
-      .pt-tbl td.pt-km{font-size:.78rem}
-      .pt-tbl td.pt-price{font-size:.92rem}
-      .pt-tbl td.pt-items{font-size:.73rem}
-      .pt-bg-num{font-size:clamp(8rem,40vw,16rem);right:-1rem}
+    /* ── Mobile: collapse table → stacked cards (no horizontal scroll) ── */
+    @media(max-width:720px){
+      .pt-tbl-wrap{overflow-x:visible;background:transparent;border:none;box-shadow:none}
+      .pt-tbl{min-width:0;display:block;width:100%}
+      .pt-tbl thead{display:none}
+      .pt-tbl tbody{display:block}
+      .pt-tbl tr{display:block;padding:1.1rem 1.15rem;
+                 border:1px solid var(--bd);border-bottom:none;
+                 background:linear-gradient(180deg,#0a0a0a 0,var(--bg) 100%);
+                 position:relative}
+      .pt-tbl tr:last-child{border-bottom:1px solid var(--bd)}
+      .pt-tbl tr:hover{background:linear-gradient(180deg,#0a0a0a 0,var(--bg) 100%)}
+      .pt-tbl tr.major{border-left:2px solid var(--red);
+                       background:linear-gradient(180deg,rgba(185,28,28,.06) 0,rgba(185,28,28,.02) 100%)}
+      .pt-tbl tr.major:hover{background:linear-gradient(180deg,rgba(185,28,28,.08) 0,rgba(185,28,28,.025) 100%)}
+      .pt-tbl td{display:block;width:auto;padding:0;border:none}
+      .pt-tbl td.pt-km{font-family:'Jost',sans-serif;font-size:.74rem;font-weight:600;
+                       letter-spacing:.18em;text-transform:uppercase;color:var(--tx);
+                       margin-bottom:.4rem;white-space:normal}
+      .pt-tbl tr.major td.pt-km::after{margin-left:.55rem;box-shadow:0 0 8px rgba(185,28,28,.8)}
+      .pt-tbl td.pt-items{font-size:.8rem;line-height:1.5;
+                          color:rgba(232,228,221,.7);
+                          padding-bottom:.85rem;margin-bottom:.6rem;
+                          border-bottom:1px solid var(--bd-soft)}
+      .pt-tbl td.pt-items .pt-dash{color:var(--tx-d)}
+      .pt-tbl td.pt-price{display:flex;align-items:baseline;justify-content:space-between;
+                          padding:.32rem 0;font-size:1.05rem;text-align:left;
+                          white-space:nowrap;width:auto}
+      .pt-tbl td.pt-price::before{
+        font-family:'Jost',sans-serif;font-size:.6rem;font-weight:600;
+        letter-spacing:.16em;text-transform:uppercase;color:var(--tx-m)}
+      /* Section-scoped variant labels */
+      #var-giulia    .pt-tbl td.pt-price:nth-of-type(3)::before{content:'2.0L'}
+      #var-giulia    .pt-tbl td.pt-price:nth-of-type(4)::before{content:'2.9L QV'}
+      #var-giulietta .pt-tbl td.pt-price:nth-of-type(3)::before{content:'1.4L'}
+      #var-giulietta .pt-tbl td.pt-price:nth-of-type(4)::before{content:'1.8L'}
+
+      .pt-section{padding:3rem 0}
+      .pt-header{flex-direction:column;align-items:flex-start;gap:.85rem}
+      .pt-bg-num{font-size:clamp(8rem,40vw,16rem);right:-1rem;opacity:.9}
+      .pt-glow{width:80vw;height:80vw}
+    }
+    @media(max-width:380px){
+      .pt-tbl tr{padding:.95rem 1rem}
+      .pt-tbl td.pt-price{font-size:.98rem}
     }
 
     /* ── INSPECTION SECTION ──────────────── */
