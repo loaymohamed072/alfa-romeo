@@ -120,10 +120,26 @@
     }
 
     /* ── HERO HEADER ──────────────────────── */
-    #pg-hero{position:relative;padding:11rem 0 4.5rem;border-bottom:1px solid var(--bd);overflow:hidden}
-    #pg-hero::before{content:'';position:absolute;inset:0;
-      background:radial-gradient(ellipse at 18% 30%,rgba(185,28,28,.07),transparent 55%);
+    #pg-hero{position:relative;padding:9rem 0 3.5rem;border-bottom:1px solid var(--bd);overflow:hidden}
+    #pg-hero::before{content:'';position:absolute;inset:0;z-index:1;
+      background:
+        radial-gradient(ellipse at 18% 30%,rgba(185,28,28,.10),transparent 55%),
+        radial-gradient(ellipse at 92% 80%,rgba(185,28,28,.06),transparent 50%);
       pointer-events:none}
+    /* faint grid pattern in hero */
+    #pg-hero::after{content:'';position:absolute;inset:0;z-index:0;opacity:.18;
+      background-image:
+        linear-gradient(rgba(232,228,221,.05) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(232,228,221,.05) 1px,transparent 1px);
+      background-size:64px 64px;
+      mask-image:radial-gradient(ellipse at center,#000 30%,transparent 78%);
+      -webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 78%);
+      pointer-events:none}
+    #pg-hero > .w{position:relative;z-index:2}
+    .pg-hero-wm{position:absolute;bottom:-4rem;right:-2rem;z-index:1;
+      font-family:'Bodoni Moda',serif;font-style:italic;font-weight:400;
+      font-size:clamp(8rem,18vw,16rem);line-height:.85;letter-spacing:-.04em;
+      color:rgba(185,28,28,.045);pointer-events:none;user-select:none;white-space:nowrap}
     .pg-h{font-family:'Bodoni Moda',serif;font-size:clamp(2.2rem,5vw,4.6rem);font-weight:500;
           line-height:1.04;letter-spacing:-.024em;color:var(--tx);max-width:18ch;
           margin:1.25rem 0 1.5rem;position:relative}
@@ -142,54 +158,94 @@
     .pg-chip-dot{width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0}
 
     /* ── PRICING TABLES ──────────────────── */
-    .pt-section{padding:5rem 0;border-top:1px solid var(--bd)}
+    .pt-section{padding:4.5rem 0;border-top:1px solid var(--bd);position:relative;overflow:hidden}
     .pt-section:first-of-type{border-top:none}
     .pt-section.alt{background:var(--s1)}
-    .pt-header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
-               gap:1rem 2rem;margin-bottom:2.5rem;padding-bottom:1.5rem;
-               border-bottom:1px solid var(--bd-soft)}
-    .pt-h{font-family:'Bodoni Moda',serif;font-size:clamp(1.6rem,3.2vw,2.6rem);
-          font-weight:500;line-height:1.1;letter-spacing:-.018em;color:var(--tx)}
+    .pt-section > .w{position:relative;z-index:3}
+    /* big serif watermark number */
+    .pt-bg-num{position:absolute;top:50%;right:-1.5rem;
+      font-family:'Bodoni Moda',serif;font-style:italic;
+      font-size:clamp(13rem,26vw,26rem);font-weight:500;line-height:.82;
+      color:rgba(232,228,221,.028);pointer-events:none;
+      transform:translateY(-50%);user-select:none;
+      letter-spacing:-.05em;z-index:1;white-space:nowrap}
+    /* carbon-fibre mesh on alt sections */
+    .pt-section.alt::before{content:'';position:absolute;inset:0;opacity:.045;
+      background-image:
+        repeating-linear-gradient(45deg,transparent 0,transparent 2px,rgba(255,255,255,.55) 2px,rgba(255,255,255,.55) 3px),
+        repeating-linear-gradient(-45deg,transparent 0,transparent 2px,rgba(255,255,255,.55) 2px,rgba(255,255,255,.55) 3px);
+      background-size:6px 6px;pointer-events:none;z-index:1}
+    /* corner red glows */
+    .pt-glow{position:absolute;width:55vw;height:55vw;max-width:720px;max-height:720px;
+      pointer-events:none;border-radius:50%;z-index:2;
+      background:radial-gradient(circle,rgba(185,28,28,.07),transparent 62%)}
+    .pt-glow.tl{top:-22vw;left:-22vw}
+    .pt-glow.br{bottom:-22vw;right:-22vw;
+      background:radial-gradient(circle,rgba(185,28,28,.045),transparent 62%)}
+    /* horizontal tricolor accent over header */
+    .pt-tri{display:flex;height:2px;width:3.5rem;gap:1.5px;margin-bottom:1.1rem}
+    .pt-tri i{flex:1;display:block}
+
+    .pt-header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;
+               gap:.75rem 2rem;margin-bottom:1.5rem;padding-bottom:1.1rem;
+               border-bottom:1px solid var(--bd-soft);position:relative}
+    .pt-header > div:first-child{flex:1;min-width:220px}
+    .pt-h{font-family:'Bodoni Moda',serif;font-size:clamp(1.55rem,2.8vw,2.25rem);
+          font-weight:500;line-height:1.08;letter-spacing:-.018em;color:var(--tx)}
     .pt-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.5)}
     .pt-tag{display:inline-flex;align-items:center;gap:.55rem;
             padding:.45rem 1rem;border:1px solid rgba(185,28,28,.4);
-            font-size:.6rem;font-weight:600;letter-spacing:.17em;
-            text-transform:uppercase;color:var(--red);background:rgba(185,28,28,.05)}
+            font-size:.58rem;font-weight:600;letter-spacing:.16em;
+            text-transform:uppercase;color:var(--red);background:rgba(185,28,28,.05);
+            white-space:nowrap}
 
-    .pt-tbl-wrap{overflow-x:auto;border:1px solid var(--bd);background:var(--bg)}
-    .pt-tbl{width:100%;border-collapse:collapse;min-width:580px}
-    .pt-tbl thead{background:rgba(255,255,255,.02);border-bottom:1px solid var(--bd)}
-    .pt-tbl th{padding:1.15rem 1.5rem;text-align:left;font-size:.6rem;font-weight:600;
-               letter-spacing:.17em;text-transform:uppercase;color:var(--tx-m);
-               border-bottom:1px solid var(--bd)}
-    .pt-tbl th:last-child{text-align:right}
-    .pt-tbl td{padding:1.2rem 1.5rem;border-bottom:1px solid var(--bd-soft);
-               font-size:.92rem;font-weight:300;color:var(--tx);vertical-align:top}
+    .pt-tbl-wrap{overflow-x:auto;border:1px solid var(--bd);
+                 background:linear-gradient(180deg,#0a0a0a 0,var(--bg) 100%);
+                 box-shadow:0 24px 60px -30px rgba(0,0,0,.7)}
+    .pt-tbl{width:100%;border-collapse:collapse;min-width:680px}
+    .pt-tbl thead{background:rgba(255,255,255,.025);border-bottom:1px solid var(--bd)}
+    .pt-tbl th{padding:.85rem 1.1rem;text-align:left;font-size:.57rem;font-weight:600;
+               letter-spacing:.16em;text-transform:uppercase;color:var(--tx-m);
+               border-bottom:1px solid var(--bd);white-space:nowrap;vertical-align:bottom}
+    .pt-tbl th.pt-th-price{text-align:right;color:var(--tx);border-left:1px solid var(--bd-soft)}
+    .pt-tbl th .pt-th-sub{display:block;font-size:.5rem;font-weight:500;
+                          color:var(--tx-m);margin-top:.25rem;letter-spacing:.13em}
+    .pt-tbl td{padding:.65rem 1.1rem;border-bottom:1px solid var(--bd-soft);
+               font-size:.84rem;font-weight:300;color:var(--tx);vertical-align:middle}
     .pt-tbl tr:last-child td{border-bottom:none}
-    .pt-tbl td.pt-km{font-weight:400;white-space:nowrap;width:18%}
-    .pt-tbl td.pt-items{color:rgba(232,228,221,.72);line-height:1.6;font-size:.86rem}
-    .pt-tbl td.pt-items .pt-base{color:var(--tx-m);font-size:.78rem;display:block;margin-top:.3rem}
-    .pt-tbl td.pt-items .pt-extra{color:var(--tx);font-weight:400}
-    .pt-tbl td.pt-price{font-family:'Bodoni Moda',serif;font-size:1.18rem;font-weight:400;
-                        color:var(--tx);text-align:right;white-space:nowrap;width:22%}
-    .pt-tbl tr.major{background:rgba(185,28,28,.045)}
+    .pt-tbl tbody tr{transition:background .2s}
+    .pt-tbl tbody tr:hover{background:rgba(255,255,255,.022)}
+    .pt-tbl td.pt-km{font-weight:400;white-space:nowrap;width:13%;font-size:.82rem;color:var(--tx)}
+    .pt-tbl td.pt-items{color:rgba(232,228,221,.78);line-height:1.4;font-size:.78rem}
+    .pt-tbl td.pt-items .pt-dash{color:var(--tx-d);font-weight:300}
+    .pt-tbl td.pt-price{font-family:'Bodoni Moda',serif;font-size:1rem;font-weight:400;
+                        color:var(--tx);text-align:right;white-space:nowrap;width:14%;
+                        border-left:1px solid var(--bd-soft)}
+    .pt-tbl tr.major{background:rgba(185,28,28,.05)}
+    .pt-tbl tr.major:hover{background:rgba(185,28,28,.075)}
     .pt-tbl tr.major td.pt-price{color:var(--red)}
-    .pt-tbl tr.major td.pt-km::after{content:'Major';display:inline-block;margin-left:.6rem;
-      font-family:'Jost',sans-serif;font-size:.55rem;font-weight:600;letter-spacing:.14em;
-      text-transform:uppercase;color:var(--red);
-      border:1px solid rgba(185,28,28,.4);padding:.18rem .5rem;vertical-align:middle}
-    .pt-foot{margin-top:1.5rem;font-size:.78rem;font-weight:300;
-             color:var(--tx-m);line-height:1.7;max-width:64ch}
+    .pt-tbl tr.major td.pt-km::after{content:'';display:inline-block;width:5px;height:5px;
+      background:var(--red);border-radius:50%;margin-left:.45rem;vertical-align:middle;
+      margin-bottom:1px;box-shadow:0 0 6px rgba(185,28,28,.7)}
+    .pt-legend{display:inline-flex;align-items:center;gap:.45rem;
+               font-size:.58rem;font-weight:600;letter-spacing:.16em;
+               text-transform:uppercase;color:var(--tx-m)}
+    .pt-legend::before{content:'';width:5px;height:5px;background:var(--red);border-radius:50%;
+      box-shadow:0 0 5px rgba(185,28,28,.6)}
+    .pt-foot{margin-top:1.1rem;font-size:.74rem;font-weight:300;
+             color:var(--tx-m);line-height:1.65;max-width:78ch}
     .pt-foot strong{color:var(--tx);font-weight:400}
 
-    /* — Side-by-side wrap for Giulietta two columns — */
-    .pt-couple{display:grid;grid-template-columns:1fr;gap:2.5rem}
-    @media(min-width:1100px){
-      .pt-couple{grid-template-columns:1fr 1fr;gap:2rem}
+    @media(max-width:600px){
+      .pt-tbl th,.pt-tbl td{padding:.6rem .7rem}
+      .pt-tbl td.pt-km{font-size:.78rem}
+      .pt-tbl td.pt-price{font-size:.92rem}
+      .pt-tbl td.pt-items{font-size:.73rem}
+      .pt-bg-num{font-size:clamp(8rem,40vw,16rem);right:-1rem}
     }
 
     /* ── INSPECTION SECTION ──────────────── */
-    #inspection{padding:5.5rem 0;background:var(--s1);border-top:1px solid var(--bd);position:relative;overflow:hidden}
+    #inspection{padding:4rem 0;background:var(--s1);border-top:1px solid var(--bd);position:relative;overflow:hidden}
     #inspection::before{content:'';position:absolute;inset:0;
       background:radial-gradient(ellipse at 82% 20%,rgba(185,28,28,.06),transparent 55%);
       pointer-events:none}
@@ -347,6 +403,7 @@
 
 <!-- HERO -->
 <section id="pg-hero">
+  <span class="pg-hero-wm" aria-hidden="true">Autotech</span>
   <div class="w">
     <div class="it" aria-hidden="true">
       <i style="background:#009246"></i><i style="background:#fff"></i><i style="background:#CE2B37"></i>
@@ -357,24 +414,28 @@
       Every Alfa Romeo we service follows a manufacturer-grade schedule. Below is the full breakdown for Giulia, Stelvio and Giulietta &mdash; every interval from 10,000 to 120,000 KM, every item replaced, every price. Plus our comprehensive 50-point inspection.
     </p>
     <div class="pg-chips">
-      <a href="#var-giulia20" class="pg-chip"><span class="pg-chip-dot"></span>Giulia &amp; Stelvio 2.0</a>
-      <a href="#var-giulia29" class="pg-chip"><span class="pg-chip-dot"></span>Giulia &amp; Stelvio 2.9 QV</a>
-      <a href="#var-giulietta14" class="pg-chip"><span class="pg-chip-dot"></span>Giulietta 1.4</a>
-      <a href="#var-giulietta18" class="pg-chip"><span class="pg-chip-dot"></span>Giulietta 1.8</a>
+      <a href="#var-giulia" class="pg-chip"><span class="pg-chip-dot"></span>Giulia &amp; Stelvio</a>
+      <a href="#var-giulietta" class="pg-chip"><span class="pg-chip-dot"></span>Giulietta</a>
       <a href="#inspection" class="pg-chip"><span class="pg-chip-dot"></span>Inspection points</a>
     </div>
   </div>
 </section>
 
-<!-- GIULIA & STELVIO 2.0L -->
-<section id="var-giulia20" class="pt-section">
+<!-- GIULIA & STELVIO -->
+<section id="var-giulia" class="pt-section">
+  <span class="pt-bg-num" aria-hidden="true">01</span>
+  <span class="pt-glow tl" aria-hidden="true"></span>
+  <span class="pt-glow br" aria-hidden="true"></span>
   <div class="w">
+    <div class="pt-tri" aria-hidden="true">
+      <i style="background:#009246"></i><i style="background:#fff"></i><i style="background:#CE2B37"></i>
+    </div>
     <div class="pt-header">
       <div>
-        <span class="lbl-m">2.0L Petrol</span>
-        <h2 class="pt-h" style="margin-top:.6rem">Giulia &amp; Stelvio <em>2.0L.</em></h2>
+        <span class="lbl-m">Sedan &middot; SUV</span>
+        <h2 class="pt-h" style="margin-top:.55rem">Giulia &amp; Stelvio <em>&mdash; 2.0L &amp; 2.9L QV.</em></h2>
       </div>
-      <span class="pt-tag">AED 1,350 &nbsp;&ndash;&nbsp; AED 5,380</span>
+      <span class="pt-tag">AED 1,350 &nbsp;&ndash;&nbsp; AED 5,890</span>
     </div>
 
     <div class="pt-tbl-wrap">
@@ -382,63 +443,49 @@
         <thead>
           <tr>
             <th>Interval</th>
-            <th>Items replaced</th>
-            <th>Price (excl. VAT)</th>
+            <th>Additional items at this interval</th>
+            <th class="pt-th-price">2.0L</th>
+            <th class="pt-th-price">2.9L QV</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="pt-km">10,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,350</td></tr>
-          <tr><td class="pt-km">20,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,800</td></tr>
-          <tr><td class="pt-km">30,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,350</td></tr>
-          <tr class="major"><td class="pt-km">40,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 2,260</td></tr>
-          <tr><td class="pt-km">50,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,350</td></tr>
-          <tr class="major"><td class="pt-km">60,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 2,640</td></tr>
-          <tr><td class="pt-km">70,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,350</td></tr>
-          <tr><td class="pt-km">80,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,800</td></tr>
-          <tr><td class="pt-km">90,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,350</td></tr>
-          <tr class="major"><td class="pt-km">100,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Coolant &middot; transmission oil &middot; transfer-case oil &middot; differential oil &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 5,380</td></tr>
-          <tr><td class="pt-km">110,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,350</td></tr>
-          <tr class="major"><td class="pt-km">120,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 2,640</td></tr>
+          <tr><td class="pt-km">10K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">1,350</td><td class="pt-price">1,950</td></tr>
+          <tr><td class="pt-km">20K</td><td class="pt-items">Brake fluid</td><td class="pt-price">1,800</td><td class="pt-price">2,400</td></tr>
+          <tr><td class="pt-km">30K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">1,350</td><td class="pt-price">1,950</td></tr>
+          <tr class="major"><td class="pt-km">40K</td><td class="pt-items">Drive belt &middot; brake fluid</td><td class="pt-price">2,260</td><td class="pt-price">5,350</td></tr>
+          <tr><td class="pt-km">50K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">1,350</td><td class="pt-price">1,950</td></tr>
+          <tr class="major"><td class="pt-km">60K</td><td class="pt-items">Spark plugs &middot; brake fluid</td><td class="pt-price">2,640</td><td class="pt-price">3,600</td></tr>
+          <tr><td class="pt-km">70K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">1,350</td><td class="pt-price">1,950</td></tr>
+          <tr><td class="pt-km">80K</td><td class="pt-items">Brake fluid</td><td class="pt-price">1,800</td><td class="pt-price">2,400</td></tr>
+          <tr><td class="pt-km">90K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">1,350</td><td class="pt-price">1,950</td></tr>
+          <tr class="major"><td class="pt-km">100K</td><td class="pt-items">Coolant &middot; transmission &middot; transfer-case &middot; differential &middot; brake fluid</td><td class="pt-price">5,380</td><td class="pt-price">5,890</td></tr>
+          <tr><td class="pt-km">110K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">1,350</td><td class="pt-price">1,950</td></tr>
+          <tr class="major"><td class="pt-km">120K</td><td class="pt-items">Spark plugs &middot; brake fluid</td><td class="pt-price">2,640</td><td class="pt-price">3,600</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="pt-foot"><strong>Always included:</strong> engine oil &amp; filter, cabin filter, air filter. Items marked with <strong>+</strong> are additional replacements for that interval. Final quote may vary after inspection depending on vehicle condition and required parts. All prices exclude VAT.</p>
+    <p class="pt-foot">
+      <span class="pt-legend">Major service</span> &nbsp;&middot;&nbsp;
+      <strong>Included in every interval:</strong> engine oil &amp; filter, cabin filter, air filter. All prices in AED, excluding VAT. Final quote may vary after inspection depending on vehicle condition and required parts.
+    </p>
   </div>
 </section>
 
-<!-- GIULIA & STELVIO 2.9L -->
-<section id="var-giulia29" class="pt-section alt">
+<!-- GIULIETTA -->
+<section id="var-giulietta" class="pt-section alt">
+  <span class="pt-bg-num" aria-hidden="true">02</span>
+  <span class="pt-glow tl" aria-hidden="true"></span>
+  <span class="pt-glow br" aria-hidden="true"></span>
   <div class="w">
+    <div class="pt-tri" aria-hidden="true">
+      <i style="background:#009246"></i><i style="background:#fff"></i><i style="background:#CE2B37"></i>
+    </div>
     <div class="pt-header">
       <div>
-        <span class="lbl-m">2.9L V6 Biturbo &middot; Quadrifoglio</span>
-        <h2 class="pt-h" style="margin-top:.6rem">Giulia &amp; Stelvio <em>2.9L Quadrifoglio.</em></h2>
+        <span class="lbl-m">Hatch</span>
+        <h2 class="pt-h" style="margin-top:.55rem">Giulietta <em>&mdash; 1.4L &amp; 1.8L.</em></h2>
       </div>
-      <span class="pt-tag">AED 1,950 &nbsp;&ndash;&nbsp; AED 5,890</span>
+      <span class="pt-tag">AED 950 &nbsp;&ndash;&nbsp; AED 6,290</span>
     </div>
 
     <div class="pt-tbl-wrap">
@@ -446,179 +493,31 @@
         <thead>
           <tr>
             <th>Interval</th>
-            <th>Items replaced</th>
-            <th>Price (excl. VAT)</th>
+            <th>Additional items at this interval</th>
+            <th class="pt-th-price">1.4L</th>
+            <th class="pt-th-price">1.8L</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="pt-km">10,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,950</td></tr>
-          <tr><td class="pt-km">20,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 2,400</td></tr>
-          <tr><td class="pt-km">30,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,950</td></tr>
-          <tr class="major"><td class="pt-km">40,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 5,350</td></tr>
-          <tr><td class="pt-km">50,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,950</td></tr>
-          <tr class="major"><td class="pt-km">60,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 3,600</td></tr>
-          <tr><td class="pt-km">70,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,950</td></tr>
-          <tr><td class="pt-km">80,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 2,400</td></tr>
-          <tr><td class="pt-km">90,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,950</td></tr>
-          <tr class="major"><td class="pt-km">100,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Coolant &middot; transmission oil &middot; transfer-case oil &middot; differential oil &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 5,890</td></tr>
-          <tr><td class="pt-km">110,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,950</td></tr>
-          <tr class="major"><td class="pt-km">120,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 3,600</td></tr>
+          <tr><td class="pt-km">10K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">950</td><td class="pt-price">1,050</td></tr>
+          <tr><td class="pt-km">20K</td><td class="pt-items">Brake fluid</td><td class="pt-price">1,300</td><td class="pt-price">1,400</td></tr>
+          <tr><td class="pt-km">30K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">950</td><td class="pt-price">1,050</td></tr>
+          <tr class="major"><td class="pt-km">40K</td><td class="pt-items">Timing belt &middot; drive belt &middot; brake fluid</td><td class="pt-price">5,240</td><td class="pt-price">5,540</td></tr>
+          <tr><td class="pt-km">50K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">950</td><td class="pt-price">1,050</td></tr>
+          <tr class="major"><td class="pt-km">60K</td><td class="pt-items">Spark plugs &middot; brake fluid</td><td class="pt-price">1,790</td><td class="pt-price">2,150</td></tr>
+          <tr><td class="pt-km">70K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">950</td><td class="pt-price">1,050</td></tr>
+          <tr class="major"><td class="pt-km">80K</td><td class="pt-items">Timing belt &middot; drive belt &middot; brake fluid</td><td class="pt-price">5,240</td><td class="pt-price">5,540</td></tr>
+          <tr><td class="pt-km">90K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">950</td><td class="pt-price">1,050</td></tr>
+          <tr class="major"><td class="pt-km">100K</td><td class="pt-items">Coolant &middot; transmission &middot; brake fluid</td><td class="pt-price">1,640</td><td class="pt-price">1,740</td></tr>
+          <tr><td class="pt-km">110K</td><td class="pt-items"><span class="pt-dash">&mdash;</span></td><td class="pt-price">950</td><td class="pt-price">1,050</td></tr>
+          <tr class="major"><td class="pt-km">120K</td><td class="pt-items">Timing belt &middot; drive belt &middot; spark plugs &middot; brake fluid</td><td class="pt-price">5,730</td><td class="pt-price">6,290</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="pt-foot"><strong>Always included:</strong> engine oil &amp; filter, cabin filter, air filter. Items marked with <strong>+</strong> are additional replacements for that interval. Final quote may vary after inspection depending on vehicle condition and required parts. All prices exclude VAT.</p>
-  </div>
-</section>
-
-<!-- GIULIETTA 1.4 -->
-<section id="var-giulietta14" class="pt-section">
-  <div class="w">
-    <div class="pt-header">
-      <div>
-        <span class="lbl-m">1.4L Turbo</span>
-        <h2 class="pt-h" style="margin-top:.6rem">Giulietta <em>1.4L.</em></h2>
-      </div>
-      <span class="pt-tag">AED 950 &nbsp;&ndash;&nbsp; AED 5,730</span>
-    </div>
-
-    <div class="pt-tbl-wrap">
-      <table class="pt-tbl">
-        <thead>
-          <tr>
-            <th>Interval</th>
-            <th>Items replaced</th>
-            <th>Price (excl. VAT)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="pt-km">10,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 950</td></tr>
-          <tr><td class="pt-km">20,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,300</td></tr>
-          <tr><td class="pt-km">30,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 950</td></tr>
-          <tr class="major"><td class="pt-km">40,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 5,240</td></tr>
-          <tr><td class="pt-km">50,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 950</td></tr>
-          <tr class="major"><td class="pt-km">60,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,790</td></tr>
-          <tr><td class="pt-km">70,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 950</td></tr>
-          <tr class="major"><td class="pt-km">80,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 5,240</td></tr>
-          <tr><td class="pt-km">90,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 950</td></tr>
-          <tr class="major"><td class="pt-km">100,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Coolant &middot; transmission oil &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,640</td></tr>
-          <tr><td class="pt-km">110,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 950</td></tr>
-          <tr class="major"><td class="pt-km">120,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 5,730</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="pt-foot"><strong>Always included:</strong> engine oil &amp; filter, cabin filter, air filter. Items marked with <strong>+</strong> are additional replacements for that interval. Timing-belt intervals (40K, 80K, 120K) are major services. Final quote may vary after inspection. All prices exclude VAT.</p>
-  </div>
-</section>
-
-<!-- GIULIETTA 1.8 -->
-<section id="var-giulietta18" class="pt-section alt">
-  <div class="w">
-    <div class="pt-header">
-      <div>
-        <span class="lbl-m">1.8L Turbo &middot; QV</span>
-        <h2 class="pt-h" style="margin-top:.6rem">Giulietta <em>1.8L.</em></h2>
-      </div>
-      <span class="pt-tag">AED 1,050 &nbsp;&ndash;&nbsp; AED 6,290</span>
-    </div>
-
-    <div class="pt-tbl-wrap">
-      <table class="pt-tbl">
-        <thead>
-          <tr>
-            <th>Interval</th>
-            <th>Items replaced</th>
-            <th>Price (excl. VAT)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="pt-km">10,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,050</td></tr>
-          <tr><td class="pt-km">20,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,400</td></tr>
-          <tr><td class="pt-km">30,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,050</td></tr>
-          <tr class="major"><td class="pt-km">40,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 5,540</td></tr>
-          <tr><td class="pt-km">50,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,050</td></tr>
-          <tr class="major"><td class="pt-km">60,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 2,150</td></tr>
-          <tr><td class="pt-km">70,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,050</td></tr>
-          <tr class="major"><td class="pt-km">80,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 5,540</td></tr>
-          <tr><td class="pt-km">90,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,050</td></tr>
-          <tr class="major"><td class="pt-km">100,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Coolant &middot; transmission oil &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,740</td></tr>
-          <tr><td class="pt-km">110,000 KM</td>
-              <td class="pt-items"><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 1,050</td></tr>
-          <tr class="major"><td class="pt-km">120,000 KM</td>
-              <td class="pt-items"><span class="pt-extra">+ Timing belt &middot; drive belt &middot; spark plugs &middot; brake fluid</span><span class="pt-base">Engine oil &amp; filter &middot; cabin filter &middot; air filter</span></td>
-              <td class="pt-price">AED 6,290</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="pt-foot"><strong>Always included:</strong> engine oil &amp; filter, cabin filter, air filter. Items marked with <strong>+</strong> are additional replacements for that interval. Timing-belt intervals (40K, 80K, 120K) are major services. Final quote may vary after inspection. All prices exclude VAT.</p>
+    <p class="pt-foot">
+      <span class="pt-legend">Major service</span> &nbsp;&middot;&nbsp;
+      <strong>Included in every interval:</strong> engine oil &amp; filter, cabin filter, air filter. All prices in AED, excluding VAT. Timing-belt service is mandatory at 40K, 80K and 120K. Final quote may vary after inspection.
+    </p>
   </div>
 </section>
 
