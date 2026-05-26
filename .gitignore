@@ -1,0 +1,27 @@
+# Secrets — never commit
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Dev/preview helpers
+.preview-server.cjs
+.playwright-mcp/
+
+# Local bot services (deployed separately, not part of the static site)
+voice-bot/
+whatsapp-bot/
+
+# Large/source binaries not needed on the site
+*.heic
+*.zip
+*.xlsx
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log

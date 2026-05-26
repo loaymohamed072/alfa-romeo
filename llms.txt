@@ -8,7 +8,7 @@ Autotech DXB is a specialist automotive workshop based in Dubai, UAE, focused ex
 - **Name**: Autotech DXB
 - **Location**: Dubai, UAE
 - **Phone**: +971522472941
-- **Hours**: Monday to Saturday, 08:00–18:00
+- **Hours**: Monday to Friday, 08:00–17:00; Saturday, 09:00–14:00
 - **Specialisation**: Alfa Romeo — all models, modern and classic
 - **Unique credential**: Only Squadra Tuning BV appointed partner in the Middle East
 - **Google Rating**: 4.9 stars
@@ -87,7 +87,7 @@ Yes. The Quadrifoglio V6 Biturbo is one of their specialisms. Service pricing, p
 Engine rebuild pricing depends on the model, engine condition, and extent of work required. Autotech provides quotes following an initial inspection. Call +971522472941 to discuss.
 
 ## Blog / Insights
-Full articles at: https://autotech-psi.vercel.app/blog/index.html
+Full articles at: https://www.autotechdxb.com/blog/index.html
 
 - Alfa Romeo Engine Rebuild in Dubai: What Owners Should Know
 - Alfa Romeo Giulia and Stelvio Servicing in Dubai: The Complete Owner's Guide

@@ -13,14 +13,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500&family=Jost:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://autotech-psi.vercel.app/pricing.html">
+  <link rel="canonical" href="https://www.autotechdxb.com/pricing.html">
 
   <meta property="og:title" content="Service Pricing & Inspection | Autotech DXB">
   <meta property="og:description" content="Full Alfa Romeo service pricing and inspection points. Giulia, Stelvio, Giulietta. Transparent AED pricing, no surprises.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://autotech-psi.vercel.app/pricing.html">
-  <meta property="og:image" content="https://autotech-psi.vercel.app/290675929_356463063270709_6629835773073910471_n.jpg">
+  <meta property="og:url" content="https://www.autotechdxb.com/pricing.html">
+  <meta property="og:image" content="https://www.autotechdxb.com/290675929_356463063270709_6629835773073910471_n.jpg">
   <meta property="og:locale" content="en_AE">
+  <meta property="og:site_name" content="Autotech DXB">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Service Pricing & Inspection | Autotech DXB">
+  <meta name="twitter:description" content="Full Alfa Romeo service pricing & 50-point inspection. Giulia, Stelvio, Giulietta. Transparent AED pricing, no surprises.">
+  <meta name="twitter:image" content="https://www.autotechdxb.com/290675929_356463063270709_6629835773073910471_n.jpg">
+
+  <!-- Geo targeting -->
+  <meta name="geo.region" content="AE-DU">
+  <meta name="geo.placename" content="Al Quoz Industrial Area 3, Dubai">
 
   <style>
     :root {
@@ -242,31 +253,58 @@
       .pt-tbl{min-width:0;display:block;width:100%}
       .pt-tbl thead{display:none}
       .pt-tbl tbody{display:block}
-      .pt-tbl tr{display:block;padding:1.1rem 1.15rem;
-                 border:1px solid var(--bd);border-bottom:none;
-                 background:linear-gradient(180deg,#0a0a0a 0,var(--bg) 100%);
-                 position:relative}
-      .pt-tbl tr:last-child{border-bottom:1px solid var(--bd)}
-      .pt-tbl tr:hover{background:linear-gradient(180deg,#0a0a0a 0,var(--bg) 100%)}
-      .pt-tbl tr.major{border-left:2px solid var(--red);
-                       background:linear-gradient(180deg,rgba(185,28,28,.06) 0,rgba(185,28,28,.02) 100%)}
-      .pt-tbl tr.major:hover{background:linear-gradient(180deg,rgba(185,28,28,.08) 0,rgba(185,28,28,.025) 100%)}
+
+      /* each interval = its own discrete card */
+      .pt-tbl tr{display:block;position:relative;
+                 padding:1.2rem 1.25rem 1.3rem;margin-bottom:.85rem;
+                 border:1px solid var(--bd);border-radius:14px;overflow:hidden;
+                 background:linear-gradient(180deg,#0c0c0c 0,#080808 100%);
+                 box-shadow:0 14px 32px -24px rgba(0,0,0,.9)}
+      .pt-tbl tr:hover{background:linear-gradient(180deg,#0c0c0c 0,#080808 100%)}
+      .pt-tbl tr.major{border-color:rgba(185,28,28,.42);
+                       background:linear-gradient(180deg,rgba(185,28,28,.10) 0,rgba(8,8,8,.96) 68%)}
+      .pt-tbl tr.major:hover{background:linear-gradient(180deg,rgba(185,28,28,.10) 0,rgba(8,8,8,.96) 68%)}
+
+      /* "Major service" pill badge */
+      .pt-tbl tr.major::after{content:'Major service';position:absolute;top:1.2rem;right:1.25rem;
+        font-family:'Jost',sans-serif;font-size:.5rem;font-weight:700;letter-spacing:.15em;
+        text-transform:uppercase;color:var(--red);line-height:1;
+        padding:.32rem .58rem;border:1px solid rgba(185,28,28,.4);
+        border-radius:999px;background:rgba(185,28,28,.08)}
+
       .pt-tbl td{display:block;width:auto;padding:0;border:none}
-      .pt-tbl td.pt-km{font-family:'Jost',sans-serif;font-size:.74rem;font-weight:600;
-                       letter-spacing:.18em;text-transform:uppercase;color:var(--tx);
-                       margin-bottom:.4rem;white-space:normal}
-      .pt-tbl tr.major td.pt-km::after{margin-left:.55rem;box-shadow:0 0 8px rgba(185,28,28,.8)}
-      .pt-tbl td.pt-items{font-size:.8rem;line-height:1.5;
-                          color:rgba(232,228,221,.7);
-                          padding-bottom:.85rem;margin-bottom:.6rem;
-                          border-bottom:1px solid var(--bd-soft)}
-      .pt-tbl td.pt-items .pt-dash{color:var(--tx-d)}
-      .pt-tbl td.pt-price{display:flex;align-items:baseline;justify-content:space-between;
-                          padding:.32rem 0;font-size:1.05rem;text-align:left;
-                          white-space:nowrap;width:auto}
-      .pt-tbl td.pt-price::before{
-        font-family:'Jost',sans-serif;font-size:.6rem;font-weight:600;
-        letter-spacing:.16em;text-transform:uppercase;color:var(--tx-m)}
+
+      /* interval heading: eyebrow + large serif number */
+      .pt-tbl td.pt-km{font-family:'Bodoni Moda',serif;font-size:1.42rem;font-weight:500;
+                       letter-spacing:.01em;text-transform:none;color:var(--tx);
+                       line-height:1;margin-bottom:0;white-space:nowrap}
+      .pt-tbl td.pt-km::before{content:'Interval';display:block;
+        font-family:'Jost',sans-serif;font-size:.54rem;font-weight:600;
+        letter-spacing:.18em;text-transform:uppercase;color:var(--tx-m);margin-bottom:.4rem}
+      .pt-tbl tr.major td.pt-km::after{display:none}
+
+      /* additional-work box (rows with extra parts) */
+      .pt-tbl td.pt-items{font-size:.82rem;line-height:1.5;color:rgba(232,228,221,.82);
+                          margin-top:.95rem;padding:.7rem .85rem;
+                          background:rgba(255,255,255,.025);border:1px solid var(--bd-soft);
+                          border-radius:9px}
+      .pt-tbl td.pt-items::before{content:'Additional work at this interval';display:block;
+        font-family:'Jost',sans-serif;font-size:.52rem;font-weight:600;letter-spacing:.15em;
+        text-transform:uppercase;color:var(--red);margin-bottom:.35rem}
+      /* hide empty (dash-only) rows — no confusing blank band */
+      .pt-tbl td.pt-items:has(.pt-dash){display:none}
+
+      /* price block: two engine variants side by side */
+      .pt-tbl td.pt-price{display:inline-flex;flex-direction:column;gap:.28rem;
+                          width:50%;vertical-align:top;margin-top:1.15rem;padding:0;
+                          font-family:'Bodoni Moda',serif;font-size:1.5rem;font-weight:500;
+                          color:var(--tx);text-align:left;white-space:nowrap;line-height:1}
+      .pt-tbl td.pt-price:nth-of-type(4){padding-left:1rem;border-left:1px solid var(--bd-soft)}
+      .pt-tbl td.pt-price::before{order:-1;
+        font-family:'Jost',sans-serif;font-size:.56rem;font-weight:600;
+        letter-spacing:.14em;text-transform:uppercase;color:var(--tx-m)}
+      .pt-tbl tr.major td.pt-price{color:var(--red)}
+
       /* Section-scoped variant labels */
       #var-giulia    .pt-tbl td.pt-price:nth-of-type(3)::before{content:'2.0L'}
       #var-giulia    .pt-tbl td.pt-price:nth-of-type(4)::before{content:'2.9L QV'}
@@ -279,8 +317,11 @@
       .pt-glow{width:80vw;height:80vw}
     }
     @media(max-width:380px){
-      .pt-tbl tr{padding:.95rem 1rem}
-      .pt-tbl td.pt-price{font-size:.98rem}
+      .pt-tbl tr{padding:1.05rem 1.05rem 1.15rem}
+      .pt-tbl tr.major{padding-top:1.05rem}
+      .pt-tbl td.pt-km{font-size:1.3rem}
+      .pt-tbl td.pt-price{font-size:1.3rem}
+      .pt-tbl tr.major::after{top:.9rem;right:1.05rem;font-size:.46rem;padding:.28rem .5rem}
     }
 
     /* ── INSPECTION SECTION ──────────────── */
@@ -368,8 +409,6 @@
     @media(max-width:600px){
       .ft-g{grid-template-columns:1fr}
       .ft-bot{flex-direction:column;align-items:flex-start;gap:.75rem}
-      .pt-tbl th,.pt-tbl td{padding:.95rem 1rem}
-      .pt-tbl td.pt-price{font-size:1.02rem}
     }
   </style>
 
