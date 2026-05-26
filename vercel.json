@@ -1,4 +1,8 @@
 {
+  "redirects": [
+    { "source": "/pricing", "destination": "/pricing.html", "permanent": true },
+    { "source": "/blog", "destination": "/blog/index.html", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
