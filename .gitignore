@@ -11,6 +11,8 @@ node_modules/
 # Dev/preview helpers
 .preview-server.cjs
 .playwright-mcp/
+.readability-backup-*/
+.excel-dump.txt
 
 # Local bot services (deployed separately, not part of the static site)
 voice-bot/

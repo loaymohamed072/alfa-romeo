@@ -156,8 +156,8 @@
       --bd:       #222222;
       --bd-soft:  #181818;
       --tx:       #e8e4dd;
-      --tx-m:     #706c68;
-      --tx-d:     #38352f;
+      --tx-m:     #a39e94;
+      --tx-d:     #857f74;
       --red:      #b91c1c;
       --red-dim:  rgba(185,28,28,0.09);
       --ease:     cubic-bezier(0.16,1,0.3,1);
@@ -165,9 +165,9 @@
 
     /* ── RESET ──────────────────────────────────────── */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;overflow-x:clip;background:#080808}
+    html{font-size:16.5px;scroll-behavior:smooth;overflow-x:clip;background:#080808}
     body{background:#080808;color:var(--tx);font-family:'Jost',system-ui,sans-serif;
-         font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+         font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
     img,video{display:block;max-width:100%}
     a{color:inherit;text-decoration:none}
     button,input,textarea,select{font-family:inherit;font-size:inherit}
@@ -190,7 +190,7 @@
          letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
     .lbl-m{font-family:'Jost',sans-serif;font-size:.67rem;font-weight:500;
            letter-spacing:.18em;text-transform:uppercase;color:var(--tx-m)}
-    .body-t{font-size:.97rem;font-weight:300;line-height:1.82;color:rgba(232,228,221,.62)}
+    .body-t{font-size:.97rem;font-weight:400;line-height:1.82;color:rgba(232,228,221,.88)}
 
     /* ── ITALIAN TRICOLOR ───────────────────────────── */
     .it{display:flex;height:2px;width:3.5rem;gap:1.5px}
@@ -281,7 +281,7 @@
     .nav-sub{font-size:.57rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
     .nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none}
     .nav-a{font-size:.71rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;
-           color:rgba(232,228,221,.58);position:relative;transition:color .2s}
+           color:rgba(232,228,221,.86);position:relative;transition:color .2s}
     .nav-a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;
                   background:var(--red);transition:width .3s var(--ease)}
     .nav-a:hover{color:var(--tx)}.nav-a:hover::after{width:100%}
@@ -319,7 +319,7 @@
     .hero-h1{font-family:'Bodoni Moda',serif;font-size:clamp(2.9rem,6.8vw,7rem);
              font-weight:500;line-height:1.02;letter-spacing:-.03em;color:#f0ece4;margin-bottom:1.8rem}
     .hero-h1 em{font-style:italic;font-weight:400;color:rgba(240,236,228,.68)}
-    .hero-sub{font-size:1rem;font-weight:300;line-height:1.78;color:rgba(232,228,221,.58);
+    .hero-sub{font-size:1rem;font-weight:400;line-height:1.78;color:rgba(232,228,221,.86);
               max-width:46ch;margin-bottom:2.75rem}
     .hero-ctas{display:flex;flex-wrap:wrap;gap:1rem}
     .hero-sc{position:absolute;right:5vw;bottom:2.5rem;z-index:4;
@@ -344,7 +344,7 @@
     .svc-hd{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:flex-end;margin-bottom:4rem}
     .svc-h{font-family:'Bodoni Moda',serif;font-size:clamp(2rem,4vw,4rem);
            font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin-top:1.25rem}
-    .svc-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.45)}
+    .svc-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.66)}
     .svc-list{border-top:1px solid var(--bd)}
     .svc-row{display:flex;align-items:center;gap:2.5rem;padding:2.1rem 0;
              border-bottom:1px solid var(--bd);position:relative;
@@ -361,7 +361,7 @@
     .svc-bd{flex:1}
     .svc-tt{font-family:'Bodoni Moda',serif;font-size:clamp(1.15rem,2.2vw,1.7rem);
             font-weight:500;color:var(--tx);margin-bottom:.45rem;transition:color .25s}
-    .svc-ds{font-size:.86rem;font-weight:300;line-height:1.68;color:var(--tx-m);max-width:52ch}
+    .svc-ds{font-size:.86rem;font-weight:400;line-height:1.68;color:var(--tx-m);max-width:52ch}
     .svc-tag{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
              color:var(--tx-d);flex-shrink:0}
     .svc-arr{flex-shrink:0;color:var(--red);opacity:0;transform:translateX(-8px);
@@ -391,7 +391,7 @@
     .pf-g{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:center}
     .pf-h{font-family:'Bodoni Moda',serif;font-size:clamp(1.9rem,3.8vw,3.8rem);
           font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin:1.25rem 0 2rem}
-    .pf-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.48)}
+    .pf-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.70)}
     .pf-vw{position:relative;overflow:hidden;aspect-ratio:16/9}
     .pf-vw video{width:100%;height:100%;object-fit:cover;display:block}
     .pf-vw::after{content:'';position:absolute;inset:0;border:1px solid var(--bd);z-index:2;pointer-events:none}
@@ -402,7 +402,6 @@
     /* ──────────────────────────────────────────────────
        GALLERY
     ────────────────────────────────────────────────── */
-    #gallery{background:var(--bg);padding:5.5rem 0}
     .gl-h{font-family:'Bodoni Moda',serif;font-size:clamp(1.9rem,3.5vw,3.5rem);
           font-weight:500;line-height:1.1;letter-spacing:-.02em;color:var(--tx);margin-top:1.25rem}
     .gl-r1{display:grid;grid-template-columns:1fr;gap:4px}
@@ -430,7 +429,7 @@
     .og-card:hover{background:rgba(255,255,255,.025);transform:translateY(-2px)}
     .og-car{font-family:'Bodoni Moda',serif;font-size:1.1rem;font-weight:500;
             color:var(--tx);margin-bottom:.45rem;line-height:1.2}
-    .og-desc{font-size:.78rem;font-weight:300;color:var(--tx-m);
+    .og-desc{font-size:.78rem;font-weight:400;color:var(--tx-m);
              margin-bottom:1.25rem;line-height:1.55;
              white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .og-tag{display:inline-block;font-size:.58rem;font-weight:600;
@@ -445,10 +444,10 @@
     .og-feat-imgs img{width:100%;height:270px;object-fit:cover;display:block;transition:transform .9s var(--ease)}
     .og-card.og-featured:hover .og-feat-imgs img{transform:scale(1.04)}
     .og-feat-body{padding:2.5rem 2rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--bd)}
-    .og-feat-sub{font-size:.8rem;font-weight:300;color:rgba(232,228,221,.55);margin-bottom:1.1rem;line-height:1.55}
-    .og-feat-text{font-size:.78rem;font-weight:300;color:var(--tx-m);line-height:1.75;margin-bottom:1.4rem}
+    .og-feat-sub{font-size:.8rem;font-weight:400;color:rgba(232,228,221,.84);margin-bottom:1.1rem;line-height:1.55}
+    .og-feat-text{font-size:.78rem;font-weight:400;color:var(--tx-m);line-height:1.75;margin-bottom:1.4rem}
     .og-feat-trust{font-size:.61rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;
-                   color:rgba(232,228,221,.38);border-left:2px solid var(--red);padding-left:.65rem;margin-bottom:1.4rem}
+                   color:rgba(232,228,221,.74);border-left:2px solid var(--red);padding-left:.65rem;margin-bottom:1.4rem}
     @media(max-width:900px){
       .og-card.og-featured{grid-template-columns:1fr}
       .og-feat-imgs img{height:220px}
@@ -477,7 +476,7 @@
                   border-top:1.5px solid var(--red);border-right:1.5px solid var(--red);pointer-events:none}
     .about-h{font-family:'Bodoni Moda',serif;font-size:clamp(2rem,4.2vw,4.2rem);
              font-weight:500;line-height:1.06;letter-spacing:-.022em;color:var(--tx);margin:1.25rem 0 2rem}
-    .about-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.45)}
+    .about-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.66)}
     .red-rule{width:3.5rem;height:2px;background:var(--red);margin-bottom:2.25rem}
     .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
                  margin-top:3.75rem;padding-top:2.5rem;border-top:1px solid var(--bd)}
@@ -495,7 +494,7 @@
     .cm-h{font-family:'Bodoni Moda',serif;font-size:clamp(2.2rem,5.5vw,5.5rem);
           font-weight:500;line-height:1.04;letter-spacing:-.03em;color:#f0ece4;
           margin:1.25rem 0 1.5rem;max-width:22ch}
-    .cm-h em{font-style:italic;font-weight:400;color:rgba(240,236,228,.6)}
+    .cm-h em{font-style:italic;font-weight:400;color:rgba(240,236,228,.74)}
 
     /* ──────────────────────────────────────────────────
        TEAM
@@ -516,7 +515,7 @@
     .mbr-init span{font-family:'Bodoni Moda',serif;font-size:1.4rem;font-weight:500;color:var(--red)}
     .mbr-n{font-family:'Bodoni Moda',serif;font-size:2.1rem;font-weight:500;
            color:var(--tx);line-height:1;margin-bottom:1.75rem}
-    .mbr-bio{font-size:.9rem;font-weight:300;line-height:1.85;color:rgba(232,228,221,.5);max-width:40ch}
+    .mbr-bio{font-size:.9rem;font-weight:400;line-height:1.85;color:rgba(232,228,221,.82);max-width:40ch}
     .mbr-tags{margin-top:2.25rem;padding-top:1.75rem;border-top:1px solid var(--bd-soft);
               font-size:.63rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--tx-d)}
 
@@ -532,7 +531,7 @@
     .ws-card:hover .ws-num{color:rgba(185,28,28,.3)}
     .ws-title{font-family:'Bodoni Moda',serif;font-size:1.2rem;font-weight:500;
               color:var(--tx);margin-bottom:.9rem;line-height:1.2}
-    .ws-body{font-size:.875rem;font-weight:300;line-height:1.78;color:var(--tx-m);max-width:32ch}
+    .ws-body{font-size:.875rem;font-weight:400;line-height:1.78;color:var(--tx-m);max-width:32ch}
 
     /* ──────────────────────────────────────────────────
        COVERAGE
@@ -540,7 +539,7 @@
     .cov-group-label{font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
                      color:var(--red);margin-bottom:1.1rem}
     .cov-tags{display:flex;flex-wrap:wrap;gap:.6rem}
-    .cov-tag{font-size:.75rem;font-weight:400;letter-spacing:.06em;color:rgba(232,228,221,.65);
+    .cov-tag{font-size:.75rem;font-weight:400;letter-spacing:.06em;color:rgba(232,228,221,.88);
              padding:.45rem 1rem;border:1px solid var(--bd);
              transition:border-color .25s,color .25s,background .25s;cursor:default}
     .cov-tag:hover{border-color:rgba(232,228,221,.22);color:var(--tx);background:rgba(255,255,255,.03)}
@@ -561,8 +560,8 @@
     .faq-a{overflow:hidden;max-height:0;transition:max-height .42s var(--ease),opacity .35s ease}
     .faq-a:not([hidden]){max-height:300px;opacity:1}
     .faq-a[hidden]{display:block!important;max-height:0;opacity:0}
-    .faq-a p{padding:0 2rem 1.6rem 0;font-size:.9rem;font-weight:300;line-height:1.8;
-             color:rgba(232,228,221,.58);max-width:58ch}
+    .faq-a p{padding:0 2rem 1.6rem 0;font-size:.9rem;font-weight:400;line-height:1.8;
+             color:rgba(232,228,221,.86);max-width:58ch}
 
     /* ──────────────────────────────────────────────────
        TRUST + LOCATION
@@ -580,15 +579,15 @@
     .tr-meta{font-size:.68rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--tx-m)}
     .tr-divider{width:1px;height:3.5rem;background:var(--bd);flex-shrink:0}
     .tr-tag{font-family:'Bodoni Moda',serif;font-size:1.05rem;font-weight:400;font-style:italic;
-            color:rgba(232,228,221,.62);max-width:28ch;line-height:1.45}
+            color:rgba(232,228,221,.88);max-width:28ch;line-height:1.45}
 
     /* — Review cards — */
     .rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
              background:var(--bd);border:1px solid var(--bd);margin-bottom:4rem}
     .rv-card{background:var(--bg);padding:2rem 1.75rem;transition:background .3s}
     .rv-card:hover{background:var(--s1)}
-    .rv-quote{font-size:.95rem;font-weight:300;line-height:1.8;
-              color:rgba(232,228,221,.62);margin-bottom:1.5rem;
+    .rv-quote{font-size:.95rem;font-weight:400;line-height:1.8;
+              color:rgba(232,228,221,.88);margin-bottom:1.5rem;
               position:relative;padding-top:1.5rem}
     .rv-quote::before{content:'\201C';position:absolute;top:0;left:0;
                       font-family:'Bodoni Moda',serif;font-size:2.5rem;font-weight:400;
@@ -599,7 +598,7 @@
     .loc-g{display:grid;grid-template-columns:1fr 1.35fr;gap:5rem;align-items:start}
     .loc-h{font-family:'Bodoni Moda',serif;font-size:clamp(2rem,3.8vw,3.8rem);font-weight:500;
            line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin:1.25rem 0 2rem}
-    .loc-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.45)}
+    .loc-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.66)}
     .loc-rows{display:flex;flex-direction:column;gap:0;margin-bottom:2.5rem}
     .loc-row{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 0;
              border-bottom:1px solid var(--bd-soft)}
@@ -607,7 +606,7 @@
     .loc-row-ic{width:1.5rem;height:1.5rem;flex-shrink:0;margin-top:1px;color:var(--red)}
     .loc-row-lbl{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
                  color:var(--tx-m);margin-bottom:.3rem}
-    .loc-row-val{font-size:.9rem;font-weight:300;color:var(--tx);line-height:1.55}
+    .loc-row-val{font-size:.9rem;font-weight:400;color:var(--tx);line-height:1.55}
     .loc-map-wrap{position:relative;overflow:hidden;border:1px solid var(--bd)}
     .loc-map-wrap::before{content:'';position:absolute;inset:0;
       background:linear-gradient(to top,rgba(8,8,8,.3) 0%,transparent 45%);
@@ -646,38 +645,48 @@
     .pr-detail-link:hover svg{transform:translateX(3px)}
     .pr-panel{display:none}
     .pr-panel.active{display:block}
-    .pr-row{display:flex;align-items:flex-start;justify-content:space-between;
-            gap:2rem;padding:1.35rem 0;border-bottom:1px solid var(--bd-soft)}
-    .pr-row:first-child{border-top:1px solid var(--bd-soft)}
-    .pr-row.highlight{background:rgba(185,28,28,.04);
-                      margin:0 -1.5rem;padding:1.35rem 1.5rem;
-                      border-bottom-color:rgba(185,28,28,.15)}
-    .pr-mi{font-size:.9rem;font-weight:400;color:var(--tx);line-height:1.3}
-    .pr-note{font-size:.72rem;font-weight:300;color:var(--tx-m);margin-top:.3rem}
-    .pr-price{font-family:'Bodoni Moda',serif;font-size:1.2rem;font-weight:400;
-              color:var(--tx);white-space:nowrap;flex-shrink:0;text-align:right}
-    .pr-row.highlight .pr-price{color:var(--red)}
-    .pr-label{font-size:.58rem;font-weight:600;letter-spacing:.14em;
-              text-transform:uppercase;color:var(--red);display:block;margin-top:.25rem;text-align:right}
-    .pr-list{max-width:640px}
-    .pr-footnote{margin-top:2rem;font-size:.8rem;font-weight:300;
-                 color:var(--tx-m);line-height:1.7;max-width:52ch;
-                 padding-top:1.25rem;border-top:1px solid var(--bd-soft)}
+    .pr-list{max-width:680px}
+    .pr-item{border-bottom:1px solid var(--bd-soft)}
+    .pr-item:first-child{border-top:1px solid var(--bd-soft)}
+    .pr-item.highlight{background:rgba(185,28,28,.04)}
+    .pr-row{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+            width:100%;background:none;border:none;cursor:pointer;text-align:left;
+            color:inherit;font-family:inherit;padding:1.3rem 1.25rem;transition:background .2s}
+    .pr-row:hover{background:rgba(255,255,255,.02)}
+    .pr-item.highlight .pr-row:hover{background:rgba(185,28,28,.05)}
+    .pr-row-l{display:flex;flex-direction:column;gap:.32rem;min-width:0}
+    .pr-row-r{display:flex;align-items:center;gap:1.1rem;flex-shrink:0}
+    .pr-mi{font-size:.92rem;font-weight:400;color:var(--tx);line-height:1.3}
+    .pr-note{font-size:.74rem;font-weight:400;color:var(--tx-m);line-height:1.4}
+    .pr-price-wrap{text-align:right;line-height:1.1}
+    .pr-price{display:block;font-family:'Bodoni Moda',serif;font-size:1.25rem;
+              font-weight:400;color:var(--tx);white-space:nowrap}
+    .pr-item.highlight .pr-price{color:var(--red)}
+    .pr-label{display:block;font-size:.56rem;font-weight:600;letter-spacing:.14em;
+              text-transform:uppercase;color:var(--red);margin-top:.3rem}
+    .pr-chev{flex-shrink:0;color:var(--tx-m);transition:transform .4s var(--ease),color .2s}
+    .pr-row[aria-expanded="true"] .pr-chev{transform:rotate(180deg);color:var(--red)}
+    .pr-row:hover .pr-chev{color:var(--tx)}
+    .pr-detail{overflow:hidden;max-height:0;transition:max-height .4s var(--ease)}
+    .pr-detail-inner{padding:0 1.25rem 1.4rem}
+    .pr-detail-h{display:block;font-size:.58rem;font-weight:600;letter-spacing:.16em;
+                 text-transform:uppercase;color:var(--red);margin-bottom:.85rem}
+    .pr-detail-list{list-style:none;margin:0;padding:0;
+                    display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.5rem}
+    .pr-detail-list li{position:relative;padding-left:1rem;font-size:.82rem;
+                       font-weight:400;color:rgba(232,228,221,.82);line-height:1.45}
+    .pr-detail-list li::before{content:'';position:absolute;left:0;top:.5em;
+                               width:5px;height:5px;background:var(--red);border-radius:50%}
+    .pr-footnote{margin-top:1.5rem;font-size:.82rem;font-weight:400;
+                 color:var(--tx-m);line-height:1.7;max-width:60ch;
+                 padding:1.25rem 1.25rem 0;border-top:1px solid var(--bd-soft)}
 
     @media(max-width:600px){
       .pr-tab{padding:.6rem 1rem;font-size:.6rem;letter-spacing:.11em}
-      .pr-row.highlight{margin:0 -.75rem;padding:1.2rem .75rem}
-    }
-
-    @media(min-width:768px){
-      .pr-panel.active{display:grid;grid-template-columns:1fr 1fr;max-width:860px}
-      .pr-panel.active .pr-row{padding-left:.85rem;padding-right:.85rem}
-      .pr-panel.active .pr-row:nth-child(2){border-top:1px solid var(--bd-soft)}
-      .pr-panel.active .pr-row:nth-child(odd){border-right:1px solid var(--bd)}
-      .pr-panel.active .pr-row:nth-child(even){padding-left:1.25rem}
-      .pr-panel.active .pr-row.highlight{margin:0;padding:1.35rem .85rem}
-      .pr-panel.active .pr-row.highlight:nth-child(even){padding-left:1.25rem}
-      .pr-panel.active .pr-footnote{grid-column:1/-1;padding:.5rem .85rem 0}
+      .pr-row{padding:1.2rem .9rem;gap:1rem}
+      .pr-detail-inner{padding:0 .9rem 1.3rem}
+      .pr-detail-list{grid-template-columns:1fr}
+      .pr-footnote{padding:1.25rem .9rem 0}
     }
 
     /* ──────────────────────────────────────────────────
@@ -698,14 +707,14 @@
     .sq-h{font-family:'Bodoni Moda',serif;font-size:clamp(1.8rem,3.5vw,3.8rem);
           font-weight:500;line-height:1.06;letter-spacing:-.025em;color:var(--tx);
           max-width:20ch;margin-bottom:2rem}
-    .sq-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.5)}
+    .sq-h em{font-style:italic;font-weight:400;color:rgba(232,228,221,.82)}
     .sq-rule{width:4rem;height:2px;background:var(--red);margin-bottom:2.25rem}
     .sq-pillars{display:flex;flex-wrap:wrap;gap:2rem;margin-top:2.5rem;
                 padding-top:2.5rem;border-top:1px solid var(--bd)}
     .sq-p{display:flex;align-items:flex-start;gap:1.1rem}
     .sq-p-ln{width:1px;height:3.5rem;background:var(--red);flex-shrink:0;margin-top:3px}
     .sq-pn{font-family:'Bodoni Moda',serif;font-size:1.08rem;font-weight:500;color:var(--tx);margin-bottom:.3rem}
-    .sq-pd{font-size:.78rem;font-weight:300;color:var(--tx-m)}
+    .sq-pd{font-size:.78rem;font-weight:400;color:var(--tx-m)}
     .sq-dyno{display:inline-flex;border:1px solid var(--bd);overflow:hidden;margin-top:2.25rem}
     .dyn-s{padding:1.25rem 2.25rem;border-right:1px solid var(--bd)}
     .dyn-s:last-child{border-right:none}
@@ -727,11 +736,11 @@
           padding-bottom:3rem;border-bottom:1px solid var(--bd-soft)}
     .ft-ct{font-size:.61rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--tx);margin-bottom:1.5rem}
     .ft-ls{list-style:none;display:flex;flex-direction:column;gap:.8rem}
-    .ft-a{font-size:.82rem;font-weight:300;color:var(--tx-m);transition:color .2s}
+    .ft-a{font-size:.82rem;font-weight:400;color:var(--tx-m);transition:color .2s}
     .ft-a:hover{color:var(--tx)}
     .ft-bot{display:flex;justify-content:space-between;align-items:center;
             padding:1.5rem 0;flex-wrap:wrap;gap:1rem}
-    .ft-copy{font-size:.72rem;font-weight:300;color:var(--tx-d)}
+    .ft-copy{font-size:.72rem;font-weight:400;color:var(--tx-d)}
     .ft-auth{font-size:.67rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--tx-d);opacity:.55}
 
     /* responsive */
@@ -773,7 +782,8 @@
     }
     @media(max-width:900px){
       .ws-strip{grid-template-columns:1fr;gap:4px}
-      .wsp:nth-child(1),.wsp:nth-child(2),.wsp:nth-child(3){height:280px}
+      .wsp:nth-child(3){display:none}
+      .wsp:nth-child(1),.wsp:nth-child(2){height:260px}
       .gl-r1{grid-template-columns:1fr}
       .gl-r1 .gi{height:300px!important}
       .gl-r2{grid-template-columns:1fr 1fr}
@@ -799,7 +809,7 @@
       .gl-r2{grid-template-columns:1fr}
       .gl-r2 .gi{height:220px}
       .gl-r1 .gi{height:260px!important}
-      .wsp:nth-child(1),.wsp:nth-child(2),.wsp:nth-child(3){height:240px}
+      .wsp:nth-child(1),.wsp:nth-child(2){height:225px}
       .about-stats{gap:.85rem}
       .stn{font-size:1.6rem}
       .hero-h1{font-size:clamp(2.1rem,9.5vw,2.9rem);margin-bottom:1.25rem}
@@ -810,7 +820,7 @@
       .sq-dyno{width:100%}
       .dyn-s{flex:1;min-width:90px;padding:1rem 1rem}
       .dyn-n{font-size:1.5rem}
-      #about,#services,#team,#gallery,#contact,#squadra,#workshop,#performance,#ongoing,#pricing{padding:4rem 0}
+      #about,#services,#team,#contact,#squadra,#workshop,#performance,#ongoing,#pricing{padding:4rem 0}
       .mbr{padding:2rem 1.25rem}
       .mbr-n{font-size:1.75rem}
       .svc-h{font-size:clamp(1.7rem,7vw,2.5rem)}
@@ -853,7 +863,7 @@
       border-top:1px solid rgba(185,28,28,.18);
       border-bottom:1px solid rgba(185,28,28,.18)
     }
-    .mk-intro{font-size:.97rem;font-weight:300;line-height:1.82;color:rgba(232,228,221,.58);max-width:52ch;margin-top:1.5rem}
+    .mk-intro{font-size:.97rem;font-weight:400;line-height:1.82;color:rgba(232,228,221,.86);max-width:52ch;margin-top:1.5rem}
     .mk-accordion{margin-top:3rem;border-top:1px solid rgba(34,34,34,.55)}
     .mk-item{border-bottom:1px solid rgba(34,34,34,.55)}
     .mk-trigger{width:100%;background:none;border:none;cursor:pointer;padding:1.5rem 0;
@@ -872,7 +882,7 @@
     .mk-body{overflow:hidden;max-height:0;transition:max-height .5s var(--ease),opacity .4s ease;opacity:0}
     .mk-body.mk-open{opacity:1}
     .mk-list{display:grid;grid-template-columns:1fr 1fr;gap:0 3rem;padding:1rem 0 2rem}
-    .mk-model{font-size:.86rem;font-weight:300;color:rgba(232,228,221,.68);
+    .mk-model{font-size:.86rem;font-weight:400;color:rgba(232,228,221,.90);
               padding:.52rem 0;border-bottom:1px solid var(--bd-soft);line-height:1.3}
     @media(max-width:600px){
       .mk-list{grid-template-columns:1fr}
@@ -1057,9 +1067,9 @@
   <div class="amb" style="width:700px;height:700px;top:20%;left:-15%" aria-hidden="true"></div>
   <div class="w">
     <div style="margin-bottom:3rem">
-      <div data-rev="up"><span class="lbl">The Workshop</span></div>
+      <div data-rev="up"><span class="lbl">Classics &amp; Current</span></div>
       <h2 id="workshop-h" style="font-family:'Bodoni Moda',serif;font-size:clamp(2rem,4vw,4rem);font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin-top:1.25rem" data-rev="up" data-d="1">
-        Every car here<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.45)">has a name.</em>
+        The workshop.
       </h2>
     </div>
   </div>
@@ -1092,50 +1102,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════ GALLERY ════════════════════════ -->
-<section id="gallery" aria-labelledby="gallery-h">
-  <div class="w" style="margin-bottom:3rem">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem">
-      <div>
-        <div data-rev="up"><span class="lbl">The Work</span></div>
-        <h2 id="gallery-h" class="gl-h" data-rev="up" data-d="1">Machines worth caring for</h2>
-      </div>
-    </div>
-  </div>
-
-  <div style="padding:0 5vw" data-rev="scale">
-    <!-- Row 1: landscape -->
-    <div class="gl-r1">
-      <div class="gi">
-        <img src="./dubai-luxury-automotive-GqPBsjmWJPWirD43Yeo6dL.webp"
-             alt="Alfa Romeo Giulia Quadrifoglio with Dubai skyline and Burj Khalifa" loading="lazy">
-        <div class="gi-cap"><span class="gi-ct">Giulia Quadrifoglio &nbsp;·&nbsp; Dubai</span></div>
-      </div>
-    </div>
-    <!-- Row 2: three equal -->
-    <div class="gl-r2" data-rev="up" data-d="1">
-      <div class="gi">
-        <img src="./V6_Quadrifoglio_(28305207270).jpg"
-             alt="Alfa Romeo V6 Biturbo Quadrifoglio engine bay" loading="lazy" style="object-position:center 45%">
-        <div class="gi-cap"><span class="gi-ct">V6 Biturbo &nbsp;·&nbsp; Quadrifoglio</span></div>
-      </div>
-      <div class="gi">
-        <img src="./Gemini_Generated_Image_q3hfebq3hfebq3hf.jpg"
-             alt="Red Alfa Romeo Stelvio Quadrifoglio on Dubai highway" loading="lazy" style="object-position:center 60%">
-        <div class="gi-cap"><span class="gi-ct">Stelvio Quadrifoglio &nbsp;·&nbsp; Dubai</span></div>
-      </div>
-      <div class="gi">
-        <img src="./garage 3.jpg"
-             alt="Classic Alfa Romeo collection in Autotech workshop" loading="lazy">
-        <div class="gi-cap"><span class="gi-ct">Heritage Collection &nbsp;·&nbsp; Workshop</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="w gl-foot" data-rev="fade" data-d="2">
-    <span class="lbl-m">Giulia &nbsp;·&nbsp; Stelvio &nbsp;·&nbsp; Spider &nbsp;·&nbsp; V6 Biturbo &nbsp;·&nbsp; Squadra Tuning</span>
-  </div>
-</section>
 
 <!-- ════════════════════════ PERFORMANCE VIDEO ════════════════════════ -->
 <section id="performance" aria-labelledby="perf-h">
@@ -1178,7 +1144,7 @@
     <div style="max-width:38ch;margin-bottom:3.5rem">
       <div data-rev="up"><span class="lbl">Service Pricing</span></div>
       <h2 id="pricing-h" style="font-family:'Bodoni Moda',serif;font-size:clamp(2rem,4vw,4rem);font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin:1.25rem 0 1rem" data-rev="up" data-d="1">
-        Transparent pricing,<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.45)">no surprises.</em>
+        Transparent pricing,<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.66)">no surprises.</em>
       </h2>
     </div>
 
@@ -1199,338 +1165,1221 @@
       </div>
 
       <!-- 2.0 Petrol -->
-      <div id="panel-petrol" class="pr-panel active pr-list" role="tabpanel" aria-labelledby="tab-petrol">
-        <div class="pr-row">
-          <div><div class="pr-mi">10,000 KM</div></div>
-          <div class="pr-price">AED 1,350</div>
-        </div>
-        <div class="pr-row">
-          <div>
-            <div class="pr-mi">20,000 KM</div>
-            <div class="pr-note">+ Brake fluid</div>
-          </div>
-          <div class="pr-price">AED 1,800</div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">30,000 KM</div></div>
-          <div class="pr-price">AED 1,350</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">40,000 KM</div>
-            <div class="pr-note">+ Drive belt</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 2,260</div>
-            <span class="pr-label">Major Service</span>
+            <div id="panel-petrol" class="pr-panel pr-list active" role="tabpanel" aria-labelledby="tab-petrol">
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-10" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">10,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,350</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-10" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">50,000 KM</div></div>
-          <div class="pr-price">AED 1,350</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">60,000 KM</div>
-            <div class="pr-note">+ Spark plugs</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 2,640</div>
-            <span class="pr-label">Major Service</span>
-          </div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">70,000 KM</div></div>
-          <div class="pr-price">AED 1,350</div>
-        </div>
-        <div class="pr-row">
-          <div>
-            <div class="pr-mi">80,000 KM</div>
-            <div class="pr-note">+ Brake fluid</div>
-          </div>
-          <div class="pr-price">AED 1,800</div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">90,000 KM</div></div>
-          <div class="pr-price">AED 1,350</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">100,000 KM</div>
-            <div class="pr-note">+ Coolant · transmission · transfer case · differential oils</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 5,380</div>
-            <span class="pr-label">Major Service</span>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-20" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">20,000 KM</span>
+              <span class="pr-note">+ Brake fluid</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,800</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-20" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">110,000 KM</div></div>
-          <div class="pr-price">AED 1,350</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">120,000 KM</div>
-            <div class="pr-note">+ Spark plugs</div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-30" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">30,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,350</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-30" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <div class="pr-price">AED 2,640</div>
-            <span class="pr-label">Major Service</span>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-40" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">40,000 KM</span>
+              <span class="pr-note">+ Drive belt</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 2,260</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-40" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Drive belt</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-50" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">50,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,350</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-50" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-60" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">60,000 KM</span>
+              <span class="pr-note">+ Spark plugs</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 2,640</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-60" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Spark plugs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-70" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">70,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,350</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-70" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-80" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">80,000 KM</span>
+              <span class="pr-note">+ Brake fluid</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,800</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-80" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-90" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">90,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,350</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-90" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-100" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">100,000 KM</span>
+              <span class="pr-note">+ Coolant · transmission · transfer case · differential oils</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 5,380</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-100" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Coolant</li>
+                <li>Transmission oil (no filter)</li>
+                <li>Transfer case oil</li>
+                <li>Differential oil</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-110" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">110,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,350</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-110" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-120" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">120,000 KM</span>
+              <span class="pr-note">+ Spark plugs</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 2,640</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-petrol-120" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Spark plugs</li>
+              </ul>
+            </div>
           </div>
         </div>
         <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
       </div>
 
-      <!-- 2.9 V6 Quadrifoglio -->
       <div id="panel-v6" class="pr-panel pr-list" role="tabpanel" aria-labelledby="tab-v6">
-        <div class="pr-row">
-          <div><div class="pr-mi">10,000 KM</div></div>
-          <div class="pr-price">AED 1,950</div>
-        </div>
-        <div class="pr-row">
-          <div>
-            <div class="pr-mi">20,000 KM</div>
-            <div class="pr-note">+ Brake fluid</div>
-          </div>
-          <div class="pr-price">AED 2,400</div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">30,000 KM</div></div>
-          <div class="pr-price">AED 1,950</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">40,000 KM</div>
-            <div class="pr-note">+ Drive belt</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 5,350</div>
-            <span class="pr-label">Major Service</span>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-10" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">10,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-10" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">50,000 KM</div></div>
-          <div class="pr-price">AED 1,950</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">60,000 KM</div>
-            <div class="pr-note">+ Spark plugs</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 3,600</div>
-            <span class="pr-label">Major Service</span>
-          </div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">70,000 KM</div></div>
-          <div class="pr-price">AED 1,950</div>
-        </div>
-        <div class="pr-row">
-          <div>
-            <div class="pr-mi">80,000 KM</div>
-            <div class="pr-note">+ Brake fluid</div>
-          </div>
-          <div class="pr-price">AED 2,400</div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">90,000 KM</div></div>
-          <div class="pr-price">AED 1,950</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">100,000 KM</div>
-            <div class="pr-note">+ Coolant · transmission · transfer case · differential oils</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 5,890</div>
-            <span class="pr-label">Major Service</span>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-20" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">20,000 KM</span>
+              <span class="pr-note">+ Brake fluid</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 2,400</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-20" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">110,000 KM</div></div>
-          <div class="pr-price">AED 1,950</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">120,000 KM</div>
-            <div class="pr-note">+ Spark plugs</div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-30" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">30,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-30" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <div class="pr-price">AED 3,600</div>
-            <span class="pr-label">Major Service</span>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-40" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">40,000 KM</span>
+              <span class="pr-note">+ Drive belt</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 5,350</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-40" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Drive belt</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-50" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">50,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-50" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-60" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">60,000 KM</span>
+              <span class="pr-note">+ Spark plugs</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 3,600</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-60" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Spark plugs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-70" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">70,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-70" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-80" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">80,000 KM</span>
+              <span class="pr-note">+ Brake fluid</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 2,400</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-80" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-90" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">90,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-90" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-100" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">100,000 KM</span>
+              <span class="pr-note">+ Coolant · transmission · transfer case · differential oils</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 5,890</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-100" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Coolant</li>
+                <li>Transmission oil (no filter)</li>
+                <li>Transfer case oil</li>
+                <li>Differential oil</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-110" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">110,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-110" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-v6-120" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">120,000 KM</span>
+              <span class="pr-note">+ Spark plugs</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 3,600</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-v6-120" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Spark plugs</li>
+              </ul>
+            </div>
           </div>
         </div>
         <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
       </div>
 
-      <!-- Giulietta 1.4 -->
       <div id="panel-g14" class="pr-panel pr-list" role="tabpanel" aria-labelledby="tab-g14">
-        <div class="pr-row">
-          <div><div class="pr-mi">10,000 KM</div></div>
-          <div class="pr-price">AED 950</div>
-        </div>
-        <div class="pr-row">
-          <div>
-            <div class="pr-mi">20,000 KM</div>
-            <div class="pr-note">+ Brake fluid</div>
-          </div>
-          <div class="pr-price">AED 1,300</div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">30,000 KM</div></div>
-          <div class="pr-price">AED 950</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">40,000 KM</div>
-            <div class="pr-note">+ Drive belt · timing belt</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 5,240</div>
-            <span class="pr-label">Major Service</span>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-10" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">10,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-10" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">50,000 KM</div></div>
-          <div class="pr-price">AED 950</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">60,000 KM</div>
-            <div class="pr-note">+ Spark plugs</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 1,790</div>
-            <span class="pr-label">Major Service</span>
-          </div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">70,000 KM</div></div>
-          <div class="pr-price">AED 950</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">80,000 KM</div>
-            <div class="pr-note">+ Drive belt · timing belt</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 5,240</div>
-            <span class="pr-label">Major Service</span>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-20" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">20,000 KM</span>
+              <span class="pr-note">+ Brake fluid</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,300</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-20" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">90,000 KM</div></div>
-          <div class="pr-price">AED 950</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">100,000 KM</div>
-            <div class="pr-note">+ Coolant · transmission oil</div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-30" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">30,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-30" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <div class="pr-price">AED 1,640</div>
-            <span class="pr-label">Major Service</span>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-40" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">40,000 KM</span>
+              <span class="pr-note">+ Drive belt · timing belt</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 5,240</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-40" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Drive belt</li>
+                <li>Timing belt</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">110,000 KM</div></div>
-          <div class="pr-price">AED 950</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">120,000 KM</div>
-            <div class="pr-note">+ Spark plugs · drive belt · timing belt</div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-50" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">50,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-50" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <div class="pr-price">AED 5,730</div>
-            <span class="pr-label">Major Service</span>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-60" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">60,000 KM</span>
+              <span class="pr-note">+ Spark plugs</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,790</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-60" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Spark plugs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-70" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">70,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-70" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-80" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">80,000 KM</span>
+              <span class="pr-note">+ Drive belt · timing belt</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 5,240</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-80" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Drive belt</li>
+                <li>Timing belt</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-90" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">90,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-90" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-100" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">100,000 KM</span>
+              <span class="pr-note">+ Coolant · transmission oil</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,640</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-100" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Coolant</li>
+                <li>Transmission oil (no filter)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-110" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">110,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 950</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-110" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g14-120" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">120,000 KM</span>
+              <span class="pr-note">+ Spark plugs · drive belt · timing belt</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 5,730</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g14-120" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Spark plugs</li>
+                <li>Drive belt</li>
+                <li>Timing belt</li>
+              </ul>
+            </div>
           </div>
         </div>
         <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
       </div>
 
-      <!-- Giulietta 1.8 -->
       <div id="panel-g18" class="pr-panel pr-list" role="tabpanel" aria-labelledby="tab-g18">
-        <div class="pr-row">
-          <div><div class="pr-mi">10,000 KM</div></div>
-          <div class="pr-price">AED 1,050</div>
-        </div>
-        <div class="pr-row">
-          <div>
-            <div class="pr-mi">20,000 KM</div>
-            <div class="pr-note">+ Brake fluid</div>
-          </div>
-          <div class="pr-price">AED 1,400</div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">30,000 KM</div></div>
-          <div class="pr-price">AED 1,050</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">40,000 KM</div>
-            <div class="pr-note">+ Drive belt · timing belt</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 5,540</div>
-            <span class="pr-label">Major Service</span>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-10" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">10,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,050</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-10" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">50,000 KM</div></div>
-          <div class="pr-price">AED 1,050</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">60,000 KM</div>
-            <div class="pr-note">+ Spark plugs</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 2,150</div>
-            <span class="pr-label">Major Service</span>
-          </div>
-        </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">70,000 KM</div></div>
-          <div class="pr-price">AED 1,050</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">80,000 KM</div>
-            <div class="pr-note">+ Drive belt · timing belt</div>
-          </div>
-          <div>
-            <div class="pr-price">AED 5,540</div>
-            <span class="pr-label">Major Service</span>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-20" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">20,000 KM</span>
+              <span class="pr-note">+ Brake fluid</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,400</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-20" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">90,000 KM</div></div>
-          <div class="pr-price">AED 1,050</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">100,000 KM</div>
-            <div class="pr-note">+ Coolant · transmission oil</div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-30" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">30,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,050</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-30" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <div class="pr-price">AED 1,740</div>
-            <span class="pr-label">Major Service</span>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-40" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">40,000 KM</span>
+              <span class="pr-note">+ Drive belt · timing belt</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 5,540</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-40" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Drive belt</li>
+                <li>Timing belt</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="pr-row">
-          <div><div class="pr-mi">110,000 KM</div></div>
-          <div class="pr-price">AED 1,050</div>
-        </div>
-        <div class="pr-row highlight">
-          <div>
-            <div class="pr-mi">120,000 KM</div>
-            <div class="pr-note">+ Spark plugs · drive belt · timing belt</div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-50" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">50,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,050</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-50" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <div class="pr-price">AED 6,290</div>
-            <span class="pr-label">Major Service</span>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-60" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">60,000 KM</span>
+              <span class="pr-note">+ Spark plugs</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 2,150</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-60" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Spark plugs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-70" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">70,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,050</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-70" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-80" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">80,000 KM</span>
+              <span class="pr-note">+ Drive belt · timing belt</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 5,540</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-80" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Drive belt</li>
+                <li>Timing belt</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-90" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">90,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,050</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-90" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-100" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">100,000 KM</span>
+              <span class="pr-note">+ Coolant · transmission oil</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,740</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-100" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Coolant</li>
+                <li>Transmission oil (no filter)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-110" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">110,000 KM</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 1,050</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-110" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pr-item highlight">
+          <button class="pr-row" aria-expanded="false" aria-controls="d-g18-120" onclick="togglePr(this)">
+            <span class="pr-row-l">
+              <span class="pr-mi">120,000 KM</span>
+              <span class="pr-note">+ Spark plugs · drive belt · timing belt</span>
+            </span>
+            <span class="pr-row-r">
+              <span class="pr-price-wrap">
+                <span class="pr-price">AED 6,290</span>
+                <span class="pr-label">Major Service</span>
+              </span>
+              <svg class="pr-chev" width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="pr-detail" id="d-g18-120" role="region" aria-label="Service detail">
+            <div class="pr-detail-inner">
+              <span class="pr-detail-h">Included at this service</span>
+              <ul class="pr-detail-list">
+                <li>Engine oil &amp; filter</li>
+                <li>Cabin filter</li>
+                <li>Air filter</li>
+                <li>Brake fluid</li>
+                <li>Spark plugs</li>
+                <li>Drive belt</li>
+                <li>Timing belt</li>
+              </ul>
+            </div>
           </div>
         </div>
         <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
@@ -1588,13 +2437,13 @@
       <!-- photos -->
       <div class="about-photos" data-rev="left" data-d="2">
         <div class="about-pm">
-          <img src="./garage photo 2.jpg" alt="Autotech workshop, multiple Alfa Romeos in service" loading="lazy">
+          <img src="./garage photo.jpg" alt="Autotech workshop floor with Alfa Romeos in for specialist service" loading="lazy">
           <div class="about-cap">
             <span class="lbl-m">Autotech Workshop &nbsp;·&nbsp; Dubai</span>
           </div>
         </div>
         <div class="about-pf">
-          <img src="./garage-photo-5.jpg" alt="Alfa Romeo badge wall and classic vehicle on lift" loading="lazy">
+          <img src="./V6_Quadrifoglio_(28305207270).jpg" alt="Alfa Romeo V6 Biturbo Quadrifoglio engine bay during specialist work" loading="lazy">
         </div>
         <div class="about-corner" aria-hidden="true"></div>
       </div>
@@ -1603,7 +2452,7 @@
       <div style="padding-top:2rem">
         <div data-rev="up">
           <span class="lbl">The Garage</span>
-          <p style="font-size:.78rem;font-weight:300;letter-spacing:.04em;color:rgba(232,228,221,.42);margin-top:.7rem;font-style:italic">Autotech Alfa Romeo. Established 2021 by Alfa Romeo enthusiasts, for Alfa Romeo enthusiasts.</p>
+          <p style="font-size:.78rem;font-weight:400;letter-spacing:.04em;color:rgba(232,228,221,.78);margin-top:.7rem;font-style:italic">Autotech Alfa Romeo. Established 2021 by Alfa Romeo enthusiasts, for Alfa Romeo enthusiasts.</p>
         </div>
 
         <h2 id="about-h" class="about-h" data-rev="up" data-d="1">
@@ -1643,7 +2492,7 @@
     <div style="margin-bottom:3rem" data-rev="up">
       <span class="lbl">Trusted in Dubai</span>
       <h2 id="trust-h" style="font-family:'Bodoni Moda',serif;font-size:clamp(2rem,4vw,4rem);font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin-top:1.25rem;max-width:22ch">
-        The garage owners<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.45)">recommend to other owners.</em>
+        The garage owners<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.66)">recommend to other owners.</em>
       </h2>
     </div>
 
@@ -1712,9 +2561,9 @@
       <div>
         <div data-rev="up"><span class="lbl">Scope of Work</span></div>
         <h2 id="cov-h" style="font-family:'Bodoni Moda',serif;font-size:clamp(2rem,3.8vw,3.8rem);font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin:1.25rem 0 2rem" data-rev="up" data-d="1">
-          Established for Alfa Romeo.<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.45)">Trusted by Alfisti.</em>
+          Established for Alfa Romeo.<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.66)">Trusted by Alfisti.</em>
         </h2>
-        <p style="font-size:.97rem;font-weight:300;line-height:1.82;color:rgba(232,228,221,.58);max-width:44ch" data-rev="up" data-d="2">
+        <p style="font-size:.97rem;font-weight:400;line-height:1.82;color:rgba(232,228,221,.86);max-width:44ch" data-rev="up" data-d="2">
           From daily-driven Giulias to 600+BHP Quadrifoglio builds, classic Alfa Romeo models, and rare performance-focused track cars. Autotech handles specialist diagnostics, repair, tuning, inspections, and upgrades from a workshop built around technical knowledge, not mass appeal.
         </p>
       </div>
@@ -1751,7 +2600,7 @@
   <div class="w">
     <div data-rev="up"><span class="lbl">Specialist Knowledge</span></div>
     <h2 id="mk-h" style="font-family:'Bodoni Moda',serif;font-size:clamp(2rem,4vw,4rem);font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin-top:1.25rem" data-rev="up" data-d="1">
-      Specialist Alfa Romeo<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.45)">Model Knowledge</em>
+      Specialist Alfa Romeo<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.66)">Model Knowledge</em>
     </h2>
     <p class="mk-intro" data-rev="up" data-d="2">
       The team has extensive experience across classic Alfa Romeo models, modern performance cars, and rare enthusiast builds.
@@ -1841,7 +2690,7 @@
   <div class="w">
     <div data-rev="up"><span class="lbl">The Team</span></div>
     <h2 id="team-h" style="font-family:'Bodoni Moda',serif;font-size:clamp(2rem,4vw,4rem);font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin-top:1.25rem;max-width:18ch" data-rev="up" data-d="1">
-      Built on expertise.<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.45)">Driven by the brand.</em>
+      Built on expertise.<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.66)">Driven by the brand.</em>
     </h2>
 
     <div class="team-g">
@@ -1999,9 +2848,9 @@
       <div style="position:sticky;top:6rem">
         <div data-rev="up"><span class="lbl">FAQ</span></div>
         <h2 id="faq-h" style="font-family:'Bodoni Moda',serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--tx);margin:1.25rem 0 1.5rem" data-rev="up" data-d="1">
-          Alfa Romeo questions,<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.45)">answered.</em>
+          Alfa Romeo questions,<br><em style="font-style:italic;font-weight:400;color:rgba(232,228,221,.66)">answered.</em>
         </h2>
-        <p style="font-size:.9rem;font-weight:300;color:rgba(232,228,221,.5);line-height:1.75;max-width:28ch" data-rev="up" data-d="2">
+        <p style="font-size:.9rem;font-weight:400;color:rgba(232,228,221,.82);line-height:1.75;max-width:28ch" data-rev="up" data-d="2">
           Everything owners ask before trusting someone with an Alfa Romeo.
         </p>
       </div>
@@ -2153,7 +3002,6 @@
           <li><a href="#ongoing"  class="ft-a">Projects</a></li>
           <li><a href="#pricing"  class="ft-a">Pricing</a></li>
           <li><a href="./pricing.html" class="ft-a">Full Pricing &amp; Inspection</a></li>
-          <li><a href="#gallery"  class="ft-a">Gallery</a></li>
           <li><a href="#location"  class="ft-a">Contact</a></li>
         </ul>
       </div>
@@ -2314,9 +3162,29 @@ function switchTab(id) {
     t.setAttribute('aria-selected', 'false');
   });
   document.querySelectorAll('.pr-panel').forEach(p => p.classList.remove('active'));
+  /* collapse any open service detail so each tab opens clean */
+  document.querySelectorAll('.pr-row[aria-expanded="true"]').forEach(b => {
+    b.setAttribute('aria-expanded', 'false');
+    b.nextElementSibling.style.maxHeight = '0';
+  });
   document.getElementById('tab-' + id).classList.add('active');
   document.getElementById('tab-' + id).setAttribute('aria-selected', 'true');
   document.getElementById('panel-' + id).classList.add('active');
+}
+
+/* ── PRICING SERVICE DETAIL (accordion) ────────────── */
+function togglePr(btn) {
+  const detail = btn.nextElementSibling;
+  const isOpen = btn.getAttribute('aria-expanded') === 'true';
+  const panel  = btn.closest('.pr-panel');
+  panel.querySelectorAll('.pr-row[aria-expanded="true"]').forEach(b => {
+    if (b !== btn) {
+      b.setAttribute('aria-expanded', 'false');
+      b.nextElementSibling.style.maxHeight = '0';
+    }
+  });
+  btn.setAttribute('aria-expanded', String(!isOpen));
+  detail.style.maxHeight = isOpen ? '0' : detail.scrollHeight + 'px';
 }
 
 
