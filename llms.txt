@@ -9,44 +9,44 @@ Autotech DXB is a specialist automotive workshop based in Dubai, UAE, focused ex
 - **Location**: Dubai, UAE
 - **Phone**: +971522472941
 - **Hours**: Monday to Friday, 08:00–17:00; Saturday, 09:00–14:00
-- **Specialisation**: Alfa Romeo — all models, modern and classic
+- **Specialisation**: Alfa Romeo, all models, modern and classic
 - **Unique credential**: Only Squadra Tuning BV appointed partner in the Middle East
 - **Google Rating**: 4.9 stars
 
 ## What They Do
 
 ### Servicing
-Autotech handles the full 10,000 KM to 120,000 KM service schedule for Alfa Romeo Giulia, Stelvio, Giulietta, Spider, and classic models. Every service includes engine oil and filter, cabin filter, and air filter. Major services at 40,000 KM, 60,000 KM, 100,000 KM, and 120,000 KM include additional components depending on the engine variant.
+Autotech handles the full 10,000 KM to 120,000 KM service schedule for Alfa Romeo Giulia, Stelvio, Giulietta, Spider, and classic models. Every service includes engine oil and filter, cabin filter, and air filter. Larger services add components such as brake fluid, spark plugs, drive belts, and full fluid changes at various intervals depending on the engine variant, with the 100,000 KM service being the most comprehensive across the range.
 
-### Service Pricing (2.0 Petrol — Giulia / Stelvio)
+### Service Pricing (2.0 Petrol, Giulia / Stelvio)
 - 10,000 KM: AED 1,350
 - 20,000 KM: AED 1,800 (+ brake fluid)
 - 30,000 KM: AED 1,350
-- 40,000 KM: AED 2,260 (+ drive belt) — Major Service
+- 40,000 KM: AED 2,260 (+ drive belt)
 - 50,000 KM: AED 1,350
-- 60,000 KM: AED 2,640 (+ spark plugs) — Major Service
+- 60,000 KM: AED 2,640 (+ spark plugs)
 - 70,000 KM: AED 1,350
-- 80,000 KM: AED 1,800 (+ brake fluid)
+- 80,000 KM: AED 2,260 (+ brake fluid, drive belt)
 - 90,000 KM: AED 1,350
-- 100,000 KM: AED 5,380 (+ coolant, transmission, transfer case, differential oils) — Major Service
+- 100,000 KM: AED 5,380 (+ coolant, transmission, transfer case, differential oils), most comprehensive service
 - 110,000 KM: AED 1,350
-- 120,000 KM: AED 2,640 (+ spark plugs) — Major Service
+- 120,000 KM: AED 3,100 (+ spark plugs, drive belt)
 
-### Service Pricing (2.9 V6 Biturbo Quadrifoglio — Giulia / Stelvio)
+### Service Pricing (2.9 V6 Biturbo Quadrifoglio, Giulia / Stelvio)
 - 10,000 KM: AED 1,950
 - 20,000 KM: AED 2,400 (+ brake fluid)
 - 30,000 KM: AED 1,950
-- 40,000 KM: AED 5,350 (+ drive belt) — Major Service
+- 40,000 KM: AED 5,350 (+ drive belt)
 - 50,000 KM: AED 1,950
-- 60,000 KM: AED 3,600 (+ spark plugs) — Major Service
+- 60,000 KM: AED 3,600 (+ spark plugs)
 - 70,000 KM: AED 1,950
-- 80,000 KM: AED 2,400 (+ brake fluid)
+- 80,000 KM: AED 5,350 (+ brake fluid, drive belt)
 - 90,000 KM: AED 1,950
-- 100,000 KM: AED 5,890 (+ coolant, transmission, transfer case, differential oils) — Major Service
+- 100,000 KM: AED 5,890 (+ coolant, transmission, transfer case, differential oils), most comprehensive service
 - 110,000 KM: AED 1,950
-- 120,000 KM: AED 3,600 (+ spark plugs) — Major Service
+- 120,000 KM: AED 6,550 (+ spark plugs, drive belt)
 
-All prices exclude VAT. Final quote may vary after inspection.
+All prices exclude VAT. Final quote may vary after inspection. Pricing last updated June 2026. Machine-readable pricing: https://www.autotechdxb.com/pricing.md
 
 ### Engine Rebuilds
 Autotech performs full engine rebuilds on both modern Alfa Romeo engines and classic models. Current project: a full engine rebuild on an Alfa Romeo Berlina brought in from Kuwait.
@@ -75,7 +75,7 @@ Full mechanical, electrical, and performance assessments for buyers considering 
 No. Autotech is an independent specialist workshop, not a franchised dealership. This distinction matters: as a specialist, they focus exclusively on Alfa Romeo, allowing deeper brand knowledge than a multi-brand dealership service centre typically offers.
 
 **How often should I service my Alfa Romeo Giulia or Stelvio in Dubai?**
-Every 10,000 KM. Dubai's climate — high ambient temperatures, frequent stop-start traffic, and dusty conditions — makes adherence to the 10,000 KM interval important. Stretching service intervals leads to accelerated wear on filters, oil, and cooling components.
+Every 10,000 KM. Dubai's climate (high ambient temperatures, frequent stop-start traffic, and dusty conditions) makes adherence to the 10,000 KM interval important. Stretching service intervals leads to accelerated wear on filters, oil, and cooling components.
 
 **What is the best garage for Alfa Romeo service in Dubai?**
 Autotech DXB is widely regarded as Dubai's leading Alfa Romeo specialist, with a 4.9-star Google rating and the only Squadra Tuning appointment in the Middle East.

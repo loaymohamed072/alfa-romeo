@@ -4,13 +4,25 @@
     <loc>https://www.autotechdxb.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-25</lastmod>
   </url>
   <url>
     <loc>https://www.autotechdxb.com/pricing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-25</lastmod>
+  </url>
+  <url>
+    <loc>https://www.autotechdxb.com/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-06-25</lastmod>
+  </url>
+  <url>
+    <loc>https://www.autotechdxb.com/terms.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-06-25</lastmod>
   </url>
   <url>
     <loc>https://www.autotechdxb.com/blog/index.html</loc>

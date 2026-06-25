@@ -1,7 +1,9 @@
 {
   "redirects": [
     { "source": "/pricing", "destination": "/pricing.html", "permanent": true },
-    { "source": "/blog", "destination": "/blog/index.html", "permanent": true }
+    { "source": "/blog", "destination": "/blog/index.html", "permanent": true },
+    { "source": "/privacy", "destination": "/privacy.html", "permanent": true },
+    { "source": "/terms", "destination": "/terms.html", "permanent": true }
   ],
   "headers": [
     {

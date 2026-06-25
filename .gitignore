@@ -3,6 +3,7 @@
 .env.*
 **/.env
 **/.env.*
+mail.txt
 
 # Dependencies
 node_modules/
