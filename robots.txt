@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Content-Signal: ai-train=yes, ai-input=yes, search=yes
 
 # AI assistants & answer engines (explicitly allowed so they can cite us)
 User-agent: GPTBot
