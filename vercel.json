@@ -5,18 +5,6 @@
     { "source": "/privacy", "destination": "/privacy.html", "permanent": true },
     { "source": "/terms", "destination": "/terms.html", "permanent": true }
   ],
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [{ "type": "header", "key": "accept", "value": ".*text/markdown.*" }],
-      "destination": "/index.md"
-    },
-    {
-      "source": "/pricing.html",
-      "has": [{ "type": "header", "key": "accept", "value": ".*text/markdown.*" }],
-      "destination": "/pricing.md"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
