@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Autotech DXB is a Dubai-based Alfa Romeo specialist workshop for Giulia, Stelvio, Quadrifoglio servicing, diagnostics, tuning, inspections, and engine rebuilds.">
+  <meta name="description" content="Alfa Romeo specialist in Al Quoz, Dubai: Giulia, Stelvio and Quadrifoglio servicing, diagnostics, Squadra tuning and AED 350 inspections. Book on WhatsApp.">
   <title>Alfa Romeo Specialist Dubai | Autotech DXB</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="shortcut icon" href="/favicon.png">
@@ -14,7 +14,6 @@
 
   <!-- SEO meta -->
   <meta name="robots" content="index, follow">
-  <meta name="keywords" content="Alfa Romeo specialist Dubai, Alfa Romeo garage Dubai, Alfa Romeo repair Dubai, Alfa Romeo diagnostics Dubai, Alfa Romeo tuning Dubai, Squadra Tuning Middle East, Quadrifoglio tuning UAE, performance car garage Dubai, pre-purchase inspection Alfa Romeo Dubai">
   <link rel="canonical" href="https://www.autotechdxb.com/">
 
   <!-- Open Graph -->
@@ -22,7 +21,7 @@
   <meta property="og:description" content="Autotech DXB is Dubai's specialist Alfa Romeo workshop. Giulia, Stelvio, Quadrifoglio servicing, diagnostics, tuning, inspections, and engine rebuilds.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.autotechdxb.com/">
-  <meta property="og:image" content="https://www.autotechdxb.com/290675929_356463063270709_6629835773073910471_n.jpg">
+  <meta property="og:image" content="https://www.autotechdxb.com/autotech-dxb-logo.jpg">
   <meta property="og:locale" content="en_AE">
   <meta property="og:site_name" content="Autotech DXB">
 
@@ -30,7 +29,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Alfa Romeo Specialist Dubai | Autotech DXB">
   <meta name="twitter:description" content="Dubai's specialist Alfa Romeo workshop. Giulia, Stelvio, Quadrifoglio servicing, diagnostics, tuning, inspections, and engine rebuilds.">
-  <meta name="twitter:image" content="https://www.autotechdxb.com/290675929_356463063270709_6629835773073910471_n.jpg">
+  <meta name="twitter:image" content="https://www.autotechdxb.com/autotech-dxb-logo.jpg">
 
   <!-- Geo targeting -->
   <meta name="geo.region" content="AE-DU">
@@ -44,7 +43,7 @@
     "name": "Autotech",
     "description": "Dubai's premier Alfa Romeo specialist garage. The only appointed Squadra Tuning BV partner in the Middle East.",
     "url": "https://www.autotechdxb.com/",
-    "image": "https://www.autotechdxb.com/290675929_356463063270709_6629835773073910471_n.jpg",
+    "image": "https://www.autotechdxb.com/autotech-dxb-logo.jpg",
     "telephone": "+971522472941",
     "address": {
       "@type": "PostalAddress",
@@ -556,15 +555,16 @@
     .faq-item{border-bottom:1px solid var(--bd)}
     .faq-q{width:100%;background:none;border:none;cursor:pointer;padding:1.6rem 0;
            display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
-           text-align:left;color:var(--tx);transition:color .2s}
+           text-align:left;color:var(--tx);transition:color .2s;list-style:none}
+    .faq-q::-webkit-details-marker{display:none}
     .faq-q:hover{color:#fff}
     .faq-q span{font-family:'Jost',sans-serif;font-size:clamp(.9rem,1.8vw,1.02rem);
                 font-weight:400;line-height:1.4;letter-spacing:.01em}
     .faq-ic{flex-shrink:0;color:var(--red);transition:transform .35s var(--ease)}
-    .faq-q[aria-expanded="true"] .faq-ic{transform:rotate(180deg)}
-    .faq-a{overflow:hidden;max-height:0;transition:max-height .42s var(--ease),opacity .35s ease}
-    .faq-a:not([hidden]){max-height:300px;opacity:1}
-    .faq-a[hidden]{display:block!important;max-height:0;opacity:0}
+    .faq-item[open] .faq-ic{transform:rotate(180deg)}
+    .faq-item[open] .faq-a{animation:faqIn .42s var(--ease)}
+    @keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+    @media(prefers-reduced-motion:reduce){.faq-item[open] .faq-a{animation:none}}
     .faq-a p{padding:0 2rem 1.6rem 0;font-size:.9rem;font-weight:400;line-height:1.8;
              color:rgba(232,228,221,.86);max-width:58ch}
 
@@ -649,10 +649,11 @@
     .pr-detail-link svg{transition:transform .3s var(--ease)}
     .pr-detail-link:hover svg{transform:translateX(3px)}
     .pr-panel{display:none}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     .pr-panel.active{display:block}
     .pr-list{max-width:680px}
     .pr-item{border-bottom:1px solid var(--bd-soft)}
-    .pr-item:first-child{border-top:1px solid var(--bd-soft)}
+    .pr-item:first-of-type{border-top:1px solid var(--bd-soft)}
     .pr-item.highlight{background:rgba(185,28,28,.04)}
     .pr-row{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
             width:100%;background:none;border:none;cursor:pointer;text-align:left;
@@ -861,7 +862,7 @@
     /* ── MODEL KNOWLEDGE ACCORDION ──────────────────── */
     #model-knowledge{
       background-color:var(--bg);
-      background-image:linear-gradient(rgba(8,8,8,.80),rgba(8,8,8,.80)),url('./ig_0cdc6242b5825f020169f39f21100c81918a477562e484d2db.png');
+      background-image:linear-gradient(rgba(8,8,8,.80),rgba(8,8,8,.80)),url('./alfa-romeo-model-range.png');
       background-size:cover;
       background-position:center 38%;
       padding:5.5rem 0;
@@ -919,7 +920,7 @@
 <!-- ════════════════════════ NAV ════════════════════════ -->
 <nav id="nav" aria-label="Main navigation">
   <a href="/" class="nav-brand" aria-label="Autotech home">
-    <div class="nav-img"><img src="./290675929_356463063270709_6629835773073910471_n.jpg" alt="Autotech"></div>
+    <div class="nav-img"><img src="./autotech-dxb-logo.jpg" alt="Autotech"></div>
     <div class="nav-wm">
       <span class="nav-name">Autotech</span>
       <span class="nav-sub">Dubai's Alfa Romeo Specialists</span>
@@ -955,8 +956,8 @@
 <!-- ════════════════════════ HERO ════════════════════════ -->
 <section id="hero" aria-label="Hero">
   <video id="hero-vid" autoplay muted loop playsinline webkit-playsinline preload="metadata"
-         poster="./Gemini_Generated_Image_q3hfebq3hfebq3hf.jpg" aria-hidden="true">
-    <source src="./watermark_removed_3ab22fd4-f905-4793-acd9-d3014767ef4d.mp4" type="video/mp4">
+         poster="./alfa-romeo-stelvio-quadrifoglio-dubai.jpg" aria-hidden="true">
+    <source src="./autotech-dxb-hero.mp4" type="video/mp4">
   </video>
   <div class="hero-g" aria-hidden="true"></div>
   <div class="hero-v" aria-hidden="true"></div>
@@ -967,7 +968,7 @@
       <div style="max-width:820px">
         <h1 class="hero-h1" style="margin-bottom:1.5rem">
           <span class="wr hero-l1"><span>Autotech</span></span>
-          <span class="hero-l2"><span class="wr" data-d="2"><span>Precision for Alfa Romeos</span></span></span>
+          <span class="hero-l2"><span class="wr" data-d="2"><span>Precision for Alfa Romeos in Dubai</span></span></span>
         </h1>
         <p class="hero-sub" data-rev="fade" data-d="3">
           Dubai's leading Alfa Romeo Specialist. Genuine diagnostic expertise, precision maintenance, genuine Alfa Romeo parts, and the region's exclusively appointed Squadra Tuning BV performance-trained tuners.
@@ -1087,11 +1088,11 @@
         <div class="wsp-cap"><span class="lbl-m">Heritage &nbsp;·&nbsp; Classic Models</span></div>
       </div>
       <div class="wsp">
-        <img src="./garage photo 2.jpg" alt="Autotech workshop, Giulia, Stelvio and classic in service" loading="lazy">
+        <img src="./autotech-workshop-giulia-quadrifoglio-dubai.jpg" alt="Autotech workshop, Giulia, Stelvio and classic in service" loading="lazy">
         <div class="wsp-cap"><span class="lbl-m">Modern Specialist Workshop</span></div>
       </div>
       <div class="wsp">
-        <img src="./garage 3.jpg" alt="Classic Alfa Romeo collection including Spider in workshop" loading="lazy">
+        <img src="./autotech-workshop-italian-classics-dubai.jpg" alt="Classic Alfa Romeo collection including Spider in workshop" loading="lazy">
         <div class="wsp-cap"><span class="lbl-m">From Spider to Quadrifoglio</span></div>
       </div>
     </div>
@@ -1130,8 +1131,8 @@
       <div style="position:relative" data-rev="right" data-d="2">
         <div class="pf-vw">
           <video id="perf-vid" muted loop playsinline webkit-playsinline preload="metadata"
-                 poster="./Gemini_Generated_Image_q3hfebq3hfebq3hf.jpg">
-            <source src="./performance video.mp4" type="video/mp4">
+                 poster="./alfa-romeo-stelvio-quadrifoglio-dubai.jpg">
+            <source src="./alfa-romeo-performance-tuning.mp4" type="video/mp4">
           </video>
         </div>
         <div class="pf-c pf-c-tl" aria-hidden="true"></div>
@@ -1171,6 +1172,7 @@
 
       <!-- 2.0 Petrol -->
             <div id="panel-petrol" class="pr-panel pr-list active" role="tabpanel" aria-labelledby="tab-petrol">
+        <h3 class="sr-only">Alfa Romeo Giulia &amp; Stelvio 2.0 petrol service prices (AED, excl. VAT)</h3>
         <div class="pr-item">
           <button class="pr-row" aria-expanded="false" aria-controls="d-petrol-10" onclick="togglePr(this)">
             <span class="pr-row-l">
@@ -1469,10 +1471,11 @@
             </div>
           </div>
         </div>
-        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
+        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT. Prices last updated June 2026.</span></p>
       </div>
 
       <div id="panel-v6" class="pr-panel pr-list" role="tabpanel" aria-labelledby="tab-v6">
+        <h3 class="sr-only">Alfa Romeo Giulia &amp; Stelvio 2.9 V6 Quadrifoglio service prices (AED, excl. VAT)</h3>
         <div class="pr-item">
           <button class="pr-row" aria-expanded="false" aria-controls="d-v6-10" onclick="togglePr(this)">
             <span class="pr-row-l">
@@ -1771,10 +1774,11 @@
             </div>
           </div>
         </div>
-        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
+        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT. Prices last updated June 2026.</span></p>
       </div>
 
       <div id="panel-g14" class="pr-panel pr-list" role="tabpanel" aria-labelledby="tab-g14">
+        <h3 class="sr-only">Alfa Romeo Giulietta 1.4 service prices (AED, excl. VAT)</h3>
         <div class="pr-item">
           <button class="pr-row" aria-expanded="false" aria-controls="d-g14-10" onclick="togglePr(this)">
             <span class="pr-row-l">
@@ -2076,10 +2080,11 @@
             </div>
           </div>
         </div>
-        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
+        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT. Prices last updated June 2026.</span></p>
       </div>
 
       <div id="panel-g18" class="pr-panel pr-list" role="tabpanel" aria-labelledby="tab-g18">
+        <h3 class="sr-only">Alfa Romeo Giulietta 1.8 service prices (AED, excl. VAT)</h3>
         <div class="pr-item">
           <button class="pr-row" aria-expanded="false" aria-controls="d-g18-10" onclick="togglePr(this)">
             <span class="pr-row-l">
@@ -2381,7 +2386,7 @@
             </div>
           </div>
         </div>
-        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT.</span></p>
+        <p class="pr-footnote">Every service includes engine oil &amp; filter, cabin filter and air filter. Final quote may vary after inspection depending on vehicle condition and required parts.<br><span style="color:var(--tx);font-weight:400">All prices exclude VAT. Prices last updated June 2026.</span></p>
       </div>
     </div>
 
@@ -2409,8 +2414,8 @@
       <!-- Featured: 1750 GTV Engine Rebuild -->
       <div class="og-card og-featured">
         <div class="og-feat-imgs">
-          <img src="./IMG_4272.jpg" alt="Alfa Romeo 1750 GTV engine stripped and laid out for full rebuild" loading="lazy">
-          <img src="./IMG_4273.jpg" alt="Alfa Romeo 1750 GTV engine components during specialist rebuild at Autotech Dubai" loading="lazy">
+          <img src="./classic-alfa-romeo-rebuild-autotech-dubai.jpg" alt="Alfa Romeo 1750 GTV engine stripped and laid out for full rebuild" loading="lazy">
+          <img src="./classic-alfa-romeo-rebuild-autotech-dubai-2.jpg" alt="Alfa Romeo 1750 GTV engine components during specialist rebuild at Autotech Dubai" loading="lazy">
         </div>
         <div class="og-feat-body">
           <div class="og-car">Alfa Romeo 1750 GTV Engine Rebuild</div>
@@ -2436,13 +2441,13 @@
       <!-- photos -->
       <div class="about-photos" data-rev="left" data-d="2">
         <div class="about-pm">
-          <img src="./garage photo.jpg" alt="Autotech workshop floor with Alfa Romeos in for specialist service" loading="lazy">
+          <img src="./autotech-workshop-classic-alfa-romeo-dubai.jpg" alt="Autotech workshop floor with Alfa Romeos in for specialist service" loading="lazy">
           <div class="about-cap">
             <span class="lbl-m">Autotech Workshop &nbsp;·&nbsp; Dubai</span>
           </div>
         </div>
         <div class="about-pf">
-          <img src="./V6_Quadrifoglio_(28305207270).jpg" alt="Alfa Romeo V6 Biturbo Quadrifoglio engine bay during specialist work" loading="lazy">
+          <img src="./alfa-romeo-quadrifoglio-v6-engine.jpg" alt="Alfa Romeo V6 Biturbo Quadrifoglio engine bay during specialist work" loading="lazy">
         </div>
         <div class="about-corner" aria-hidden="true"></div>
       </div>
@@ -2533,7 +2538,7 @@
 
 <!-- ════════════════════════ COMMUNITY ════════════════════════ -->
 <section id="community" aria-labelledby="comm-h">
-  <img class="cm-img" src="./alfa romeo cars.jpg"
+  <img class="cm-img" src="./alfa-romeo-quadrifoglio-fleet-dubai-autodrome.jpg"
        alt="Fleet of Alfa Romeo vehicles including Dubai Police Giulias at Dubai Autodrome"
        loading="lazy">
   <div class="cm-ov" aria-hidden="true"></div>
@@ -2856,105 +2861,105 @@
 
       <div class="faq-list" data-rev="up" data-d="2">
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <details class="faq-item" name="faq">
+          <summary class="faq-q">
             <span>Do you specialize in Alfa Romeo vehicles in Dubai?</span>
             <svg class="faq-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-a" hidden>
+          </summary>
+          <div class="faq-a">
             <p>Yes. Autotech is a Dubai-based specialist garage focused on Alfa Romeo diagnostics, repair, maintenance, and performance work.</p>
           </div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <details class="faq-item" name="faq">
+          <summary class="faq-q">
             <span>Are you an official Squadra Tuning partner?</span>
             <svg class="faq-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-a" hidden>
+          </summary>
+          <div class="faq-a">
             <p>Autotech is the only appointed Squadra Tuning BV partner in the Middle East, offering approved Alfa Romeo performance software and tuning support.</p>
           </div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <details class="faq-item" name="faq">
+          <summary class="faq-q">
             <span>Do you work on Alfa Romeo Quadrifoglio models?</span>
             <svg class="faq-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-a" hidden>
+          </summary>
+          <div class="faq-a">
             <p>Yes. We work on performance-focused Alfa Romeo models including Quadrifoglio variants, with specialist diagnostics, tuning, and mechanical support.</p>
           </div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <details class="faq-item" name="faq">
+          <summary class="faq-q">
             <span>Do you offer Alfa Romeo diagnostics in Dubai?</span>
             <svg class="faq-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-a" hidden>
+          </summary>
+          <div class="faq-a">
             <p>Yes. We provide Alfa Romeo-specific diagnostics using specialist knowledge and tooling that general workshops often lack.</p>
           </div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <details class="faq-item" name="faq">
+          <summary class="faq-q">
             <span>Can you inspect an Alfa Romeo before purchase?</span>
             <svg class="faq-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-a" hidden>
+          </summary>
+          <div class="faq-a">
             <p>Yes. We offer pre-purchase inspections for Alfa Romeo vehicles to help identify mechanical, electrical, and performance-related issues before you commit.</p>
           </div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <details class="faq-item" name="faq">
+          <summary class="faq-q">
             <span>Do you handle electrical faults and complex issues?</span>
             <svg class="faq-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-a" hidden>
+          </summary>
+          <div class="faq-a">
             <p>Yes. Autotech handles Alfa Romeo electrical diagnostics and deeper fault-finding, including issues that are often misdiagnosed by non-specialist garages.</p>
           </div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <details class="faq-item" name="faq">
+          <summary class="faq-q">
             <span>Do you work on other Italian marques?</span>
             <svg class="faq-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-a" hidden>
+          </summary>
+          <div class="faq-a">
             <p>Alfa Romeo is our primary specialism. We also accept work on classic Ferrari, Lamborghini, Lancia, Fiat, and Abarth by marque appointment consultation. Please contact us directly to discuss your vehicle and requirements.</p>
           </div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <details class="faq-item" name="faq">
+          <summary class="faq-q">
             <span>Why choose a specialist garage instead of a general workshop?</span>
             <svg class="faq-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-a" hidden>
+          </summary>
+          <div class="faq-a">
             <p>A specialist garage understands the platform, common faults, performance systems, and proper diagnostic paths. That usually means fewer guesses, faster answers, and better outcomes.</p>
           </div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <details class="faq-item" name="faq">
+          <summary class="faq-q">
             <span>Do you work on classic Alfa Romeo models?</span>
             <svg class="faq-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-a" hidden>
+          </summary>
+          <div class="faq-a">
             <p>Yes. We support both modern and heritage Alfa Romeo vehicles with the same specialist mindset and attention to detail.</p>
           </div>
-        </div>
+        </details>
 
-        <div class="faq-item" style="border-bottom:none">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+        <details class="faq-item" name="faq" style="border-bottom:none">
+          <summary class="faq-q">
             <span>How can I book an inspection or service?</span>
             <svg class="faq-ic" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7L9 12L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-a" hidden>
+          </summary>
+          <div class="faq-a">
             <p>You can contact Autotech directly through the website, WhatsApp, or phone to book diagnostics, repair, tuning, or inspection work.</p>
           </div>
-        </div>
+        </details>
 
       </div>
     </div>
@@ -2969,7 +2974,7 @@
 
       <div>
         <a href="/" style="display:inline-flex;align-items:center;gap:.75rem;margin-bottom:1.5rem" aria-label="Autotech home">
-          <div class="nav-img" style="width:36px;height:36px"><img src="./290675929_356463063270709_6629835773073910471_n.jpg" alt="Autotech"></div>
+          <div class="nav-img" style="width:36px;height:36px"><img src="./autotech-dxb-logo.jpg" alt="Autotech"></div>
           <div class="nav-wm">
             <span class="nav-name" style="font-size:.95rem">Autotech</span>
             <span class="nav-sub">Dubai's Alfa Romeo Specialists</span>
@@ -3120,20 +3125,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ── FAQ ACCORDION ─────────────────────────────────── */
-function toggleFaq(btn) {
-  const answer  = btn.nextElementSibling;
-  const isOpen  = btn.getAttribute('aria-expanded') === 'true';
-  document.querySelectorAll('.faq-q[aria-expanded="true"]').forEach(b => {
-    if (b !== btn) {
-      b.setAttribute('aria-expanded', 'false');
-      b.nextElementSibling.setAttribute('hidden', '');
-    }
-  });
-  btn.setAttribute('aria-expanded', !isOpen);
-  if (isOpen) { answer.setAttribute('hidden', ''); }
-  else         { answer.removeAttribute('hidden'); }
-}
-
 /* ── MODEL KNOWLEDGE ACCORDION ────────────────────── */
 function toggleMk(btn) {
   const body   = btn.nextElementSibling;
