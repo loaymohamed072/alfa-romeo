@@ -3,7 +3,19 @@
     { "source": "/pricing", "destination": "/pricing.html", "permanent": true },
     { "source": "/blog", "destination": "/blog/index.html", "permanent": true },
     { "source": "/privacy", "destination": "/privacy.html", "permanent": true },
-    { "source": "/terms", "destination": "/terms.html", "permanent": true }
+    { "source": "/terms", "destination": "/terms.html", "permanent": true },
+    { "source": "/ig_0cdc6242b5825f020169f39f21100c81918a477562e484d2db.png", "destination": "/alfa-romeo-model-range.png", "permanent": true },
+    { "source": "/performance%20video.mp4", "destination": "/alfa-romeo-performance-tuning.mp4", "permanent": true },
+    { "source": "/alfa%20romeo%20cars.jpg", "destination": "/alfa-romeo-quadrifoglio-fleet-dubai-autodrome.jpg", "permanent": true },
+    { "source": "/V6_Quadrifoglio_\\(28305207270\\).jpg", "destination": "/alfa-romeo-quadrifoglio-v6-engine.jpg", "permanent": true },
+    { "source": "/Gemini_Generated_Image_q3hfebq3hfebq3hf.jpg", "destination": "/alfa-romeo-stelvio-quadrifoglio-dubai.jpg", "permanent": true },
+    { "source": "/watermark_removed_3ab22fd4-f905-4793-acd9-d3014767ef4d.mp4", "destination": "/autotech-dxb-hero.mp4", "permanent": true },
+    { "source": "/290675929_356463063270709_6629835773073910471_n.jpg", "destination": "/autotech-dxb-logo.jpg", "permanent": true },
+    { "source": "/garage%20photo.jpg", "destination": "/autotech-workshop-classic-alfa-romeo-dubai.jpg", "permanent": true },
+    { "source": "/garage%20photo%202.jpg", "destination": "/autotech-workshop-giulia-quadrifoglio-dubai.jpg", "permanent": true },
+    { "source": "/garage%203.jpg", "destination": "/autotech-workshop-italian-classics-dubai.jpg", "permanent": true },
+    { "source": "/IMG_4273.jpg", "destination": "/classic-alfa-romeo-rebuild-autotech-dubai-2.jpg", "permanent": true },
+    { "source": "/IMG_4272.jpg", "destination": "/classic-alfa-romeo-rebuild-autotech-dubai.jpg", "permanent": true }
   ],
   "headers": [
     {
